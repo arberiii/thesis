@@ -1,0 +1,606 @@
+\documentclass[12pt,a4paper,titlepage,openany]{report}
+\usepackage{zakljucna_FAMNIT_1_stopnja_MA_MEF_EN_2016}
+
+% Head of document:
+
+\fancyhf{}
+\lhead[]{{\fontsize{9.3}{12}\selectfont
+Avdullahu A. Representations of graphs as induced subgraphs of Hamming graphs.\\
+\noindent Univerza na Primorskem, Fakulteta za matematiko, naravoslovje in informacijske tehnologije, year}}
+\chead[]{\fancyplain{}{}}
+\rhead[]{\fancyplain{\thepage}
+{\thepage}}
+\cfoot[]{\fancyplain{}{}}
+\lfoot[]{\fancyplain{}{}}
+\rfoot[]{\fancyplain{}{}}
+\normalsize
+
+%%%%%%%%%%%%%%%%%%%%%%%%% BEGINNING OF DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Title page %%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\pagenumbering{Roman}
+\pagestyle{empty}
+\begin{center}
+\noindent \large UNIVERZA NA PRIMORSKEM\\
+\large FAKULTETA ZA MATEMATIKO, NARAVOSLOVJE IN\\
+INFORMACIJSKE TEHNOLOGIJE
+
+
+\normalsize
+\vspace{5.5cm}
+Seminar - uvod v raziskovalno delo\\
+(Seminar - Introduction to Research Work)\\
+\textbf{\large Naslov seminarske naloge}\\
+\normalsize
+(Representations of graphs as induced subgraphs of Hamming graphs)\\
+\end{center}
+
+\begin{flushleft}
+\vspace{5cm}
+\noindent Ime in priimek: Arber Avdullahu
+% add your first name and last name in the line above
+\\
+\noindent \v Studijski program: Matematika
+% add your study program in the line above
+\\
+\noindent Mentor: dr. Martin Milani\v c
+% add the academic title, first name, and last name of your mentor in the line above
+\\
+\noindent Somentor: dr. Marcelo Mydlarz
+% if you have a co-mentor, add his/her academic title, first name, and last name in the line above
+% if you do not have a co-mentor, delete the line above and the line below
+\\
+\end{flushleft}
+
+\vspace{4cm}
+\begin{center}
+\large \textbf{Koper, April 2019}
+% add the month and year of submission of your final project paper
+\end{center}
+\newpage
+
+\pagestyle{fancy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Key words documentation (Slovene and English) %%%%%%%%%%%
+
+\section*{Klju\v cna dokumentacijska informacija}
+
+\medskip
+\begin{center}
+\fbox{\parbox{\linewidth}{
+\vspace{0.2cm}
+\noindent
+Ime in PRIIMEK:\vspace{0.5cm}\\
+Naslov seminarske naloge:\vspace{0.5cm}\\
+Kraj:\vspace{0.5cm}\\
+Leto:\vspace{0.5cm}\\
+\v Stevilo listov: \hspace{2cm} \v Stevilo slik: \hspace{2.6cm} \v Stevilo tabel:\hspace{2cm}\vspace{0.5cm}\\
+\v Stevilo prilog: \hspace{1.9cm} \v Stevilo strani prilog: \hspace{1cm} \v Stevilo referenc:\vspace{0.5cm}\\
+Mentor:\vspace{0.5cm}\\
+Somentor:\vspace{0.5cm}\\
+Klju\v cne besede:\vspace{0.5cm}\\
+Math.~Subj.~Class.~(2010):\vspace{0.5cm}\\
+{\bf Izvle\v cek:}\\
+Izvle\v cek predstavlja kratek, a jedrnat prikaz vsebine naloge. V najve\v c 250 besedah naka\v zemo problem, metode, rezultate, klju\v cne ugotovitve in njihov pomen.
+\vspace{0.2cm}
+}}
+\end{center}
+
+\newpage
+
+\section*{Key words documentation}
+
+\medskip
+
+\begin{center}
+\fbox{\parbox{\linewidth}{
+\vspace{0.2cm}
+\noindent
+Name and SURNAME:\vspace{0.5cm}\\
+Title of term project paper:\vspace{0.5cm}\\
+Place:\vspace{0.5cm}\\
+Year:\vspace{0.5cm}\\
+Number of pages:\hspace{1.6cm} Number of figures:\hspace{2.2cm} Number of tables:\vspace{0.5cm}\\
+Number of appendices:\hspace{0.6cm} Number of appendix pages:\hspace{0.8cm}Number of references:\vspace{0.5cm}\\
+Mentor: title~First Name~Last Name, PhD\vspace{0.5cm}\\
+% for : "title" write one of the following:
+% Assist.~Prof.~(if the title is "docent"),
+% Assoc.~Prof.~(if the title is "izredni profesor"),
+% Prof.~(if the title is "profesor")
+Co-Mentor:\vspace{0.5cm}\\
+Keywords:\vspace{0.5cm}\\
+Math.~Subj.~Class.~(2010):\vspace{0.5cm}\\
+{\bf Abstract:}
+\vspace{0.2cm}
+}}
+\end{center}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Acknowledgement %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\section*{Acknowledgement}
+
+Here we thank all involved with our term project paper, that is, persons or institutions that helped us in our work and/or made it possible.
+We can also thank the mentor and the co-mentor (if there is one).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table of contents, list of figures, etc. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\tableofcontents
+\addtocontents{toc}{\protect\thispagestyle{fancy}}
+% if there are no tables in your final project paper, delete the following three lines
+\newpage
+\listoftables
+\addtocontents{lot}{\protect\thispagestyle{fancy}}
+% if there are no figures in your final project paper, delete the following three lines
+\newpage
+\listoffigures
+\addtocontents{lof}{\protect\thispagestyle{fancy}}
+\newpage
+% Since the appendices are not numbered, we also do not want to show the dots to their (non-existing) page numbers.
+\renewcommand{\cftdot}{}
+\listofappendices
+\thispagestyle{fancy}
+\newpage
+
+\chapter*{List of Abbreviations}
+\thispagestyle{fancyplain}
+\begin{longtable}{@{}p{1cm}@{}p{\dimexpr\textwidth-1cm\relax}@{}}
+\nomenclature{{\it i.e.}}{that is}
+\nomenclature{{\it e.g.}}{for example}
+\end{longtable}
+\newpage
+
+\normalsize
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapters: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Hint: You might find it convenient to keep the contents of separate chapters in separate files, each in their own
+% .tex file. They all have to be stored in the same folder as the main file. Each chapter is included with the \include command.
+% Example: we can insert FirstChapter.tex and SecondChapter.tex as follows:
+% \include{FirstChapter}
+% \include{SecondChapter}
+
+\chapter{Introduction}
+\thispagestyle{fancy}
+\pagenumbering{arabic}
+
+How difficult is it to determine if
+a given graph $G$ can be realized in $\mathbb{R}^d$ so that vertices are mapped to distinct points and two vertices are adjacent if and only if the corresponding points are on a common line that is parallel to some axis? Let us refer to any such mapping as a d-realization of $G$ and say that a graph is $d$-realizable if it has a $d$-realization.The class of $d$-realizable graphs was studied
+in the literature for decades, under diverse names such as arrow graphs (Cook, 1974), $(d - 1)$-plane graphs and $(d -1)$-line graphs of $d$-partite $d$-uniform hypergraphs (Bermond etal., 1977), $d$-dimensional cellular graphs (Gurvich and Temkin, 1992), $d$-dimensional chessboard graphs (Staton and Wingard, 1998), and d-dimensional gridline graphs (Peterson, 2003).\newline
+In order to determine how hard will it be to answer that question we should first take a look at those definitions:\newline
+Let $A$ be an algorithm that solves a problem $\mathcal{P}$. The running time of algorithm $A$ is the number of basic calculation steps performed by $A$ (additions, subtractions, multiplications, comparison of two numbers etc.). The time complexity of algorithm $A$ is the function $T_A(n)$ that
+measures the running time of $A$ in the worst case:
+\begin{center}
+	$T_A : n \mapsto $ largest running time of $A$ on input instances of size $\leq$ $n$.
+\end{center} 
+Besides time complexity, space complexity of an algorithm might also be important (how much computer memory the algorithm needs). If we have a probability distribution on the input instances, we can also estimate the expected time complexity of the algorithm.\newline
+Given two functions $f,g : \mathbb{N} \to \mathbb{N}$ is of order (at most) $O(g)$, if there exists a constant $C > 0$ such that $f(n) \leq C\cdot g(n)$ for all $n \in N$ and we write $f = O(g)$.\newline
+An algorithm $A$ is polynomial if its time complexity $T_A(n)$ is of order $O(n^k)$ for some $k \in N$.
+Polynomial algorithms are also said to be efficient.
+
+A decision problem is a problem in which the set of instances divides into two sets depending on whether the answer is YES or NO.
+In computational theory, the following three classes of decision problem are of interest:
+\begin{itemize}
+\item {\it P} is the set of decision problems that can be solved by a polynomial algorithm. Intuitively: $P$ is the set of problems that can be solved efficiently.
+\item {\it NP} is the set of decision problems with the following property:
+If the answer is YES then there exists a certificate that
+enables us to verify this fact in polynomial time. Intuitively: NP is the set of problems for which we can
+quickly verify a positive answer if we are given a solution.
+\item {\it co-NP} is the set of decision problems with the following property:
+If the answer is NO then there exists a certificate that
+enables us to verify this fact in polynomial time.
+\end{itemize}
+
+
+Recently, Sangha and Zito studied $d$-realizable graphs in the more general context of the so-called Line-of-Sight (LoS) networks [49]. Line of Sight (LoS) networks provide a model of wireless communication which incorporates visibility constraints. Vertices of such networks can be embedded in finite $d$-dimensional grids of size $n$, and two vertices are adjacent if they share a line of sight and are at distance less than $\omega$ where two points $x=(x_1,...,x_d)$ and $x'=(x_1',...,x_d')$ share a line of sight if there exist $j\in \{1,...,d\}$ such that $x_i=x_i'$ for all $i\in \{1,...,d\} \symbol{92} \{j\}$. They studied large independent sets in LoS networks. They proved that the computational problem of finding a largest independent
+set can be solved optimally in polynomial time for one dimensional LoS networks. However, for $d \geq 2$, the (decision version of) the problem becomes NP-hard for any fixed $\omega \geq 3$ and even if $ω$ is chosen to be a
+function of $n$ that is $O(n^{1-\epsilon})$ for any fixed $\epsilon>0$. In addition they showed that the problem is also NP-hard when $\omega = n$ for $d \geq 3$. This result
+extends earlier work which showed that the problem is solvable in polynomial time for gridline graphs when $d = 2$.\newline
+For the small-dimensional cases, $d \in \{2, 3\}$, Peterson suggested an application of d-realizable graphs to robotics [46]: if the movement of a robot is restricted to be along axis-parallel directions only and turns are
+allowable only at certain points, then a shortest path in a d-realized graph gives the number of turns required.
+
+
+
+Despite many studies on $d$-realizable graphs in the literature, determining the computational complexity of recognizing $d$-realizable graphs has been elusive except for $d \in \{1, 2\}$,
+when $d$-realizable graphs coincide with complete graphs and with line graphs of bipartite graphs, respectively (and can be recognized in polynomial time).The problem that we study in this final project paper is to analyze the question about recognition complexity of $d$-realizable graphs for $d \geq 3$, asked explicitly by Peterson in 2003 [46].
+We show that for all $d \geq 3$, determining if a given graph is $d$-realizable is {\it NP}-complete, even for bipartite graphs.We also identify some tractable cases.
+We present the work of Martin Milani\v c, Peter Mur\v si\v c, and Marcelo Mydlarz $d$-realizable graphs (for any positive integer $d$) in the class of $HHD$-free graphs, a large class of perfect graphs containing chordal graphs and distance-hereditary graphs. The characterization leads to a linear time recognition algorithm.\newline
+
+My approach is based on the fact that a graph G is $d$ -realizable if and only if $G$ is an induced subgraph of a Cartesian product of $d$ complete graphs. Given two graphs G and H, their Cartesian product is the graph $G\square H$ with vertex set $V (G) \times V (H)$ in which two
+vertices $(u_1 , u_2 )$ and $(v_1 , v_2 )$ are adjacent if and only if either $u_1 v_1\in E(G)$ and $u_2 = v_2$ ,
+or $u_1 = v_1$ and $u_2 v_2 \in E(H)$. The Cartesian product is associative and commutative (in
+the sense that $G\square H \equiv H\square G$ where $\equiv$ denotes the graph isomorphism relation). Another
+name for Cartesian products of complete graphs is Hamming graphs; a Hamming graph is $d$-dimensional if it is the Cartesian product of $d$ nontrivial complete graphs. The 3-dimensional Hamming graphs having all factors of the same size were studied in the literature under the name cubic lattice graphs [37, 12, 11, 1, 16], hence, 3-realizable graphs are exactly the induced subgraphs of cubic lattice graphs. Results are based on a characterization of induced subgraphs of d-dimensional Hamming graphs due to Klav\v zar and Peterin [33], expressed in terms of the existence of a particular edge labeling. For the 3-dimensional case, we develop a more specific characterization based on induced cycles of the graph and use it to prove hardness of recognizing 3-realizable graphs via a reduction from the 3-edge-coloring problem
+in cubic graphs. The hardness of the 3-dimensional case forms the basis for establishing hardness for all higher dimensions.\newline
+
+Since a $d$-realizable graph is also $(d + 1)$-realizable, the notion of d-realizability suggests a natural graph parameter. The Cartesian dimension of a graph $G = (V, E)$, denoted $Cdim(G)$, is defined as the minimum non-negative integer $d$ such that $G$ is $d$-realizable, if such an integer exists, and $\infty$, otherwise. The infinite case can indeed occur, even some small graphs – the diamond, the 5-cycle, and the complete bipartite graph $K_{2,3}$ , for example – cannot be realized in any dimension. Note that $Cdim(G)$, when finite and strictly positive, is the minimum positive integer $d$ such that $G$ is an induced subgraph of the Cartesian product
+of $d$ complete graphs. This point of view adds the Cartesian dimension of a graph to the list of graph dimensions studied in the literature related to various embeddings of graphs into Cartesian product graphs [24, 20, 27, 34]. Other dimensions were studied related to the
+strong product [22, 15, 32, 47] and the direct product of graphs [41, 48].
+
+\chapter{KP-labeling and induced subgraphs of Hamming Graphs}
+\thispagestyle{fancy}
+
+In this chapter we will talk about necessary and sufficent conditions for a graph to be induced subgraph of Hamming Graphs and some results regarding those conditions 
+
+\section{KP-labeling}\label{kp-labeling-section}
+We take a closer look at the characterization of induced subgraphs of Hamming Graph due to Klav\v zar and Peterin. \newline
+Before going to the result we need to go through couple of definitions and some results.
+\newline
+\begin{corollary}
+An edge $e = \{u, v\}$ of a graph G is a cut-edge iff it doesn’t belong to any cycle.
+\end{corollary}
+\begin{proof} Take any edge $e = \{u, v\}$. Remove this edge from our graph: if the graph is still connected, then there is some path from $u$ to $v$ not involving $e$;
+consequently, if we add $e$ to the end of this path, we get a cycle. Thus, if $e$ is not a cut-edge, it’s involved in a cycle.\newline
+Conversely: suppose that $e = \{u, v\}$ lies in a cycle.
+Let $P$ be the path from $u$ to $v$ that doesn’t use $e$ (i.e. go the other way around the cycle.) Pick any $x, y$ in $G$; because $G$ is connected, there is a path from $x$ to $y$ in $G$. Take this path, and edit it as follows:
+whenever the edge $e$ shows up, replace this with the path $P$ (or $P$ traced backwards, as needed.) This then creates a walk from $x$ to $y$; by deleting cycles, this walk will always become a path, and thus $G$ is connected. So if $e$ is involved in a cycle, it’s not a cut-edge.
+\end{proof}
+The Cartesian product $G\square H$ of graphs G and H is the graph with vertex set $V(G)\times V(H)$ in which the vertex $(a,x)$ is adjacent to the vertex $(b,y)$ whenever
+$ab\in E(G)$ and $x=y$, or $a=b$ and $xy\in E(H)$. For a fixed vertex $a$ of $G$, the vertices $\{(a,x)|x\in V(H)\}$ induce a subgraph of $G \square H$ isomorphic to $H$, called an $H$-layer of $G \square H$. Analogously we define $G$-layers. A subgraph of $G \square H$ is called non-trivial if it intersects at least two $G$-layers and at least two $H$-layers. \newline
+The map $p_G:G\square H \mapsto G$ defined by $p_G(a,x)=a$, is called a projection. The image of an edge $(a,x)(b,y)$ under a projection is an edge when $x=y$ or a vertex in when $a=b$.\newline
+\begin{figure}
+\centering
+\includegraphics[scale=0.45]{figures/Graph-Cartesian-product.png}
+\caption{The Cartesian product of graphs.}
+
+\end{figure}
+Cartesian products of complete graphs are known as Hamming graphs. But they can be described also as follows. For
+$i=1,2,\ldots n$ let $r_i\geq 2$ be given integers. Let $G$ be the graph whose vertices are the $n$-tuples $b_1b_2\cdots b_n$ with $b_i\in \{0,1,\ldots r_i-1\}$. Two vertices are adjacent if the corresponding tuples differ in precisely one place—one coordinate. The vertex set of $G$ is the same as $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ and edges in $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ between two vertices have same vertex in every graph $K_{r_i}$ but one and since in complete graphs we have every possible edge, then it is easy to see that they are isomorphic. For an edge $uv$ of
+$H=K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ we define the color map $c:E(H)\mapsto \{1,2,\ldots n\}$ with $c(uv)=i$, where u and v differ in coordinate i.
+\newline
+Let $G$ be a connected graph and let $\mathcal{F}=\{F_1,F_2,\ldots F_k\}$ be a partition of $E(G)$. The \textit{quotient graph} $G\backslash F_i$ has connected components of $G\\F_i$ as vertices, two components $C$ and $C'$ being adjacent whenever there exists an edge of $F_i$ connecting a vertex of $C$ with a vertex of $C'$ . For each $i$, define a map $f_i:V(G)\mapsto V(G\backslash F_i)$ by $f_i(v)=C$, where $C$ is the component of $G\\F_i$ containing $v$.Then let
+$$f:G\mapsto G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$$
+be the natural coordinate-wise mapping, that is
+$$f(v)=(f_1(v),f_2(v),\ldots , f_k(v))$$
+We call $f$ the \textit{quotient map} of $G$ with respect to $F$. Note that $f$ need not be one-to-one in general and that it is possible that some quotient graphs are the one vertex graph. However, all the partitions $F$ introduced later will lead to one-to-one mappings with non-trivial quotient graphs.\newline
+A partition $\{F_1,F_2,\ldots ,F_k\}$ of $E(G)$ naturally leads to an edge-labeling $l:E(G)\mapsto \{1,2,\ldots,k\}$ by setting $l(e)=i$, where $e\in F_i$. Unless stated
+otherwise, a labeling (or more precisely a $k$-labeling) of $G$ will mean an edge-labeling (with $k$ labels).
+\newline 
+Quotient graph is the central concept in this chapter, so to get a better understanding we also visualize it.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.5\linewidth]{figures/quotientgraph.png}
+\end{center}
+\caption{Quotient graph of $C_7$}
+\end{figure}
+We define the partition of $E(C_7)$ by defining $F_i$ having edges with label $i$, as we can see $C_7\backslash F_1$ and $C_7/F_3$ have only two vertices and since there is an edge in the correspoding $F_i$ connecting those two components therefore both of  $C_7\backslash F_1$ and $C_7/F_3$ are simply $K_2$, while $C_7\backslash F_2$ has three vertices but each two of compontents are connected with an edge from $F_2$ so $C_7\backslash F_2$ is simply $K_3$.   
+\newline
+They defined two conditions to get a better understanding. They actuall named them by letters $B$ and $C$ but since we will not need the condition $A$ will name just by numbers $1$ and $2$.\newline
+We first state two labeling conditions needed:
+\newline
+\textbf{Condition 1} Let $G$ be a graph. Then edges of a triangle have the same label.\newline
+\textbf{Condition 2} Let $G$ be a labeled graph and let $u$ and $v$ be arbitrary vertices of $G$ with $d_G(u,v) \geq 2$. Then there exist different labels i and j which both appear on any induced u, v-path.\newline
+Next we try to understand those conditions on cycle and we infer the following result
+\begin{lemma}\label{lemma:cyclenotunique}Let $G$ be a labeled graph fulfilling Condition 2 and let $C_k$ , $k \geq 4$, be an induced cycle of $G$. Then every label of $C_k$ is presented more than once on $C_k$.
+\end{lemma}
+\begin{proof}
+The labels of a $u, v$-path of length $2$ on $C_k$ are different, hence by Condition 2 those two labels should appear also along the other part. So for any label take two vertices that have distance two containg the edge with that label and therefore it is presented more than once on $C_k$ 
+\end{proof}
+Before going to the main result we will need also the following lemma that tells us that we only need to check the induced paths.
+\begin{lemma}\label{lemma:inducedpaths}Let $G$ be a labeled graph fulfilling Conditions 1 and 2 and let $u, v$ be vertices of $G$ with $d_G(u,v)\geq 2$. Then, if labels $i$ and $j$ appear on every induced $u, v$-path, they appear on every $u, v$-path.
+\end{lemma}
+\begin{proof}
+Suppose that labels $i$ and $j$ appear on every induced $u, v$-path. Let $P=x_1x_2...x_r, x_1=u,x_r=v$, be a $u, v$-path of minimal length that does not contain both labels $i$ and $j$. Then P is not induced since every induced path contains both labels, hence we have an edge between some non-consecutive vertices say $e=x_kx_l$ with $l-k>1$. We may assume that $e$ is selected such that $l-k$ is as small as possible. By the minimality of $P$, the path $x_1x_2...x_kx_lx_{l+1}...x_r$ which is shorter than $P$ contains both labels $i$ and $j$. Hence, the label of the edge $x_kx_l$ is either $i$ or $j$, otherwise $P$ would contain both labels $i$ and $j$. Assume without loss of generality it is $i$. Then, using minimality again, label $j$ appears on the path $x_1x_2...x_k$ or on $x_lx_{l+1}...x_r$, note that it cannot happen that $k=1$ and $l=r$ as $d_G(u,v)\geq 2$. It follows that $i$ does not appear on the path $x_kx_{k+1}...x_l$. But then the label $i$ appears only once on the cycle $C=x_kx_{k+1}...x_lx_k$. If $C$ is a triangle, we have a contradiction with Condition 1,
+otherwise with previous lemma.
+\end{proof}
+\begin{proposition}
+Let $G$ be a graph having a $KP$-labeling and let $e$ be an edge in $G$. Then $G$ has a $KP$-labeling in which $e$ receives a unique label if and only if $e$ is a cut-edge.
+\end{proposition}
+
+\begin{proof}
+First we will show that if $e$ is a cut-edge then $G$ has a $KP$-labeling in which $e$ receives a unique label. Fix an arbitrary $KP$-labeling of G.\newline
+Relabel edge $e$ with a new label say $i$ not used before. We will show that the new labeling is also a $KP$-labeling. We need to verify the following two conditions:\newline
+Condition 1: Every triangle is monochromatic.\newline Condition 1 holds, since $e$ is not part of any cycle and therefore every triangle is still monochromatic.\newline
+Condition 2: for every pair of distinct non-adjacent vertices $u,v$, there exist different labels $j$ and $k$ which both appear on every iduced $u,v$-path.\newline
+To verify condition 2, note that any two $u,v$-paths either both contain edge $e$ or none (otherwise $e$ would be part of a cycle, but $e$ is a cut-edge)\newline
+If none of the induced $u,v$-paths contains edge $e$ then the new $KP$-labeling still satisfies Condition 2 for the pair $u,v$ because of the original $KP$-labeling satisfied for this pair.\newline
+Otherwise all induced $u,v$-paths contain e, let the new label of $e$ be $i$, and original label of $e$ be $i_0$. We differ two cases:
+\item[Case 1] If $i_0\in \{j,k\}$ then simply take the set $(\{j,k\}\setminus \{i_0\})\cup \{i\}$.
+\item[Case 2] If $i_0\not\in \{j,k\}$ then simply take the set $\{j,k\}$.\newline
+Suppose $G$ has a $KP$-labeling in induced path $e$ receives a unique label (by Corollary). Suppose for contradiction that $e$ is not a cut edge such that $e$ is part of a cycle $C$. If $C$ is a triangle then it is not monochromatic as then it must satisfy Condition 1 and every edge must label same as $e$ but then $e$ would not be labeled uniquely . Therefore $C$ cannot be triangle. 
+Let $V(C)=\{v_1,v_2,...,v_p\}$ in cyclic order and without loss of generality $e=v_1v_2$. Let $u=v_1$ and $v=v_3$. Then since $e$ is labeled uniquely, the two induced paths forming a cycle from $u$ to $v$. These two paths cannot share any two labels so Condition 2 cannot hold, a contradiction. 
+\end{proof}
+\begin{theorem}\label{thm:mainkp}
+Let $G$ be a connected graph. Then $G$ is an induced subgraph of a Hamming graph if and only if there exists a labeling of $G$ that fulfills Conditions $1$ and $2$.
+\end{theorem}
+\begin{proof}
+Let $G$ be an induced subgraph of $H=K_{n_1}\square K_{n_2}\square\cdots\square K_{n_k}$. To make things easier denote $p_i=p_{K_{n_i}}$ which is the projection of complete graph $K_{n_i}$ of $H$ and also consider the labeling $E(G)$ indeuced by the color map $c$ of $H$. We will show that this labeling satisfies Conditions $1$ and $2$.\newline
+Condition $1$ is clear. Indeed, if $u$, $v$, and $w$ induce a triangle, then they all lie in
+the same layer of H and by alternative description of Hamming graphs we have that each pair is adjacent so they differ in exactly on coordinate and therefore color map $c$ will map those edges to the coordinate in which they differ and so the edges $uv$, $uw$, and $vw$ receive the same label.\newline
+We next show Condition $2$ is satisfied also. Let $u$ and $v$ be two vertices of $G$ with $d_G(u,v)\geq 2$.
+Suppose that there is no label that appears on all induced $u, v$-paths. Now if we see $u$ and$v$ as $k-tuples$ and we understand paths as changing coordinates and therefore $p_i(u)=p_j(v)$ for all $i$ because if we look at one induced path that doesn't have label $i$ that means than we never change the $i^{th}$ coordinate as we traverse this path and therefore the $i^{th}$ coordinate is the same, and this is contrary to $d_G(u,v)\geq 2$. Suppose now that all induced $u, v$-paths have exactly one label in common, say $i$. We have $p_j(u)=p_j(v)$ for all $j\neq i$ and $p_i(u)\neq p_i(v)$ (the case when $p_i(u)= p_i(v)$). Vertices $p_i(u)$ and $p_j(v)$ are adjacent in $K_{n_i}$ , since $K_{n_i}$ is a complete graph. Hence, $u$ and $v$ are adjacent in $H$ and therefore also in $G$ which is impossible.\newline
+Conversely, let $l$ be a labeling of $G$ that fulfills Conditions 1 and 2. Let $\mathcal{F}=\{F_1,F_2,\ldots F_k\}$ be the partition of $E(G)$ induced by $l$ and let $f$ be the quotient map of $G$ with respect to $\mathcal{F}$. We claim that $f$ embeds $G$ as an induced subgraph into $G=G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$.\newline
+We show first that f is one-to-one, in this way we show that indeed $f$ embeds $G$ as an induced subgraph into $G=G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$. Suppose that vertices $x$ and $y$ are not adjacent in $G$. Then by Condition C and Lemma ~\ref{lemma:inducedpaths}, there exist labels $i$ and $j$ such that on every $x, y$-path we find labels $i$ and $j$. So $x$ and $y$ are in different components in both $G\backslash F_i$ and $G\backslash F_j$. Already the first fact assures that $f(x)\neq f(y)$. Let next $x$ and $y$ be adjacent vertices of $G$ and let $l(xy)=i$, and we can see that $f_j(x)=f_j(y)$ for every $j\neq i$, now let us take a look for $f_i$. Suppose that there exists an $x, y$-path $P=x_1x_2\ldots x_r$ in $G\backslash F_i$, where $x_1=x$ and $x_r=y$. We can assume that $P$ is shortest among all $x, y$-paths in $G\backslash F_i$. If $P$ is induced in $G-xy$ we have a contradiction with Condition 1 when $r=3$ since $P$ does not take the label $i$ ($P$ in $G\backslash F_i$) but a triangle will be formed with $xy$ and two edges in $P$ and a contradiction with Lemma ~\ref{lemma:cyclenotunique} when $r>3$ because $P+xy$ would form a cycle and label $i$  is present only once. Thus $P$ is not induced in $G-xy$,
+$r > 3$, and there are adjacent vertices $x_j$ and $x_k$ with $k > j+1$. By the minimality of $P$ we have $l(x_jx_k)=i$. We can select $j$ and $k$ such that $k- j$ is minimal among all such vertices $x_j$ and $x_k$. Then the cycle $C=x_jx_{j+1}\ldots x_{k-1}x_k$ is induced. If $C$ is a triangle we have a contradiction with Condition 1, otherwise we have a
+contradiction with Lemma ~\ref{lemma:cyclenotunique}. Hence, we have shown that f is one-to-one.\newline
+Let $xy$ be an edge with $l(xy)=i$. Then, by the above, $x$ and $y$ are in different components of $G\backslash F_i$. Moreover, they belong to the same component in any of the graphs $G\backslash F_j$ , for $j\neq i$. It follows that $f$ maps edges to edges and the claim is proved.\newline
+Hence, $G=f(G)$ is an induced subgraph of $G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$. To complete the proof we show that $G$ is also an induced subgraph of the Hamming graph $k_{|G\backslash F_1|}\square K_{|G\backslash F_2|}\square \ldots \square K_{|G\backslash F_k|}$ :
+Let $x$ and $y$ be non-adjacent vertices of $G$. Then, by the same reasoning as above, $x$ and $y$ are in different components of at least two graphs $G\backslash F_i$. It follows that $f(x)$ and $f(y)$ differ in at least two coordinates which remains valid after adding edges to the factor graphs.
+\end{proof}
+\begin{example} Let's see that $C_7$ is an induced subgraph of a Hamming graph and there exists a labeling of $C_7$ that fulfills Conditions $1$ and $2$.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=1\linewidth]{figures/c_7inducedhamming.png}
+\end{center}
+\caption{$C_7$ as an induced subgraph of $K_2\square K_3\square K_2$}\label{fig:c7induced}
+\end{figure}
+\newline
+$C_7$ is an induced subgraph of Hamming graph more specifically of $K_2\square K_3\square K_2$ in the Figure ~\ref{fig:c7induced} take cycle $(112,212,232,231,221,121,111)$ and using the color map $c$, edge $111,112$ gets label $3$, edge $112,212$ gets label $1$, edge $212,232$ gets label $2$, edge $232,231$ gets label $3$, edge $231,221$ gets label $2$, edge $221,121$ gets label $1$, edge $121,111$ gets label $2$. We can easily check that edges of a triangle have the same label (here there is no triangle which is fine) and let $u$ and $v$ be arbitrary vertices of $C_7$ with $d_{C_7}(u,v) \geq 2$. Then there exist different labels i and j which both appear on any induced u, v-path.\newline
+$C_7$ has a labeling in which Conditions 1 and 2 hold as the first graph in Figure ~\ref{fig:c7induced}, now let's take a look at where does the map $f$ sends vertices of $C_7$. We follow the order clockwise from most top vertice, $f$ maps the first vertice to $112$, $f$ maps the second vertice to $212$, $f$ maps the third vertice to $232$, $f$ maps the fourth vertice to $231$, $f$ maps the fifth vertice to $221$,, $f$ maps the sixth vertice to $121$,, $f$ maps the seventh vertice to $111$ and as we can see $G=f(G)$ and induced subgraph of $K_2\square K_3\square K_2$
+\end{example}
+Note that the quotient graphs obtained in the proof of Theorem ~\ref{thm:mainkp} need not be complete. For instance, consider the path $P_4$ together with the labeling 1, 2, 1 as we get $G\backslash F_1=P_3$ and $G\backslash F_2=K_2$.
+\chapter{Cartesian dimension}
+Given a positive integer $d$, a $d$-realization of a graph $G=(V,E)$ is an injective mapping $\varphi_G:V\mapsto \mathbb{R}^d$ such that two vertices $u, v \in V$ are adjacent if and only if $\varphi G(u)$ and $\varphi G(v)$ differ in exactly one coordinate. A graph $G$ is said to be $d$-realizable if it has a $d$-realization. Note that $G$ is $d$-realizable if and only if $G$ has a $d$-realization $\varphi_G : V \mapsto \mathbb{N}^d$ or any large enough set of dimension $d$ since $V(G)$ is countable.\newline
+Any graph that has a $d$-realization, it has also a $d+1$-realization (simply add one coordinate equal to $0$). Which naturally leads to a definition: the Cartesian dimension of a graph $G = (V, E)$, denoted $Cdim(G)$, is defined as the minimum non-negative integer $d$ such that $G$ is $d$-realizable, if such an integer exists, and $\infty$, otherwise. (Note that $K_1$ is the only graph of Cartesian dimension 0.)\newline
+
+For a graph $G$ to have Cartesian dimension $1$ it must have a $1$-realization, or in other words you can map all the vertices of the graph to $\mathbb{R}$ and becuase the map has to be injective every vertice is mapped to different real number but every two vertice differ in exactly one coordinate which makes them adjacent, therefore the only graphs of Cartesian dimension $1$ are complete graphs of order at least $2$.
+
+\begin{example}
+$C_6$ has Cartesian dimension $2$, indeed since it is not a complete graph it cannot have dimension $1$, and we find a $2-realization$ of $C_6$ with vertex set $V=\{v_1,v_2,v_3,v_4,v_5,v_6\}$ and edge set $E=\{v_1v_2,v_2v_3,v_3v_4,v_4v_5,v_5v_6,v_6v_1\}$ by map defining $\varphi_{C_7}:V\mapsto \mathbb{R}^2$ with $\varphi(v_1)=(1,1)$, $\varphi(v_1)=(1,1)$, $\varphi(v_2)=(3,1)$, $\varphi(v_3)=(3,3)$, $\varphi(v_4)=(2,3)$, $\varphi(v_5)=(2,2)$ and $\varphi(v_1)=(1,2)$. An easy check shows that indeed for any edge the corresponding values of $\varphi$ differ in exactly one coordinate.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1\linewidth]{figures/c_62real.png}
+\end{center}
+\caption{A $2$-realization of $C_6$}
+\end{figure}
+\end{example} 
+
+\begin{theorem}
+For every graph G, the following conditions are equivalent:
+\begin{enumerate}
+\item $Cdim(G)\leq 2$.
+\item $G$ is the line graph of a bipartite graph.
+\item $G$ is diamond-free and $K(G)$ is bipartite.
+\item $G$ is \{claw, diamond, $C_5$ , $C_7$ , ...\}-free.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+$(1)\implies(4)$ We show that none of those graphs in (4) can be an induced subgraph of a graph with $Cdim(G)\leq 2$. $Cdim(G)$ cannot be equal to $1$ since only complete graph with Cartesian dimension $1$. Now suppose it $Cdim(G)=2$.
+\newline First let's show for diamond. Suppose G has diamond as induced subgraph with vertex set $V(G)=\{v_1,v_2,v_3,v_4\}$ and edge set $E(G)=\{v_1v_2,v_1v_3,v_2v_3,v_2v_4,v_3v_4\}$, now because $v_1$, $v_2$ and $v_3$ is complete graph on $3$ vertices all three together differ in one coordinate, similarly for $v_2$, $v_3$ and $v_4$ so it follows that also $v_1$ and $v_4$ differ only in one coordinate but they are not adjacent.
+\newline Next suppose G has claw as induced subgraph with vertex set $V(G)=\{v_1,v_2,v_3,v_4\}$ and edge set $E(G)=\{v_1v_2,v_1v_3,v_1v_4\}$ and w.l.o.g. assume that assume that $\varphi_G(v_1)$ differs only in first coordinate with $\varphi_G(v_2)$ and because $v_2$ and $v_3$ are not adjacent then $\varphi_G(v_1)$ and $\varphi_G(v_3)$ must differ only in second coordinate. Which bring us to $v_4$, because $v_1$ and $v_4$ are adjacent they must differ only one coordinate, but either coordinate is not good as would  imply adjacency between $v_4$ and $v_2$ or $v_4$ and $v_3$ but there is no edge among them.
+\newline And finally for odd-cycle larger than 3. Let the vertex set be $V(G)=\{v_1,v_2,...,v_n\}$ with edge set $E(G)=\{v_1v_2,v_2v_3,\ldots v_nv_1\}$ and notice that since there is no triangle no three vertices lie in same line so if we color map define in the section ~\ref{kp-labeling-section} then by by following the cycle we alternate by colors $1$ and $2$, but to close the cycle it must be followed by two different colors but cycle is odd so it is not possible.\newline
+$(4)\implies (3)$ 
+\end{proof}
+
+\begin{theorem}[Staton and Wingard 1998]
+Every d-realizable graph is \{$K_{1,d+1}$ , diamond,
+$K_{2,3}$ , $C_5$ \}-free.
+\end{theorem} 
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.4\linewidth]{figures/k23notrealizable.png}
+\end{center}
+\caption{$K_{2,3}$ is not realizable}
+\end{figure}
+Next we see the relation between $KP$-labeling and Cartesian dimension:
+ \begin{theorem}[Kla\v zvar and Peterin 2005]
+For every connected graph G and a positive integer d, we have $Cdim(G) \leq d$ if and only if $G$ has a d-KP-labeling.
+\end{theorem}
+
+ \begin{thebibliography}{99}
+\thispagestyle{fancy}
+
+\bibitem{Cook}
+\articleInJournalOneAuthor
+    {Curtis R. Cook}
+    {Representations of graphs by n-tuples. In Proceedings of the Fifth South-eastern Conference on Combinatorics, Graph Theory, and Computing}
+   {Israel J.~Math}{52}
+   {1985}{46--52}
+
+\bibitem{Blum}
+  \articleInJournalManyAuthors
+    {A.~Blum, G.~Konjevod}{R.~Ravi}
+    {Semidefinite relaxations for minimum bandwidth and other vertex-ordering problems}
+   {Theor.~Comp.~Sci.}{235}
+   {2000}{25--42}
+
+\bibitem{Bourgain}
+\articleInJournalOneAuthor
+    {J.~Bourgain}
+    {On Lipschitz embedding of finite metric spaces in Hilbert space}
+   {Israel J.~Math}{52}
+   {1985}{46--52}
+
+\bibitem{Chinn}
+  \articleInJournalManyAuthors
+    {P.~Chinn, J.~Chv\'atalov\'a, A.~Dewdney}{N.~Gibbs}
+    {The bandwidth problem for graphs and matrices -- a survey}
+   {J.~Graph Theory}{6}
+   {1982}{223--254}
+
+\bibitem{Chvatalova}
+\PhDDissertation
+    {J.~Chv\'atalov\'a}
+    {On the bandwidth problem for graphs}
+    {Ph.D.~dissertation, University of Waterloo, 1980}
+
+\bibitem{Frankl}
+  \articleInJournalTwoAuthors
+    {P.~Frankl}{H.~Maehara}
+    {The Johnson-Lindenstrauss lemma and the sphericity of some graphs}
+   {J.~Comb.~Theory, Ser.~B}{44}
+   {1988}{355--362}
+
+\bibitem{Feige}
+  \articleInJournalOneAuthor
+    {U.~Feige}
+    {Approximating the bandwidth via volume respecting embeddings}
+    {J.~Comp.~Syst.~Sci.}{60}
+    {2000}{510--539}
+
+\bibitem{George}
+  \bookTwoAuthors
+  {A.~George}{J.~Liu}
+   {Computer Solution of Large Positive Definite Systems}
+    {Prentice-Hall, 1981}
+
+\bibitem{Grotschel}
+  \bookManyAuthors  {M.~Gr\"otschel, L.~Lov\'asz}{A.~Schrijver}
+   {Geometric Algorithms and Combinatorial Optimization}
+    {Springer-Verlag, Berlin, 1987}
+
+\bibitem{Kleitman}
+   \articleInJournalTwoAuthors
+     {D.~Kleitman}{R.~Vohra}
+     {Computing the bandwidth of interval graphs}
+     {SIAM J.~Discrete Math.}{3}
+     {1990}{373--375}
+
+\bibitem{Knuth}
+  \bookOneAuthor     {D.~Knuth}
+   {The Art of Computer Programming, Vol.~2, Seminumerical Algorithms}
+    {Addison Wesley, Second Edition, 1981}
+
+\bibitem{Lagarias}
+\bookChapterOneAuthor
+   {J.~Lagarias}
+   {Point Lattices}
+   {R.~Graham, M.~Gr\"otschel, L.~Lov\'asz (eds.)}
+   {Handbook of Combinatorics, Volume~1}
+   {MIT Press, 1995}
+   {919--966}
+
+\bibitem{Linial}
+   \articleInJournalManyAuthors
+     {N.~Linial, E.~London}{Y.~Rabinovich}
+   {The geometry of graphs and some of its algorithmic applications}
+     {Combinatorica}{15}
+     {1995}{215--245}
+
+\bibitem{Novak}
+   \articleInJournalOneAuthorAccepted
+     {J.~Novak}
+   {Polynomial approximation of rational manifolds. I}
+     {J.~Abstract~Approximation}
+
+\bibitem{Novak2}
+   \articleInJournalOneAuthorInPrint
+     {J.~Novak}
+   {Polynomial approximation of rational manifolds. II}
+     {J.~Abstract~Approximation}
+
+\bibitem{Novak3}
+   \articleInJournalTwoAuthorsAccepted
+     {J.~Novak}{M.~Novak}
+   {Polynomial approximation of rational manifolds. III}
+     {J.~Abstract~Approximation}
+
+\bibitem{Novak4}
+   \articleInJournalTwoAuthorsInPrint
+     {J.~Novak}{M.~Novak}
+   {Polynomial approximation of rational manifolds. IV}
+     {J.~Abstract~Approximation}
+
+\bibitem{Novak5}
+   \articleInJournalOneAuthorSubmitted
+     {J.~Novak}
+   {Polynomial approximation of rational manifolds. V}
+     {2014}
+
+\bibitem{Novak6}
+   \articleInJournalTwoAuthorsSubmitted
+     {J.~Novak}{M.~Novak}
+   {Polynomial approximation of rational manifolds. VI}
+     {2014}
+
+\bibitem{Novak7}
+\conferenceArticleTwoAuthors
+     {J.~Novak}{M.~Novak}
+   {Polynomial approximation of rational manifolds. VII}
+    {Proc.~112th Annual Symposium on Topological Approximation}
+    {2002}
+    {112--133}
+
+\bibitem{Santalo}
+  \bookOneAuthor
+  {L.A.~Santalo}
+   {Integral Geometry and Geometric Probability}
+    {Encyclopedia of Mathematics and its Applications, Volume 1, Addison Wesley, 1976}
+
+\bibitem{Saxe}
+   \articleInJournalOneAuthor
+     {J.~Saxe}
+   {Dynamic programming algorithms for recognizing small-bandwidth graphs in polynomial time}
+     {SIAM J.~Alg.~Meth.}{1}
+     {1980}{363--369}
+
+\bibitem{Strang}
+  \bookOneAuthor     {G.~Strang}
+   {Linear Algebra and its Applications, Third Edition}
+    {Saunders College \hbox{Publishing}, Harcourt Brace Jovanovich College Publishers, 1988}
+
+    \bibitem{Unger}
+\conferenceArticleOneAuthor
+    {W.~Unger}
+    {The complexity of the approximation of the bandwidth problem}
+    {Proc.~39th Annual IEEE Symposium on Foundations of Computer Science}
+    {1998}
+    {82--91}
+
+\bibitem{splet1}
+\webPageNoAuthor
+    {Miller--Rabin primality test}
+    {\newline http://en.wikipedia.org/wiki/Miller/\%E2\%80\%93Rabin\_primality\_test}
+    {25}{4}{2014}
+
+\bibitem{splet2}
+\webPageNoAuthorWithInstitution
+    {The Converse of Wilson's Theorem}{The Oxford Math Center}
+    {http://www.oxfordmathcenter.com/drupal7/node/382}
+    {25}{4}{2014}
+
+\bibitem{splet3}
+\webPageOneAuthor
+    {T.~Tao}
+    {Algebraic probability spaces}
+    {http://terrytao.wordpress.com/}
+    {4}{7}{2014}
+
+% There has to be an empty line here so that the page numbers of citations are properly displayed.
+\end{thebibliography}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Appendices %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancyplain}
+\vspace*{\fill}
+     \begin{center}
+          \bf{\Huge{Appendices}}
+     \end{center}
+\vspace*{\fill}
+\thispagestyle{fancy}
+
+\appendix
+\thispagestyle{empty}
+\pagenumbering{gobble}
+
+\addtocontents{toc}{\setcounter{tocdepth}{-1}}
+\appendices{A Title of First Appendix}
+\chapter{Title of First Appendix}
+\thispagestyle{empty}
+Here we add the first appendix.
+
+% Be careful:
+% the command
+% \thispagestyle{empty}
+% has to be present on every page of each appendix (so that the document header is not displayed)
+
+\appendices{B Title of Second Appendix}
+\chapter{Title of Second Appendix}
+\thispagestyle{empty}
+Here we add the second appendix.
+
+% Be careful:
+% the command
+% \thispagestyle{empty}
+% has to be present on every page of each appendix (so that the document header is not displayed)
+
+\addtocontents{toc}{\setcounter{tocdepth}{2}}
+\end{document}
