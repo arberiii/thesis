@@ -351,6 +351,13 @@ $C_6$ has Cartesian dimension $2$, indeed since it is not a complete graph it ca
 \end{figure}
 \end{example} 
 
+\begin{lemma}\label{diamondfreecliques}
+If graph $G$ is diamond-free then any two cliques of $G$ intersect in at most one vertex.
+\end{lemma}
+\begin{proof}
+Suppose cliques $A_1$ and $A_2$ intersect in at least two vertices say $v_1, v_2$. Becuase $A_1$ is maximal clique there is some vertice $v_3$ other than $v_1,v_2$ in $A_1$ but not in $A_2$ and since $A_1$ is clique we have that $v_1,v_2,v_3$ form a triangle, similarly there exists $v_4$ in $A_2$ but not in $A_1$ such that $v_1,v_2,v_4$ form triangle. But all together $v_1,v_2,v_3,v_4$ form a diamond, a contradiction with $G$ being diamond-free.
+\end{proof}
+
 \begin{theorem}
 For every graph G, the following conditions are equivalent:
 \begin{enumerate}
@@ -366,7 +373,8 @@ $(1)\implies(4)$ We show that none of those graphs in (4) can be an induced subg
 \newline First let's show for diamond. Suppose G has diamond as induced subgraph with vertex set $V(G)=\{v_1,v_2,v_3,v_4\}$ and edge set $E(G)=\{v_1v_2,v_1v_3,v_2v_3,v_2v_4,v_3v_4\}$, now because $v_1$, $v_2$ and $v_3$ is complete graph on $3$ vertices all three together differ in one coordinate, similarly for $v_2$, $v_3$ and $v_4$ so it follows that also $v_1$ and $v_4$ differ only in one coordinate but they are not adjacent.
 \newline Next suppose G has claw as induced subgraph with vertex set $V(G)=\{v_1,v_2,v_3,v_4\}$ and edge set $E(G)=\{v_1v_2,v_1v_3,v_1v_4\}$ and w.l.o.g. assume that assume that $\varphi_G(v_1)$ differs only in first coordinate with $\varphi_G(v_2)$ and because $v_2$ and $v_3$ are not adjacent then $\varphi_G(v_1)$ and $\varphi_G(v_3)$ must differ only in second coordinate. Which bring us to $v_4$, because $v_1$ and $v_4$ are adjacent they must differ only one coordinate, but either coordinate is not good as would  imply adjacency between $v_4$ and $v_2$ or $v_4$ and $v_3$ but there is no edge among them.
 \newline And finally for odd-cycle larger than 3. Let the vertex set be $V(G)=\{v_1,v_2,...,v_n\}$ with edge set $E(G)=\{v_1v_2,v_2v_3,\ldots v_nv_1\}$ and notice that since there is no triangle no three vertices lie in same line so if we color map define in the section ~\ref{kp-labeling-section} then by by following the cycle we alternate by colors $1$ and $2$, but to close the cycle it must be followed by two different colors but cycle is odd so it is not possible.\newline
-$(4)\implies (3)$ 
+$(4)\implies (3)$ We only need to show that $K(G)$ is not bipartite which is equivalent that $K(G)$ has an odd cycle. Suppose it has length greater than $3$, first note that no three cliques(vertices in $K(G)$) share one vertice as then a claw would be form in $G$ but $G$ is claw-free, so we form an odd cycle by following the common vertice of cliques of size greater than $3$ but $G$ is $\{C_5,C_7,\ldots\}$-free, therefore $K(G)$ has a cycle of length $3$. Now if all three cliques have a vertice in common then we can form a claw because those cliques are maximal so there exist some vertex that other cliques don't have. Let those cliques that form a triangle be $A_1,A_2,A_3$ and the common vertex of $A_1,A_2$ be $v_1$, $A_2,A_3$ be $v_2$ and $A_3,A_1$ be $v_3$, because $v_1$ and $v_2$ are in $A_2$ they are adjacent, similiar for others. Notice that one of the cliques must have another vertex $v_4$ other than $v_1,v_2,v_3$ otherwise $K(G)$ would be just a vertex. Now w.l.o.g. say $v_4\in A_1$ then we have another triangle with $v_1,v_3\in A_1$, which all together $v_1,v_2,v_3,v_4$ forms a diamond but $G$ is diamond-free which leads to a contradiction, therefore $K(G)$ is bipartite.\newline 
+$(3)\implies (1)$ If $G$ is complete then we know that $Cdim(G)=1$, suppose $G$ is not complete. Since $K(G)$ is bipartite we color vertices with two colors in natural way. Map vertices of $G$ in $\mathbb{R}^2$ by placing cliques of $G$ having one color on vertical lines and cliques having the other color on horizontal lines. By Lemma ~\ref{diamondfreecliques}, no two vertices are mapped to same point.
 \end{proof}
 
 \begin{theorem}[Staton and Wingard 1998]
