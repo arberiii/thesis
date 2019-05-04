@@ -387,18 +387,16 @@ $(1)\implies(4)$ We show that none of those graphs in (4) can be an induced subg
 \newline And finally for odd-cycle larger than 3. Let the vertex set be $V(G)=\{v_1,v_2,...,v_n\}$ with edge set $E(G)=\{v_1v_2,v_2v_3,\ldots v_nv_1\}$ and notice that since there is no triangle no three vertices lie in same line so if we color map define in the section ~\ref{kp-labeling-section} then by by following the cycle we alternate by colors $1$ and $2$, but to close the cycle it must be followed by two different colors but cycle is odd so it is not possible.\newline
 $(4)\implies (3)$ We only need to show that $K(G)$ is not bipartite which is equivalent that $K(G)$ has an odd cycle. Suppose it has length greater than $3$, first note that no three cliques(vertices in $K(G)$) share one vertice as then a claw would be form in $G$ but $G$ is claw-free, so we form an odd cycle by following the common vertice of cliques of size greater than $3$ but $G$ is $\{C_5,C_7,\ldots\}$-free, therefore $K(G)$ has a cycle of length $3$. Now if all three cliques have a vertice in common then we can form a claw because those cliques are maximal so there exist some vertex that other cliques don't have. Let those cliques that form a triangle be $A_1,A_2,A_3$ and the common vertex of $A_1,A_2$ be $v_1$, $A_2,A_3$ be $v_2$ and $A_3,A_1$ be $v_3$, because $v_1$ and $v_2$ are in $A_2$ they are adjacent, similiar for others. Notice that one of the cliques must have another vertex $v_4$ other than $v_1,v_2,v_3$ otherwise $K(G)$ would be just a vertex. Now w.l.o.g. say $v_4\in A_1$ then we have another triangle with $v_1,v_3\in A_1$, which all together $v_1,v_2,v_3,v_4$ forms a diamond but $G$ is diamond-free which leads to a contradiction, therefore $K(G)$ is bipartite.\newline 
 $(3)\implies (1)$ If $G$ is complete then we know that $Cdim(G)=1$, suppose $G$ is not complete. Since $K(G)$ is bipartite we color vertices with two colors in natural way. Map vertices of $G$ in $\mathbb{R}^2$ by placing cliques of $G$ having one color on vertical lines and cliques having the other color on horizontal lines. By Lemma ~\ref{diamondfreecliques}, no two vertices are mapped to same point.
+\newline
+$(1)\iff (2)$ Given a bipartite graph $H$ such that $L(HG$, construct the adjacency matrix $A$. Mark points in $\mathbb{R}^2$ at $(i, j)$ iff $a_{ij} = 1$ in uppertriangle matrix of $A$. It is immediate that one can map vertex ${i,j}\in G$ to $(i,j)$ where $i<j$ and notice that this defines a one to one mapping and if two vertices are adjacent in $G$ then they will defer in exactly on coordinate. This shows that $Cdim(G)\leq 2$ as we found a $2$-realization.\newline
+Since G can be realized with vertices only at positive integral points (the map $\varphi_G$ can be defined to $\mathbb{N}^d$), the proof works in reverse.
 \end{proof}
 
 \begin{theorem}[Staton and Wingard 1998]
 Every d-realizable graph is \{$K_{1,d+1}$ , diamond,
 $K_{2,3}$ , $C_5$ \}-free.
 \end{theorem} 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=0.4\linewidth]{figures/k23notrealizable.png}
-\end{center}
-\caption{$K_{2,3}$ is not realizable}
-\end{figure}
+
 Next we see the relation between $KP$-labeling and Cartesian dimension:
  \begin{theorem}[Kla\v zvar and Peterin 2005]
 For every connected graph G and a positive integer d, we have $Cdim(G) \leq d$ if and only if $G$ has a d-KP-labeling.
