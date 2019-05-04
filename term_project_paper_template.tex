@@ -223,7 +223,7 @@ Since a $d$-realizable graph is also $(d + 1)$-realizable, the notion of d-reali
 of $d$ complete graphs. This point of view adds the Cartesian dimension of a graph to the list of graph dimensions studied in the literature related to various embeddings of graphs into Cartesian product graphs [24, 20, 27, 34]. Other dimensions were studied related to the
 strong product [22, 15, 32, 47] and the direct product of graphs [41, 48].
 
-\chapter{KP-labeling and induced subgraphs of Hamming Graphs}
+\chapter{Characterizing Subgraphs of Hamming Graphs}
 \thispagestyle{fancy}
 
 In this chapter we will talk about necessary and sufficent conditions for a graph to be induced subgraph of Hamming Graphs and some results regarding those conditions 
@@ -272,10 +272,22 @@ Quotient graph is the central concept in this chapter, so to get a better unders
 We define the partition of $E(C_7)$ by defining $F_i$ having edges with label $i$, as we can see $C_7\backslash F_1$ and $C_7/F_3$ have only two vertices and since there is an edge in the correspoding $F_i$ connecting those two components therefore both of  $C_7\backslash F_1$ and $C_7/F_3$ are simply $K_2$, while $C_7\backslash F_2$ has three vertices but each two of compontents are connected with an edge from $F_2$ so $C_7\backslash F_2$ is simply $K_3$.   
 \newline
 They defined two conditions to get a better understanding. They actuall named them by letters $B$ and $C$ but since we will not need the condition $A$ will name just by numbers $1$ and $2$.\newline
-We first state two labeling conditions needed:
+We say that a $d$-edge-labeling of $G$ is a ($d$-)KP-labeling if it satisfies the following conditions:
 \newline
 \textbf{Condition 1} Let $G$ be a graph. Then edges of a triangle have the same label.\newline
-\textbf{Condition 2} Let $G$ be a labeled graph and let $u$ and $v$ be arbitrary vertices of $G$ with $d_G(u,v) \geq 2$. Then there exist different labels i and j which both appear on any induced u, v-path.\newline
+\textbf{Condition 2} Let $G$ be a labeled graph and let $u$ and $v$ be arbitrary vertices of $G$ with $d_G(u,v) \geq 2$. Then there exist different labels $i$ and $j$ which both appear on any induced $u$, $v$-path.\newline
+\begin{figure}[h!]\label{kpexample}
+\begin{center}
+\includegraphics[width=0.75\linewidth]{figures/kpexample.png}
+\end{center}
+\caption{The label in left is a KP-labeling, while the one in right is not.}
+\end{figure}
+\begin{example}
+Let's see two examples of edge labeling of the same graph $G$ as in Figure ~\ref{kpexample}.\newline
+The label in left satisfy condition $1$ as the edges of triangle have the same label, also it satisfies condition $2$ as it can be check that for $u$ and $v$ arbitrary vertices of $G$ with $d_G(u,v) \geq 2$ then there exist different labels $i$ and $j$ which both appear on any induced $u$, $v$-path. Therefore the label in left is a KP-labeling.\newline
+The label in right doesn't satisfies neither condition $1$ nor $2$, as the edges of triangle don't have the same label, and also if we take vertices $v_5$ and $v_8$ then paths $P_1=v_5v_3v_4v_6v_8$ and $P_2=v_5v_7v_8$ have only one label in their intersecion.
+\end{example}
+\section{Induced subgraphs of Hamming Graphs}
 Next we try to understand those conditions on cycle and we infer the following result
 \begin{lemma}\label{lemma:cyclenotunique}Let $G$ be a labeled graph fulfilling Condition 2 and let $C_k$ , $k \geq 4$, be an induced cycle of $G$. Then every label of $C_k$ is presented more than once on $C_k$.
 \end{lemma}
