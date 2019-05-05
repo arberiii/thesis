@@ -392,6 +392,13 @@ $(1)\iff (2)$ Given a bipartite graph $H$ such that $L(HG$, construct the adjace
 Since G can be realized with vertices only at positive integral points (the map $\varphi_G$ can be defined to $\mathbb{N}^d$), the proof works in reverse.
 \end{proof}
 
+\begin{lemma}
+Let $G$ be a d-realizable graph. Let $v$ be a vertex adjacent to vertices $x$ and $y$. Then $x$ and $y$ are adjacent if and only if they differ from $v$ in the same coordinate.
+\end{lemma}
+\begin{proof}
+($\implies$) If $x$ and $y$ are adjacent then they differ in exactly one coordinate say in $k$th coordinate. Also say $v$ differs to $x$ exactly in $i$th coordinate and to $y$ in $j$th coordinate. Now suppose $x$ and $y$ don't differ from $v$ in the same coordinate which means that $i\neq j$, also note that $k$ cannot be equal to both $i$ and $j$ as this would imply $i=j$ so w.l.o.g. $k\neq j$. Now because $i\neq j$, the $j$th coordinate of x differs from $j$th coordinate of $y$ 
+\end{proof}
+
 \begin{theorem}[Staton and Wingard 1998]
 Every d-realizable graph is \{$K_{1,d+1}$ , diamond,
 $K_{2,3}$ , $C_5$ \}-free.
