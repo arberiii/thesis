@@ -392,20 +392,24 @@ $(1)\iff (2)$ Given a bipartite graph $H$ such that $L(HG$, construct the adjace
 Since G can be realized with vertices only at positive integral points (the map $\varphi_G$ can be defined to $\mathbb{N}^d$), the proof works in reverse.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{xyv adjacent}
 Let $G$ be a d-realizable graph. Let $v$ be a vertex adjacent to vertices $x$ and $y$. Then $x$ and $y$ are adjacent if and only if they differ from $v$ in the same coordinate.
 \end{lemma}
 \begin{proof}
-($\implies$) If $x$ and $y$ are adjacent then they differ in exactly one coordinate say in $k$th coordinate. Also say $v$ differs to $x$ exactly in $i$th coordinate and to $y$ in $j$th coordinate. Now suppose $x$ and $y$ don't differ from $v$ in the same coordinate which means that $i\neq j$, also note that $k$ cannot be equal to both $i$ and $j$ as this would imply $i=j$ so w.l.o.g. $k\neq j$. Now because $i\neq j$, the $j$th coordinate of $x$ is the same with $j$th coordinate of $v$ and therefore differs from $j$th coordinate of $y$, but also $k\neq j$ which means that $x$ and $y$ differ in more than one coordinate which contradicts the fact that $x$ and $y$ are adjacent. 
+($\implies$) If $x$ and $y$ are adjacent then they differ in exactly one coordinate say in $k$th coordinate. Also say $v$ differs to $x$ exactly in $i$th coordinate and to $y$ in $j$th coordinate. Now suppose $x$ and $y$ don't differ from $v$ in the same coordinate which means that $i\neq j$, also note that $k$ cannot be equal to both $i$ and $j$ as this would imply $i=j$ so w.l.o.g. $k\neq j$. Now because $i\neq j$, the $j$th coordinate of $x$ is the same with $j$th coordinate of $v$ and therefore differs from $j$th coordinate of $y$, but also $k\neq j$ which means that $x$ and $y$ differ in more than one coordinate which contradicts the fact that $x$ and $y$ are adjacent.\newline
+($\impliedby$) If they differ from $v$ in the same coordinate and because both of them are adjacent to $v$ then it means that they differ in exactly that coordinate which they differ with $v$, i.e. in one coordinate therefore they are adjacent.
 \end{proof}
 
-\begin{theorem}[Staton and Wingard 1998]
+\begin{theorem}
 Every d-realizable graph is \{$K_{1,d+1}$ , diamond,
 $K_{2,3}$ , $C_5$ \}-free.
 \end{theorem} 
-
+\begin{proof}
+\textit{For $K_{1,d+1}:$} Suppose $v$ is the hub (the vertex with largest degree) of an induced $K_{1,d+1}$. Then $v$ differs from $n+1$ neighbors in different coordinates by Lemma ~\ref{xyv adjacent}, but there are only $n$ coordinates.\newline
+\textit{For diamond:} If $v_1$, $v_2$, $x$ and $y$ are vertices of an induced diamond with $v_1$ and $v_2$ the vertices of degree $2$, then, invoking the Lemma ~\ref{xyv adjacent} we see that $v_1$ differs from $x$ and $y$ in the same coordinate. Similarly $v_2$ diifers from $x$ and $y$ in the same coordinate. Hence $v_1$ and $v_2$ differ from $x$ and $y$ in the same coordinate, and thus either $x=y$ or $x$ is adjacent to $y$. 
+\end{proof}
 Next we see the relation between $KP$-labeling and Cartesian dimension:
- \begin{theorem}[Kla\v zvar and Peterin 2005]
+ \begin{theorem}[Klav\v zar and Peterin 2005]
 For every connected graph G and a positive integer d, we have $Cdim(G) \leq d$ if and only if $G$ has a d-KP-labeling.
 \end{theorem}
 
