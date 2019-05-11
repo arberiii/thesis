@@ -1,10 +1,11 @@
 \thispagestyle {fancy}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {chapter}{\numberline {2}Characterizing Subgraphs of Hamming Graphs}{4}
-\contentsline {section}{\numberline {2.1}KP-labeling}{4}
-\contentsline {section}{\numberline {2.2}Induced subgraphs of Hamming Graphs}{7}
-\contentsline {chapter}{\numberline {3}Cartesian dimension}{12}
-\contentsline {chapter}{\numberline {4}Bibliography}{17}
+\contentsline {chapter}{\numberline {2}Preliminaries}{4}
+\contentsline {chapter}{\numberline {3}Characterizing Subgraphs of Hamming Graphs}{5}
+\contentsline {section}{\numberline {3.1}KP-labeling}{5}
+\contentsline {section}{\numberline {3.2}Induced subgraphs of Hamming Graphs}{8}
+\contentsline {chapter}{\numberline {4}Cartesian dimension}{13}
+\contentsline {chapter}{\numberline {5}Bibliography}{18}
 \global \c@tocdepth -1\relax 
 \contentsline {chapter}{\numberline {A}Title of First Appendix}{}
 \contentsline {chapter}{\numberline {B}Title of Second Appendix}{}
