@@ -438,17 +438,21 @@ Next we see the relation between $KP$-labeling and Cartesian dimension:
 For every connected graph G and a positive integer d, we have $Cdim(G) \leq d$ if and only if $G$ has a d-KP-labeling.
 \end{theorem}
 
+
 \subsection{Cartesian dimension of $P_i\square P_j$}
-An interesting class of graph is the Cartesian product of two paths. We will see that we can find the exact Cartesian dimension of those graphs. It will be interesting as we will see an application of relation between Cartesian dimension and KP-labeling. \newline
-First we start by dealing with small length of paths. Without loss of generality let us take $i\leq j$.\newline
-If $i=1$ then $P_1\square P_j=P_j$ then $Cdim(P_i\square P_j)=0$ if $j=1$, $Cdim(P_i\square P_j)=1$ if $j=2$ and $Cdim(P_i\square P_j)=2$ if $j\geq 2$.\newline
-If $i=2$ then $Cdim(P_i\square P_j)=2$ if $j=2$ and we write as proposition when $j\geq 3$
+The Cartesian product of two path graphs is an interesting type of graph which generates its product in a grid graph. The results below will demonstrate that when finding the exact Cartesian dimension of these graphs and adding a constraint, the Cartesian dimension is equal for any pair of path graphs. To prove these results, we will use the theorem which shows the relation between Cartesian dimension and KP-labeling.\newline
+
+First, we examine the short paths. Without loss of generality, let us take $i\leq j$.\newline
+If $i=1$, then $P_1\square P_j=P_j$; if $j=1$ then $Cdim(P_i\square P_j)=0$; if $j=2$, then $Cdim(P_i\square P_j)=1$; and if $j\geq 2$, then $Cdim(P_i\square P_j)=2$
+ .\newline 
+If $i=2$ and $j=2$, then $Cdim(P_i\square P_j)=2$.
+As a result, we write the following proposition
 \begin{proposition}
 $Cdim(P_2\square P_j)=3$ if $j\geq 3$
 \end{proposition}
 \begin{proof}
-From Theorem \ref{d-realizable-free} we have that $Cdim(P_2\square P_j)\geq 3$ since $P_2 \square P_j$ has $K_{1,3}$ as induced subgraph.\newline
-Next we find a KP-labeling of the graph with 3 labels.
+From Theorem \ref{d-realizable-free}, we have that $Cdim(P_2\square P_j)\geq 3$, since $P_2 \square P_j$ has $K_{1,3}$ as induced subgraph.\newline
+Next, we find a KP-labeling of the graph with 3 labels.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.6\linewidth]{figures/p_2sqp_j.png}
@@ -456,19 +460,19 @@ Next we find a KP-labeling of the graph with 3 labels.
 \caption{KP-labeling of $P_2\square P_6$}
 \end{figure}\newline
 We label the copies of $P_2$ with label 1 and both copies of $P_j$ the same by alternating between 2 and 3.\newline
-For any non-adjacent vertices $u$ and $v$ if they belong to $C_4$ take label 1 and the other one to satisfy the Condition 2 and otherwise take labels 2 and 3 as for each pair of vertices that do not belong to $C_4$ then they belong to different components if we remove the edges of label 2 or 3.\newline
-Therefore this label is a KP-labeling and from Theorem \ref{cdim<kp} we have that $Cdim(P_2\square P_j)\leq 3$.\newline
-Combining both inequalities we have that $Cdim(P_2\square P_j)=3$ if $j\geq 3$
+For any two non-adjacent vertices, $u$ and $v$, if they belong to $C_4$, we take label 1 and the other label from set $\{2,3\}$ to satisfy the Condition 2; otherwise take labels 2 and 3 for vertices, $u$ and $v$, when they do not belong to some $C_4$ and $u$ and $v$ are in different components when taking the partition of graph with respect to labels 2 or 3.\newline
+Therefore, this label is a KP-labeling and from Theorem \ref{cdim<kp}, we have that $Cdim(P_2\square P_j)\leq 3$.\newline
+Combining both inequalities, we have that $Cdim(P_2\square P_j)=3$ if $j\geq 3$
 
 \end{proof}
 
-And now we will look at general case when $i\geq 3$.
+Finally, we will look at the general case when $i\geq 3$.
 \begin{proposition}
 $Cdim(P_2\square P_j)=4$ if $i\geq 3$
 \end{proposition}
 \begin{proof}
-From Theorem \ref{d-realizable-free} we have that $Cdim(P_i\square P_j)\geq 4$ since $P_i \square P_j$ has $K_{1,4}$ as induced subgraph.\newline
-Next we find a KP-labeling of the graph with 4 labels.
+From Theorem \ref{d-realizable-free}, we have that $Cdim(P_i\square P_j)\geq 4$, since $P_i \square P_j$ has $K_{1,4}$ as induced subgraph.\newline
+Next, we find a KP-labeling of the graph with 4 labels.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.6\linewidth]{figures/p_isqp_j.png}
@@ -476,10 +480,12 @@ Next we find a KP-labeling of the graph with 4 labels.
 \caption{KP-labeling of $P_5\square P_6$}
 \end{figure}\newline
 \end{proof}
-We label the copies of $P_i$ identically by alternating between 1 and 4 and the copies of $P_j$ identically by alternating between 2 and 3.\newline
-Indeed this is a KP-labeling as for any non-adjacent vertices $u$ and $v$ if they belong to a $C_4$ then take the labels in this cycle, otherwise either horizontally or vertically $u$ and $v$ are distanced by more than length of 2(to go from $u$ to $v$ you have to make two hoops vertically or horizontally) so if it is horizontally take labels 2 and 3 and if vertically take labels 1 and 4 and similarly as in the previous proposition then vertices $u$ and $v$ would belong to different components when considering removing one of the labels we choose. \newline
-Therefore this label is a KP-labeling and from Theorem \ref{cdim<kp} we have that $Cdim(P_i\square P_j)\leq 4$.\newline
-Combining both inequalities we have that $Cdim(P_i\square P_j)=4$ if $i\geq 3$
+We label the copies of $P_i$ identically by alternating between 1 and 4; and the copies of $P_j$ identically by alternating between 2 and 3.\newline
+For any two non-adjacent vertices, $u$ and $v$, when they belong to a $C_4$, we take the labels in this cycle. However, when any two non-adjacent vertices, $u$ and $v$, do not belong to a $C_4$, they are distanced vertically or horizontally in length by more than 2 (to go from $u$ to $v$ you have to make two hoops vertically or horizontally). When making the hoop horizontally, we take labels 2 and 3; when vertically, we take labels 1 and 4. Similarly to the previous proposition, vertices $u$ and $v$ would belong to different components when considering removing one of the labels we choose. 
+ \newline
+Therefore, this label is a KP-labeling and from Theorem \ref{cdim<kp}, we have that $Cdim(P_i\square P_j)\leq 4$.\newline
+Combining both inequalities, we have that $Cdim(P_i\square P_j)=4$, if $i\geq 3$
+
 
 
 
