@@ -5,7 +5,8 @@
 \contentsline {section}{\numberline {3.1}KP-labeling}{5}
 \contentsline {section}{\numberline {3.2}Induced subgraphs of Hamming Graphs}{8}
 \contentsline {chapter}{\numberline {4}Cartesian dimension}{13}
-\contentsline {chapter}{\numberline {5}Bibliography}{18}
+\contentsline {subsection}{\numberline {4.0.1}Cartesian dimension of $P_i\square P_j$}{17}
+\contentsline {chapter}{\numberline {5}Bibliography}{20}
 \global \c@tocdepth -1\relax 
 \contentsline {chapter}{\numberline {A}Title of First Appendix}{}
 \contentsline {chapter}{\numberline {B}Title of Second Appendix}{}

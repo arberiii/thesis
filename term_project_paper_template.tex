@@ -405,7 +405,7 @@ Let $G$ be a d-realizable graph. Let $v$ be a vertex adjacent to vertices $x$ an
 ($\impliedby$) If they differ from $v$ in the same coordinate and because both of them are adjacent to $v$ then it means that they differ in exactly that coordinate which they differ with $v$, i.e. in one coordinate therefore they are adjacent.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{d-realizable-free}
 Every d-realizable graph is \{$K_{1,d+1}$ , diamond,
 $K_{2,3}$ , $C_5$ \}-free.
 \end{theorem} 
@@ -434,9 +434,54 @@ The first of these is adjacent to $v_2$ and second is adjacent to $v_3$
 Staton and Wingard
 
 Next we see the relation between $KP$-labeling and Cartesian dimension:
- \begin{theorem}[Klav\v zar and Peterin 2005]
+ \begin{theorem}[Klav\v zar and Peterin 2005]\label{cdim<kp}
 For every connected graph G and a positive integer d, we have $Cdim(G) \leq d$ if and only if $G$ has a d-KP-labeling.
 \end{theorem}
+
+\subsection{Cartesian dimension of $P_i\square P_j$}
+An interesting class of graph is the Cartesian product of two paths. We will see that we can find the exact Cartesian dimension of those graphs. It will be interesting as we will see an application of relation between Cartesian dimension and KP-labeling. \newline
+First we start by dealing with small length of paths. Without loss of generality let us take $i\leq j$.\newline
+If $i=1$ then $P_1\square P_j=P_j$ then $Cdim(P_i\square P_j)=0$ if $j=1$, $Cdim(P_i\square P_j)=1$ if $j=2$ and $Cdim(P_i\square P_j)=2$ if $j\geq 2$.\newline
+If $i=2$ then $Cdim(P_i\square P_j)=2$ if $j=2$ and we write as proposition when $j\geq 3$
+\begin{proposition}
+$Cdim(P_2\square P_j)=3$ if $j\geq 3$
+\end{proposition}
+\begin{proof}
+From Theorem \ref{d-realizable-free} we have that $Cdim(P_2\square P_j)\geq 3$ since $P_2 \square P_j$ has $K_{1,3}$ as induced subgraph.\newline
+Next we find a KP-labeling of the graph with 3 labels.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{figures/p_2sqp_j.png}
+\end{center}
+\caption{KP-labeling of $P_2\square P_6$}
+\end{figure}\newline
+We label the copies of $P_2$ with label 1 and both copies of $P_j$ the same by alternating between 2 and 3.\newline
+For any non-adjacent vertices $u$ and $v$ if they belong to $C_4$ take label 1 and the other one to satisfy the Condition 2 and otherwise take labels 2 and 3 as for each pair of vertices that do not belong to $C_4$ then they belong to different components if we remove the edges of label 2 or 3.\newline
+Therefore this label is a KP-labeling and from Theorem \ref{cdim<kp} we have that $Cdim(P_2\square P_j)\leq 3$.\newline
+Combining both inequalities we have that $Cdim(P_2\square P_j)=3$ if $j\geq 3$
+
+\end{proof}
+
+And now we will look at general case when $i\geq 3$.
+\begin{proposition}
+$Cdim(P_2\square P_j)=4$ if $i\geq 3$
+\end{proposition}
+\begin{proof}
+From Theorem \ref{d-realizable-free} we have that $Cdim(P_i\square P_j)\geq 4$ since $P_i \square P_j$ has $K_{1,4}$ as induced subgraph.\newline
+Next we find a KP-labeling of the graph with 4 labels.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{figures/p_isqp_j.png}
+\end{center}
+\caption{KP-labeling of $P_5\square P_6$}
+\end{figure}\newline
+\end{proof}
+We label the copies of $P_i$ identically by alternating between 1 and 4 and the copies of $P_j$ identically by alternating between 2 and 3.\newline
+Indeed this is a KP-labeling as for any non-adjacent vertices $u$ and $v$ if they belong to a $C_4$ then take the labels in this cycle, otherwise either horizontally or vertically $u$ and $v$ are distanced by more than length of 2(to go from $u$ to $v$ you have to make two hoops vertically or horizontally) so if it is horizontally take labels 2 and 3 and if vertically take labels 1 and 4 and similarly as in the previous proposition then vertices $u$ and $v$ would belong to different components when considering removing one of the labels we choose. \newline
+Therefore this label is a KP-labeling and from Theorem \ref{cdim<kp} we have that $Cdim(P_i\square P_j)\leq 4$.\newline
+Combining both inequalities we have that $Cdim(P_i\square P_j)=4$ if $i\geq 3$
+
+
 
  \begin{thebibliography}{99}
 \thispagestyle{fancy}
