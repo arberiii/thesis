@@ -177,7 +177,7 @@ In order to determine how hard will it be to answer that question we should firs
 Let $A$ be an algorithm that solves a problem $\mathcal{P}$. The running time of algorithm $A$ is the number of basic calculation steps performed by $A$ (additions, subtractions, multiplications, comparison of two numbers etc.). The time complexity of algorithm $A$ is the function $T_A(n)$ that
 measures the running time of $A$ in the worst case:
 \begin{center}
-	$T_A : n \mapsto $ largest running time of $A$ on input instances of size $\leq$ $n$.
+	$T_A : n \rightarrow $ largest running time of $A$ on input instances of size $\leq$ $n$.
 \end{center} 
 Besides time complexity, space complexity of an algorithm might also be important (how much computer memory the algorithm needs). If we have a probability distribution on the input instances, we can also estimate the expected time complexity of the algorithm.\newline
 Given two functions $f,g : \mathbb{N} \to \mathbb{N}$ is of order (at most) $O(g)$, if there exists a constant $C > 0$ such that $f(n) \leq C\cdot g(n)$ for all $n \in N$ and we write $f = O(g)$.\newline
@@ -248,7 +248,7 @@ whenever the edge $e$ shows up, replace this with the path $P$ (or $P$ traced ba
 \end{proof}
 The Cartesian product $G\square H$ of graphs G and H is the graph with vertex set $V(G)\times V(H)$ in which the vertex $(a,x)$ is adjacent to the vertex $(b,y)$ whenever
 $ab\in E(G)$ and $x=y$, or $a=b$ and $xy\in E(H)$. For a fixed vertex $a$ of $G$, the vertices $\{(a,x)|x\in V(H)\}$ induce a subgraph of $G \square H$ isomorphic to $H$, called an $H$-layer of $G \square H$. Analogously we define $G$-layers. A subgraph of $G \square H$ is called non-trivial if it intersects at least two $G$-layers and at least two $H$-layers. \newline
-The map $p_G:G\square H \mapsto G$ defined by $p_G(a,x)=a$, is called a projection. The image of an edge $(a,x)(b,y)$ under a projection is an edge when $x=y$ or a vertex in when $a=b$.\newline
+The map $p_G:G\square H \rightarrow G$ defined by $p_G(a,x)=a$, is called a projection. The image of an edge $(a,x)(b,y)$ under a projection is an edge when $x=y$ or a vertex in when $a=b$.\newline
 \begin{figure}
 \centering
 \includegraphics[scale=0.45]{figures/Graph-Cartesian-product.png}
@@ -257,14 +257,14 @@ The map $p_G:G\square H \mapsto G$ defined by $p_G(a,x)=a$, is called a projecti
 \end{figure}
 Cartesian products of complete graphs are known as Hamming graphs. But they can be described also as follows. For
 $i=1,2,\ldots n$ let $r_i\geq 2$ be given integers. Let $G$ be the graph whose vertices are the $n$-tuples $b_1b_2\cdots b_n$ with $b_i\in \{0,1,\ldots r_i-1\}$. Two vertices are adjacent if the corresponding tuples differ in precisely one place—one coordinate. The vertex set of $G$ is the same as $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ and edges in $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ between two vertices have same vertex in every graph $K_{r_i}$ but one and since in complete graphs we have every possible edge, then it is easy to see that they are isomorphic. For an edge $uv$ of
-$H=K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ we define the color map $c:E(H)\mapsto \{1,2,\ldots n\}$ with $c(uv)=i$, where u and v differ in coordinate i.
+$H=K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ we define the color map $c:E(H)\rightarrow \{1,2,\ldots n\}$ with $c(uv)=i$, where u and v differ in coordinate i.
 \newline
-Let $G$ be a connected graph and let $\mathcal{F}=\{F_1,F_2,\ldots F_k\}$ be a partition of $E(G)$. The \textit{quotient graph} $G\backslash F_i$ has connected components of $G\\F_i$ as vertices, two components $C$ and $C'$ being adjacent whenever there exists an edge of $F_i$ connecting a vertex of $C$ with a vertex of $C'$ . For each $i$, define a map $f_i:V(G)\mapsto V(G\backslash F_i)$ by $f_i(v)=C$, where $C$ is the component of $G\\F_i$ containing $v$.Then let
-$$f:G\mapsto G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$$
+Let $G$ be a connected graph and let $\mathcal{F}=\{F_1,F_2,\ldots F_k\}$ be a partition of $E(G)$. The \textit{quotient graph} $G\backslash F_i$ has connected components of $G\\F_i$ as vertices, two components $C$ and $C'$ being adjacent whenever there exists an edge of $F_i$ connecting a vertex of $C$ with a vertex of $C'$ . For each $i$, define a map $f_i:V(G)\rightarrow V(G\backslash F_i)$ by $f_i(v)=C$, where $C$ is the component of $G\\F_i$ containing $v$.Then let
+$$f:G\rightarrow G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$$
 be the natural coordinate-wise mapping, that is
 $$f(v)=(f_1(v),f_2(v),\ldots , f_k(v))$$
 We call $f$ the \textit{quotient map} of $G$ with respect to $F$. Note that $f$ need not be one-to-one in general and that it is possible that some quotient graphs are the one vertex graph. However, all the partitions $F$ introduced later will lead to one-to-one mappings with non-trivial quotient graphs.\newline
-A partition $\{F_1,F_2,\ldots ,F_k\}$ of $E(G)$ naturally leads to an edge-labeling $l:E(G)\mapsto \{1,2,\ldots,k\}$ by setting $l(e)=i$, where $e\in F_i$. Unless stated
+A partition $\{F_1,F_2,\ldots ,F_k\}$ of $E(G)$ naturally leads to an edge-labeling $l:E(G)\rightarrow \{1,2,\ldots,k\}$ by setting $l(e)=i$, where $e\in F_i$. Unless stated
 otherwise, a labeling (or more precisely a $k$-labeling) of $G$ will mean an edge-labeling (with $k$ labels).
 \newline 
 Quotient graph is the central concept in this chapter, so to get a better understanding we also visualize it.
@@ -353,13 +353,13 @@ $C_7$ has a labeling in which Conditions 1 and 2 hold as the first graph in Figu
 \end{example}
 Note that the quotient graphs obtained in the proof of Theorem ~\ref{thm:mainkp} need not be complete. For instance, consider the path $P_4$ together with the labeling 1, 2, 1 as we get $G\backslash F_1=P_3$ and $G\backslash F_2=K_2$.
 \chapter{Cartesian dimension}
-Given a positive integer $d$, a $d$-realization of a graph $G=(V,E)$ is an injective mapping $\varphi_G:V\mapsto \mathbb{R}^d$ such that two vertices $u, v \in V$ are adjacent if and only if $\varphi G(u)$ and $\varphi G(v)$ differ in exactly one coordinate. A graph $G$ is said to be $d$-realizable if it has a $d$-realization. Note that $G$ is $d$-realizable if and only if $G$ has a $d$-realization $\varphi_G : V \mapsto \mathbb{N}^d$ or any large enough set of dimension $d$ since $V(G)$ is countable.\newline
+Given a positive integer $d$, a $d$-realization of a graph $G=(V,E)$ is an injective mapping $\varphi_G:V\rightarrow \mathbb{R}^d$ such that two vertices $u, v \in V$ are adjacent if and only if $\varphi G(u)$ and $\varphi G(v)$ differ in exactly one coordinate. A graph $G$ is said to be $d$-realizable if it has a $d$-realization. Note that $G$ is $d$-realizable if and only if $G$ has a $d$-realization $\varphi_G : V \rightarrow \mathbb{N}^d$ or any large enough set of dimension $d$ since $V(G)$ is countable.\newline
 Any graph that has a $d$-realization, it has also a $d+1$-realization (simply add one coordinate equal to $0$). Which naturally leads to a definition: the Cartesian dimension of a graph $G = (V, E)$, denoted $Cdim(G)$, is defined as the minimum non-negative integer $d$ such that $G$ is $d$-realizable, if such an integer exists, and $\infty$, otherwise. (Note that $K_1$ is the only graph of Cartesian dimension 0.)\newline
 
 For a graph $G$ to have Cartesian dimension $1$ it must have a $1$-realization, or in other words you can map all the vertices of the graph to $\mathbb{R}$ and becuase the map has to be injective every vertice is mapped to different real number but every two vertice differ in exactly one coordinate which makes them adjacent, therefore the only graphs of Cartesian dimension $1$ are complete graphs of order at least $2$.
 
 \begin{example}
-$C_6$ has Cartesian dimension $2$, indeed since it is not a complete graph it cannot have dimension $1$, and we find a $2-realization$ of $C_6$ with vertex set $V=\{v_1,v_2,v_3,v_4,v_5,v_6\}$ and edge set $E=\{v_1v_2,v_2v_3,v_3v_4,v_4v_5,v_5v_6,v_6v_1\}$ by map defining $\varphi_{C_7}:V\mapsto \mathbb{R}^2$ with $\varphi(v_1)=(1,1)$, $\varphi(v_1)=(1,1)$, $\varphi(v_2)=(3,1)$, $\varphi(v_3)=(3,3)$, $\varphi(v_4)=(2,3)$, $\varphi(v_5)=(2,2)$ and $\varphi(v_1)=(1,2)$. An easy check shows that indeed for any edge the corresponding values of $\varphi$ differ in exactly one coordinate.
+$C_6$ has Cartesian dimension $2$, indeed since it is not a complete graph it cannot have dimension $1$, and we find a $2-realization$ of $C_6$ with vertex set $V=\{v_1,v_2,v_3,v_4,v_5,v_6\}$ and edge set $E=\{v_1v_2,v_2v_3,v_3v_4,v_4v_5,v_5v_6,v_6v_1\}$ by map defining $\varphi_{C_7}:V\rightarrow \mathbb{R}^2$ with $\varphi(v_1)=(1,1)$, $\varphi(v_1)=(1,1)$, $\varphi(v_2)=(3,1)$, $\varphi(v_3)=(3,3)$, $\varphi(v_4)=(2,3)$, $\varphi(v_5)=(2,2)$ and $\varphi(v_1)=(1,2)$. An easy check shows that indeed for any edge the corresponding values of $\varphi$ differ in exactly one coordinate.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=1\linewidth]{figures/c_62real.png}
@@ -438,6 +438,22 @@ Next we see the relation between $KP$-labeling and Cartesian dimension:
 For every connected graph G and a positive integer d, we have $Cdim(G) \leq d$ if and only if $G$ has a d-KP-labeling.
 \end{theorem}
 
+We take a closer look at 3-dimensional case and present two results both are related to the Klav\v zar-Peterin characterization which is needed for hardness proof for recognizing 3-realizable graphs developed in paper (here reference paper of Prof Martin).\newline
+In the first result, we will see that the defining properties of a 3-KP-labeling are satisfied for a graph as soon as they are satisfied for the family of all its induced subgraphs isomorphic to a cycle or to a $P_3$.
+
+\begin{theorem}
+Let $G$ be a graph. A 3-edge-labeling of $G$ is a KP-labeling if and only if it satisfies the following two conditions:\newline
+\textbf{Condition 3}: for every induced cycle $C$ of $G$, the restriction of the labeling to $E(C)$ is
+a KP-labeling of $C$.\newline
+\textbf{Condition 4}: no induced $P_3$ is monochromatic.
+\end{theorem}
+
+\begin{proof}
+Let us start by showing the necessity of the two conditions. If $G$ is 3-KP-labeling and $H$ is an induced subgraph of $G$, then the restriction of the labeling to $E(H)$ is a 3-KP-labeling of $H$ because every path in $H$ is still a path in $G$, hence Condition 3 is necessary. Condition 4 follows from the fact that every induced $P_3$ must contain two different labels since it is a path itself.\newline 
+Now we prove the sufficiency. For Condition 1 it is needed to show that every triangle is monochromatic but from Condition 3 we know that for every induced triangle of $G$, the restriction to edges, which is the same triangle is KP-labeling but triangle is KP-labeling if and only if it is monochromatic.\newline
+Now let's show that Condition 2 also holds by contradiction.\newline
+Suppose  that there is a 3-edge-labeling $l:E(G)\rightarrow \{1,2,3\}$ satisfying Conditions 3 and 4, but not Condition 2. 
+\end{proof}
 
 \subsection{Cartesian dimension of $P_i\square P_j$}
 The Cartesian product of two path graphs is an interesting type of graph which generates its product in a grid graph. The results below will demonstrate that when finding the exact Cartesian dimension of these graphs and adding a constraint, the Cartesian dimension is equal for any pair of path graphs. To prove these results, we will use the theorem which shows the relation between Cartesian dimension and KP-labeling.\newline
@@ -479,12 +495,12 @@ Next, we find a KP-labeling of the graph with 4 labels.
 \end{center}
 \caption{KP-labeling of $P_5\square P_6$}
 \end{figure}\newline
-\end{proof}
 We label the copies of $P_i$ identically by alternating between 1 and 4; and the copies of $P_j$ identically by alternating between 2 and 3.\newline
 For any two non-adjacent vertices, $u$ and $v$, when they belong to a $C_4$, we take the labels in this cycle. However, when any two non-adjacent vertices, $u$ and $v$, do not belong to a $C_4$, they are distanced vertically or horizontally in length by more than 2 (to go from $u$ to $v$ you have to make two hoops vertically or horizontally). When making the hoop horizontally, we take labels 2 and 3; when vertically, we take labels 1 and 4. Similarly to the previous proposition, vertices $u$ and $v$ would belong to different components when considering removing one of the labels we choose. 
  \newline
 Therefore, this label is a KP-labeling and from Theorem \ref{cdim<kp}, we have that $Cdim(P_i\square P_j)\leq 4$.\newline
 Combining both inequalities, we have that $Cdim(P_i\square P_j)=4$, if $i\geq 3$
+\end{proof}
 
 
 
