@@ -3,10 +3,10 @@
 \contentsline {chapter}{\numberline {2}Preliminaries}{4}
 \contentsline {chapter}{\numberline {3}Characterizing Subgraphs of Hamming Graphs}{5}
 \contentsline {section}{\numberline {3.1}KP-labeling}{5}
-\contentsline {section}{\numberline {3.2}Induced subgraphs of Hamming Graphs}{8}
+\contentsline {section}{\numberline {3.2}Induced subgraphs of Hamming Graphs}{9}
 \contentsline {chapter}{\numberline {4}Cartesian dimension}{13}
-\contentsline {subsection}{\numberline {4.0.1}Cartesian dimension of $P_i\square P_j$}{19}
-\contentsline {chapter}{\numberline {5}Bibliography}{21}
+\contentsline {subsection}{\numberline {4.0.1}Cartesian dimension of $P_i\square P_j$}{21}
+\contentsline {chapter}{\numberline {5}Bibliography}{23}
 \global \c@tocdepth -1\relax 
 \contentsline {chapter}{\numberline {A}Title of First Appendix}{}
 \contentsline {chapter}{\numberline {B}Title of Second Appendix}{}

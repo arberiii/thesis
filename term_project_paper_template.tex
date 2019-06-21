@@ -173,19 +173,19 @@ We can also thank the mentor and the co-mentor (if there is one)
 How difficult is it to determine if
 a given graph $G$ can be realized in $\mathbb{R}^d$ so that vertices are mapped to distinct points and two vertices are adjacent if and only if the corresponding points are on a common line that is parallel to some axis? Let us refer to any such mapping as a d-realization of $G$ and say that a graph is $d$-realizable if it has a $d$-realization.The class of $d$-realizable graphs was studied
 in the literature for decades, under diverse names such as arrow graphs (Cook, 1974), $(d - 1)$-plane graphs and $(d -1)$-line graphs of $d$-partite $d$-uniform hypergraphs (Bermond etal., 1977), $d$-dimensional cellular graphs (Gurvich and Temkin, 1992), $d$-dimensional chessboard graphs (Staton and  Wingard, 1998), and d-dimensional gridline graphs (Peterson, 2003).\newline
-In order to determine how hard will it be to answer that question we should first take a look at those definitions:\newline
-Let $A$ be an algorithm that solves a problem $\mathcal{P}$. The running time of algorithm $A$ is the number of basic calculation steps performed by $A$ (additions, subtractions, multiplications, comparison of two numbers etc.). The time complexity of algorithm $A$ is the function $T_A(n)$ that
+In order to determine how hard will it be to answer that question we should first take a look at the following definitions:\newline
+Let $A$ be an algorithm that solves a problem $\mathcal{P}$. The running time of algorithm $A$ is the number of basic calculation steps performed by $A$ (additions, subtractions, multiplications, comparison of two numbers, etc.). The time complexity of algorithm $A$ is the function $T_A(n)$ that
 measures the running time of $A$ in the worst case:
 \begin{center}
 	$T_A : n \rightarrow $ largest running time of $A$ on input instances of size $\leq$ $n$.
 \end{center} 
-Besides time complexity, space complexity of an algorithm might also be important (how much computer memory the algorithm needs). If we have a probability distribution on the input instances, we can also estimate the expected time complexity of the algorithm.\newline
-Given two functions $f,g : \mathbb{N} \to \mathbb{N}$ is of order (at most) $O(g)$, if there exists a constant $C > 0$ such that $f(n) \leq C\cdot g(n)$ for all $n \in N$ and we write $f = O(g)$.\newline
-An algorithm $A$ is polynomial if its time complexity $T_A(n)$ is of order $O(n^k)$ for some $k \in N$.
+
+Given two functions $f,g : \mathbb{N} \to \mathbb{N}$, we say that $f$ is of order (at most) $O(g)$ if there exists a constant $C > 0$ such that $f(n) \leq C\cdot g(n)$ for all $n \in \mathbb{N}$ and we write $f = O(g)$.\newline
+An algorithm $A$ is \textit{polynomial} if its time complexity $T_A(n)$ is of order $O(n^k)$ for some $k \in \mathbb{N}$.
 Polynomial algorithms are also said to be efficient.
 
-A decision problem is a problem in which the set of instances divides into two sets depending on whether the answer is YES or NO.
-In computational theory, the following three classes of decision problem are of interest:
+A \textit{decision problem} is a problem in which the set of instances divides into two sets depending on whether the answer is YES or NO.
+In computational complexity theory, the following three classes of decision problem are of interest:
 \begin{itemize}
 \item {\it P} is the set of decision problems that can be solved by a polynomial algorithm. Intuitively: $P$ is the set of problems that can be solved efficiently.
 \item {\it NP} is the set of decision problems with the following property:
@@ -198,12 +198,11 @@ enables us to verify this fact in polynomial time.
 \end{itemize}
 
 
-Recently, Sangha and Zito studied $d$-realizable graphs in the more general context of the so-called Line-of-Sight (LoS) networks [49]. Line of Sight (LoS) networks provide a model of wireless communication which incorporates visibility constraints. Vertices of such networks can be embedded in finite $d$-dimensional grids of size $n$, and two vertices are adjacent if they share a line of sight and are at distance less than $\omega$ where two points $x=(x_1,...,x_d)$ and $x'=(x_1',...,x_d')$ share a line of sight if there exist $j\in \{1,...,d\}$ such that $x_i=x_i'$ for all $i\in \{1,...,d\} \symbol{92} \{j\}$. They studied large independent sets in LoS networks. They proved that the computational problem of finding a largest independent
-set can be solved optimally in polynomial time for one dimensional LoS networks. However, for $d \geq 2$, the (decision version of) the problem becomes NP-hard for any fixed $\omega \geq 3$ and even if $ω$ is chosen to be a
+Recently, Sangha and Zito studied $d$-realizable graphs in the more general context of the so-called Line-of-Sight (LoS) networks [49]. Line of Sight (LoS) networks provide a model of wireless communication which incorporates visibility constraints. Vertices of such networks can be embedded in finite $d$-dimensional grids of size $n$, and two vertices are adjacent if they share a line of sight and are at distance less than $\omega$ where two points $x=(x_1, \ldots,x_d)$ and $x'=(x_1',\ldots ,x_d')$ share a line of sight if there exists some $j\in \{1,\ldots,d\}$ such that $x_i=x_i'$ for all $i\in \{1,\ldots,d\} \symbol{92} \{j\}$. They studied large independent sets in LoS networks. They proved that the computational problem of finding a largest independent set can be solved optimally in polynomial time for one dimensional LoS networks. However, for $d \geq 2$, the (decision version of) the problem becomes NP-hard for any fixed $\omega \geq 3$ and even if $ω$ is chosen to be a
 function of $n$ that is $O(n^{1-\epsilon})$ for any fixed $\epsilon>0$. In addition they showed that the problem is also NP-hard when $\omega = n$ for $d \geq 3$. This result
 extends earlier work which showed that the problem is solvable in polynomial time for gridline graphs when $d = 2$.\newline
-For the small-dimensional cases, $d \in \{2, 3\}$, Peterson suggested an application of d-realizable graphs to robotics [46]: if the movement of a robot is restricted to be along axis-parallel directions only and turns are
-allowable only at certain points, then a shortest path in a d-realized graph gives the number of turns required.
+For the small-dimensional cases, $d \in \{2, 3\}$, Peterson suggested an application of $d$-realizable graphs to robotics [46]: if the movement of a robot is restricted to be along axis-parallel directions only and turns are
+allowable only at certain points, then a shortest path in a $d$-realized graph gives the number of turns required.
 
 
 
@@ -214,8 +213,7 @@ We present the work of Martin Milani\v c, Peter Mur\v si\v c, and Marcelo Mydlar
 
 My approach is based on the fact that a graph $G$ is $d$ -realizable if and only if $G$ is an induced subgraph of a Cartesian product of $d$ complete graphs. Given two graphs G and H, their Cartesian product is the graph $G\square H$ with vertex set $V (G) \times V (H)$ in which two
 vertices $(u_1 , u_2 )$ and $(v_1 , v_2 )$ are adjacent if and only if either $u_1 v_1\in E(G)$ and $u_2 = v_2$ ,
-or $u_1 = v_1$ and $u_2 v_2 \in E(H)$. The Cartesian product is associative and commutative (in
-the sense that $G\square H \equiv H\square G$ where $\equiv$ denotes the graph isomorphism relation). Another
+or $u_1 = v_1$ and $u_2 v_2 \in E(H)$. The Cartesian product is associative and commutative (in the sense that $G\square H \cong H\square G$ where $\cong$ denotes the graph isomorphism relation). Another
 name for Cartesian products of complete graphs is Hamming graphs; a Hamming graph is $d$-dimensional if it is the Cartesian product of $d$ nontrivial complete graphs. The 3-dimensional Hamming graphs having all factors of the same size were studied in the literature under the name cubic lattice graphs [37, 12, 11, 1, 16], hence, 3-realizable graphs are exactly the induced subgraphs of cubic lattice graphs. Results are based on a characterization of induced subgraphs of d-dimensional Hamming graphs due to Klav\v zar and Peterin [33], expressed in terms of the existence of a particular edge labeling. For the 3-dimensional case, we develop a more specific characterization based on induced cycles of the graph and use it to prove hardness of recognizing 3-realizable graphs via a reduction from the 3-edge-coloring problem
 in cubic graphs. The hardness of the 3-dimensional case forms the basis for establishing hardness for all higher dimensions.\newline
 
@@ -226,78 +224,85 @@ strong product [22, 15, 32, 47] and the direct product of graphs [41, 48].
 \chapter{Preliminaries}
 \thispagestyle{fancy}
 
-In this chapter we will talk about necessary and sufficent conditions for a graph to be induced subgraph of Hamming Graphs and some results regarding those conditions 
+In this chapter we will talk about necessary and sufficent conditions for a graph to be an induced subgraph of a Hamming graph and some results regarding those conditions. 
 
 \chapter{Characterizing Subgraphs of Hamming Graphs}
 \thispagestyle{fancy}
 
-In this chapter we will talk about necessary and sufficent conditions for a graph to be induced subgraph of Hamming Graphs and some results regarding those conditions 
+In this chapter we will talk about necessary and sufficent conditions for a graph to be an induced subgraph of a Hamming graph and some results regarding those conditions.  
 
 \section{KP-labeling}\label{kp-labeling-section}
-We take a closer look at the characterization of induced subgraphs of Hamming Graph due to Klav\v zar and Peterin. \newline
+We take a closer look at the characterization of induced subgraphs of Hamming graphs due to Klav\v zar and Peterin. \newline
 Before going to the result we need to go through couple of definitions and some results.
 \newline
-\begin{corollary}
-An edge $e = \{u, v\}$ of a graph G is a cut-edge iff it doesn’t belong to any cycle.
-\end{corollary}
+\begin{lemma}
+An edge $e = \{u, v\}$ of a graph G is a cut-edge if and only if it does not belong to any cycle.
+\end{lemma}
 \begin{proof} Take any edge $e = \{u, v\}$. Remove this edge from our graph: if the graph is still connected, then there is some path from $u$ to $v$ not involving $e$;
-consequently, if we add $e$ to the end of this path, we get a cycle. Thus, if $e$ is not a cut-edge, it’s involved in a cycle.\newline
-Conversely: suppose that $e = \{u, v\}$ lies in a cycle.
-Let $P$ be the path from $u$ to $v$ that doesn’t use $e$ (i.e. go the other way around the cycle.) Pick any $x, y$ in $G$; because $G$ is connected, there is a path from $x$ to $y$ in $G$. Take this path, and edit it as follows:
-whenever the edge $e$ shows up, replace this with the path $P$ (or $P$ traced backwards, as needed.) This then creates a walk from $x$ to $y$; by deleting cycles, this walk will always become a path, and thus $G$ is connected. So if $e$ is involved in a cycle, it’s not a cut-edge.
+consequently, if we add $e$ to the end of this path, we get a cycle. Thus, if $e$ is not a cut-edge, then $e$ belongs to a cycle.\newline
+Conversely, suppose that $e = \{u, v\}$ lies in a cycle.
+Let $P$ be the path from $u$ to $v$ that does not use $e$ (i.e. goes the other way around the cycle.) Pick any $x, y$ in $G$; because $G$ is connected, there is a path from $x$ to $y$ in $G$. Take this path, and edit it as follows:
+whenever the edge $e$ shows up, replace this with the path $P$ (or $P$ traced backwards, if needed.) This then creates a walk from $x$ to $y$; by deleting cycles if necessary, this walk can be turned into a path from $x$ to $y$, and thus $G-e$ is connected. So if $e$ is contained in a cycle, it’s not a cut-edge.
 \end{proof}
-The Cartesian product $G\square H$ of graphs G and H is the graph with vertex set $V(G)\times V(H)$ in which the vertex $(a,x)$ is adjacent to the vertex $(b,y)$ whenever
-$ab\in E(G)$ and $x=y$, or $a=b$ and $xy\in E(H)$. For a fixed vertex $a$ of $G$, the vertices $\{(a,x)|x\in V(H)\}$ induce a subgraph of $G \square H$ isomorphic to $H$, called an $H$-layer of $G \square H$. Analogously we define $G$-layers. A subgraph of $G \square H$ is called non-trivial if it intersects at least two $G$-layers and at least two $H$-layers. \newline
-The map $p_G:G\square H \rightarrow G$ defined by $p_G(a,x)=a$, is called a projection. The image of an edge $(a,x)(b,y)$ under a projection is an edge when $x=y$ or a vertex in when $a=b$.\newline
-\begin{figure}
+The Cartesian product $G\square H$ of graphs $G$ and $H$ is the graph with vertex set $V(G)\times V(H)$ in which a vertex $(a,x)$ is adjacent to a vertex $(b,y)$ whenever
+$ab\in E(G)$ and $x=y$, or $a=b$ and $xy\in E(H)$. For a fixed vertex $a$ of $G$, the vertices $\{(a,x)|x\in V(H)\}$ induce a subgraph of $G \square H$ isomorphic to $H$, called an \textit{$H$-layer} of $G \square H$. Analogously we define \textit{$G$-layers}. A subgraph of $G \square H$ is called non-trivial if it intersects at least two $G$-layers and at least two $H$-layers. \newline
+The map $p_G:V(G\square H) \to G$ defined by $p_G(a,x)=a$, is called a projection. The image of an edge $(a,x)(b,y)$ under a projection is an edge when $x=y$ or a vertex in when $a=b$.\newline
+\begin{figure}\label{fig:cartProduct}
 \centering
 \includegraphics[scale=0.45]{figures/Graph-Cartesian-product.png}
 \caption{The Cartesian product of graphs.}
 
 \end{figure}
 Cartesian products of complete graphs are known as Hamming graphs. But they can be described also as follows. For
-$i=1,2,\ldots n$ let $r_i\geq 2$ be given integers. Let $G$ be the graph whose vertices are the $n$-tuples $b_1b_2\cdots b_n$ with $b_i\in \{0,1,\ldots r_i-1\}$. Two vertices are adjacent if the corresponding tuples differ in precisely one place—one coordinate. The vertex set of $G$ is the same as $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ and edges in $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ between two vertices have same vertex in every graph $K_{r_i}$ but one and since in complete graphs we have every possible edge, then it is easy to see that they are isomorphic. For an edge $uv$ of
-$H=K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ we define the color map $c:E(H)\rightarrow \{1,2,\ldots n\}$ with $c(uv)=i$, where u and v differ in coordinate i.
+$i=1,2,\ldots, n$ let $r_i\geq 2$ be given integers. Let $G$ be the graph whose vertices are the $n$-tuples $b_1b_2\cdots b_n$ with $b_i\in \{0,1,\ldots r_i-1\}$. Two vertices are adjacent if the corresponding tuples differ in precisely one coordinate. The vertex set of $G$ is the same as that of $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ and edges in $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ between two vertices are exactly those that have same vertex in every graph $K_{r_i}$ but one and since in complete graphs we have every possible edge, then it is easy to see that $G$ and $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ are isomorphic. For an edge $uv$ of
+$H=K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ we define the color map $c:E(H)\rightarrow \{1,2,\ldots n\}$ with $c(uv)=i$, where $u$ and $v$ differ in coordinate $i$.
 \newline
-Let $G$ be a connected graph and let $\mathcal{F}=\{F_1,F_2,\ldots F_k\}$ be a partition of $E(G)$. The \textit{quotient graph} $G\backslash F_i$ has connected components of $G\\F_i$ as vertices, two components $C$ and $C'$ being adjacent whenever there exists an edge of $F_i$ connecting a vertex of $C$ with a vertex of $C'$ . For each $i$, define a map $f_i:V(G)\rightarrow V(G\backslash F_i)$ by $f_i(v)=C$, where $C$ is the component of $G\\F_i$ containing $v$.Then let
-$$f:G\rightarrow G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$$
+Let $G$ be a connected graph and let $\mathcal{F}=\{F_1,F_2,\ldots F_k\}$ be a partition of $E(G)$. The \textit{quotient graph} $G/ F_i$ has connected components of $G\backslash F_i$ as vertices, two components $C$ and $C'$ being adjacent whenever there exists an edge of $F_i$ connecting a vertex of $C$ with a vertex of $C'$. For each $i$, define a map $f_i:V(G)\rightarrow V(G/ F_i)$ by $f_i(v)=C$, where $C$ is the component of $G\backslash F_i$ containing $v$. Then let
+$$f:V(G)\to V(G/ F_1\square G/ F_2\square \ldots \square G/ F_k)$$
 be the natural coordinate-wise mapping, that is
 $$f(v)=(f_1(v),f_2(v),\ldots , f_k(v))$$
-We call $f$ the \textit{quotient map} of $G$ with respect to $F$. Note that $f$ need not be one-to-one in general and that it is possible that some quotient graphs are the one vertex graph. However, all the partitions $F$ introduced later will lead to one-to-one mappings with non-trivial quotient graphs.\newline
-A partition $\{F_1,F_2,\ldots ,F_k\}$ of $E(G)$ naturally leads to an edge-labeling $l:E(G)\rightarrow \{1,2,\ldots,k\}$ by setting $l(e)=i$, where $e\in F_i$. Unless stated
+We call $f$ the \textit{quotient map} of $G$ with respect to $\mathfrak{F}$. Note that $f$ need not be one-to-one in general and that it is possible that some quotient graphs are the one vertex graph, an example is shown in Figure \ref{fnotonetoone}.
+\begin{figure}[h]\label{fnotonetoone}
+\begin{center}
+\includegraphics[width=0.8\linewidth]{figures/fnotonetoone.png}
+\end{center}
+\caption{An example of a graph that the quotient map is not one-to-one}
+\end{figure}
+ However, all the partitions $\mathfrak{F}$ introduced later will lead to one-to-one mappings with non-trivial quotient graphs.\newline
+A partition $\{F_1,F_2,\ldots ,F_k\}$ of $E(G)$ naturally leads to an edge-labeling $l:E(G)\to \{1,2,\ldots,k\}$ by setting $l(e)=i$, where $e\in F_i$. Unless stated
 otherwise, a labeling (or more precisely a $k$-labeling) of $G$ will mean an edge-labeling (with $k$ labels).
 \newline 
 Quotient graph is the central concept in this chapter, so to get a better understanding we also visualize it.
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.5\linewidth]{figures/quotientgraph.png}
+\includegraphics[width=1\linewidth]{figures/quotientgraph.png}
 \end{center}
 \caption{Quotient graph of $C_7$}
 \end{figure}
-We define the partition of $E(C_7)$ by defining $F_i$ having edges with label $i$, as we can see $C_7\backslash F_1$ and $C_7/F_3$ have only two vertices and since there is an edge in the correspoding $F_i$ connecting those two components therefore both of  $C_7\backslash F_1$ and $C_7/F_3$ are simply $K_2$, while $C_7\backslash F_2$ has three vertices but each two of compontents are connected with an edge from $F_2$ so $C_7\backslash F_2$ is simply $K_3$.   
+We define the partition of $E(C_7)$ by defining $F_i$ having edges with label $i$, as we can see $C_7/ F_1$ and $C_7/F_3$ have only two vertices and since there is an edge in the correspoding $F_i$ connecting those two components, both of  $C_7\backslash F_1$ and $C_7/F_3$ are simply $K_2$, while $C_7\backslash F_2$ has three vertices but each two of compontents are connected with an edge from $F_2$ so $C_7\backslash F_2$ is simply $K_3$.   
 \newline
-They defined two conditions to get a better understanding. They actuall named them by letters $B$ and $C$ but since we will not need the condition $A$ will name just by numbers $1$ and $2$.\newline
+Sandi Klav\v zar and Iztok Peterin defined two conditions to get a better understanding. They actually named them by letters $B$ and $C$, and also defined condition A which is needed for subgraphs oh Hamming graphs but since we will not need condition $A$ will name just by numbers $1$ and $2$.\newline
 We say that a $d$-edge-labeling of $G$ is a ($d$-)KP-labeling if it satisfies the following conditions:
 \newline
-\textbf{Condition 1} Let $G$ be a graph. Then edges of a triangle have the same label.\newline
-\textbf{Condition 2} Let $G$ be a labeled graph and let $u$ and $v$ be arbitrary vertices of $G$ with $d_G(u,v) \geq 2$. Then there exist different labels $i$ and $j$ which both appear on any induced $u$, $v$-path.\newline
+\textbf{Condition 1} The edges of any triangle have the same label.\newline
+\textbf{Condition 2} Let $u$ and $v$ be arbitrary vertices of $G$ with $d_G(u,v) \geq 2$. Then there exist different labels $i$ and $j$ which both appear on any induced $u$, $v$-path.\newline
 \begin{figure}[h!]\label{kpexample}
 \begin{center}
-\includegraphics[width=0.75\linewidth]{figures/kpexample.png}
+\includegraphics[width=1\linewidth]{figures/kpexample.png}
 \end{center}
 \caption{The label in left is a KP-labeling, while the one in right is not.}
 \end{figure}
 \begin{example}
-Let's see two examples of edge labeling of the same graph $G$ as in Figure ~\ref{kpexample}.\newline
-The label in left satisfy condition $1$ as the edges of triangle have the same label, also it satisfies condition $2$ as it can be check that for $u$ and $v$ arbitrary vertices of $G$ with $d_G(u,v) \geq 2$ then there exist different labels $i$ and $j$ which both appear on any induced $u$, $v$-path. Therefore the label in left is a KP-labeling.\newline
-The label in right doesn't satisfies neither condition $1$ nor $2$, as the edges of triangle don't have the same label, and also if we take vertices $v_5$ and $v_8$ then paths $P_1=v_5v_3v_4v_6v_8$ and $P_2=v_5v_7v_8$ have only one label in their intersecion.
+Let us see two examples of edge labeling of the same graph $G$ as in Figure ~\ref{kpexample}.\newline
+The label in the left side of figure satisfies condition $1$ as the edges of the triangle have the same label, also it satisfies condition $2$ as it can be checked that for arbitrary vertices $u$ and $v$ of $G$ with $d_G(u,v) \geq 2$ there exist different labels $i$ and $j$ which both appear on any induced $u$, $v$-path. Therefore the label in left is a KP-labeling.\newline
+The label in right does not satisfy neither condition $1$ nor $2$, as the edges of the triangle do not have the same label, and also if we take vertices $v_5$ and $v_8$ then paths $P_1=v_5v_3v_4v_6v_8$ and $P_2=v_5v_7v_8$ have only one label in their intersecion.
 \end{example}
 \section{Induced subgraphs of Hamming Graphs}
-Next we try to understand those conditions on cycle and we infer the following result
-\begin{lemma}\label{lemma:cyclenotunique}Let $G$ be a labeled graph fulfilling Condition 2 and let $C_k$ , $k \geq 4$, be an induced cycle of $G$. Then every label of $C_k$ is presented more than once on $C_k$.
+Next we try to understand those Conditions 1 and 2 on cycle graphs and we infer the following result
+\begin{lemma}\label{lemma:cyclenotunique}Let $G$ be a labeled graph fulfilling Condition 2 and let $C_k$, $k \geq 4$, be an induced cycle of $G$. Then every label of $C_k$ is present more than once on $C_k$.
 \end{lemma}
 \begin{proof}
-The labels of a $u, v$-path of length $2$ on $C_k$ are different, hence by Condition 2 those two labels should appear also along the other part. So for any label take two vertices that have distance two containg the edge with that label and therefore it is presented more than once on $C_k$ 
+The labels of a $u, v$-path of length $2$ on a $C_k$ are different, hence by Condition 2 those two labels should appear also along the other path. So for any label take two vertices $u$ and $v$ that have distance two and such that a $u,v$-path of length two contains the edge with that label and therefore the label is present more than once on $C_k$ 
 \end{proof}
 Before going to the main result we will need also the following lemma that tells us that we only need to check the induced paths.
 \begin{lemma}\label{lemma:inducedpaths}Let $G$ be a labeled graph fulfilling Conditions 1 and 2 and let $u, v$ be vertices of $G$ with $d_G(u,v)\geq 2$. Then, if labels $i$ and $j$ appear on every induced $u, v$-path, they appear on every $u, v$-path.
@@ -441,7 +446,7 @@ For every connected graph G and a positive integer d, we have $Cdim(G) \leq d$ i
 We take a closer look at 3-dimensional case and present two results both are related to the Klav\v zar-Peterin characterization which is needed for hardness proof for recognizing 3-realizable graphs developed in paper (here reference paper of Prof Martin).\newline
 In the first result, we will see that the defining properties of a 3-KP-labeling are satisfied for a graph as soon as they are satisfied for the family of all its induced subgraphs isomorphic to a cycle or to a $P_3$.
 
-\begin{theorem}
+\begin{theorem}\label{3-edge-label}
 Let $G$ be a graph. A 3-edge-labeling of $G$ is a KP-labeling if and only if it satisfies the following two conditions:\newline
 \textbf{Condition 3}: for every induced cycle $C$ of $G$, the restriction of the labeling to $E(C)$ is
 a KP-labeling of $C$.\newline
@@ -466,39 +471,75 @@ As $C_1$ and $C_2$ are 2-labeled, they share exactly one label. By definition, a
 induced $P_3$ (as part of either $C_1$ or $C_2$), which contradicts Condition 4. 
 \end{proof}
 
-\subsection{Cartesian dimension of $P_i\square P_j$}
-The Cartesian product of two path graphs is an interesting type of graph which generates its product in a grid graph. The results below will demonstrate that when finding the exact Cartesian dimension of these graphs and adding a constraint, the Cartesian dimension is equal for any pair of path graphs. To prove these results, we will use the theorem which shows the relation between Cartesian dimension and KP-labeling.\newline
+\begin{example}
+We will see an example where the Theorem \ref{3-edge-label} does not work for 4-edge-labeling. We find a graph satisfying Condition 3 and 4 but it is not a KP-labeling.\newline
+Take the graph $G$ with 4 paths of length 6 sharing only the endpoints vertices, say $u$ and $v$. Label the paths in following way:\newline
+\textit{path 1: 1, 2, 3, 1, 2, 3}\newline
+\textit{path 2: 2, 3, 4, 2, 3, 4}\newline
+\textit{path 3: 3, 4, 1, 3, 4, 1}\newline
+\textit{path 4: 4, 1, 2, 4, 1, 2}\newline
+A quick check can show that every induced cycle is a KP-labeling and also no $P_3$ is monochromatic, which means that Condition 3 and 4 are satisfied. However if we check whether this labeling is a KP-labeling of $G$, taking non-adjacent vertices $u$ and $v$, we can see that each pair of the 4 paths share exactly 2 labels, but from pingeonhole principle we cannot find labels $i$ and $j$ which both appear on any induced $u, v$-path.\newline
+This example can be generalized that Theorem \ref{3-edge-label} does not work for any $d>3$.  
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{figures/d4.png}
+\end{center}
+\caption{Counterexample of Theorem \ref{3-edge-label} for 4-edge-labeling}
+\end{figure}
+\end{example}
+From Condition 1 we know that every 3-KP-labeling of 3-cycle is constant(monochromatic). The folliwing result analyzes longer cycles.
+\begin{lemma}
+Let $C$ be a cycle of length at least 4. A 3-edge-coloring of $C$ with colors 1, 2, 3 is a KP-labeling if and only if
+\begin{itemize}
+\item either it is a 2-edge-coloring of $C$, or
+\item possibly after permuting the labels 1, 2, 3, cycle $C$ contains a cyclically ordered sequence
+of 6 distinct (not necessarily consecutive) edges labeled 1, 2, 3, 1, 2, 3, respectively. 
+\end{itemize}
+\end{lemma}
 
-First, we examine the short paths. Without loss of generality, let us take $i\leq j$.\newline
-If $i=1$, then $P_1\square P_j=P_j$; if $j=1$ then $Cdim(P_i\square P_j)=0$; if $j=2$, then $Cdim(P_i\square P_j)=1$; and if $j\geq 2$, then $Cdim(P_i\square P_j)=2$
+\begin{proof}
+($\implies$) If the label is 2-edge-coloring then it follows, otherwise suppose that $C$ is KP-labeled with an edge-coloring using colors 1,2 and 3 so that all three labels appear on $E(C)$. Fix a cyclic order $\sigma$ of the edges of $C$. Without loss of generality, $C$ has a pair of consecutive edges in $\sigma$, say $e_1$ and $e_2$, that are labeled 1 and 2 respectively. Each label must appear at least twice on $C$, since otherwise the endpoints of a path formed by two consecutive edges containing a label that appears exactly once would violate Condition 2. Then, the sequence 1,2,3,3 must appear as a sequence of the labels of edges in order $\sigma$, we stress it here from the lemma that this order is not necessarily consecutive (we could have something like 1,2,3,1,2,1,2,3). Let $P$ be the maximal subpath of $C$ containing $e_1$ and $e_2$ having no edge labeled 3, and let $e$ and $e'$ be the two edges of $E(C)\backslash E(P)$ incident to an edge in $P$. By the maximality of $P$, edges $e$ and $e'$ are labeled 3 and, since each each label appears twice they must be distinct. Let $P'$ be the subpath of $C$ formed by the edges not in $E(P)\cup \{ e,e'\}$. Since $P$ has only labels 1 and 2, in order not to violate Condition 2 both of them must appear in $E(C)\backslash E(P)$ and since $e,e' \in E(C)\backslash E(P)$ are labeled 3, it follows that labels 1,2 must appear in $E(P')$. If labels 1 and 2 appear in order $\sigma$ on $P'$ (not necessarily consecutively), we are done. Suppose then that all occurrences of 2 appear in $\sigma$ before all occurrences of 1 on $E(P')$. If on $P$ there is an occurrence of label 2 appearing (in $\sigma$) before an occurence of 1, we are done again. By way of contradiction  ,suppose that this is not the case, that is, suppose that all occurces of 1 appear (in $\sigma$) before all occurences of 2 on $P$. \newline
+Then $C$ can be divided in two parts in such a way that the occurrences of 1 appear only in one part and the occurences of 2 in the other part, which will violate Condition 2.\newline
+($\impliedby$) Since there are no triangles, Condition 1 is satisfied. \newline
+If $C$ is 2-edge-labeled, then clearly Condition 2 holds.\newline
+Suppose now, without loss of generality, that $C$ contains a cyclically ordered sequence of 6 distinct (not necessarily consecutive) edges labeled 1, 2, 3, 1, 2, 3, respectively. Let $F$ denote a fixed set of 6 edges with the above property. Consider now an arbitrary pair $u,v$ of non -adjacent vertices of $C$. Let $P$ and $Q$ be the two $u,v-$subpaths of $C$. At least on of $P$ and $Q$, say $P$, contains at least three consecutive edges from $F$. Hence, any two distinct labels appearing on $Q$ will appear on every induced $u,v-$path. Since this is true for an arbitrary pair $u,v$ of nonadjacent verices, Condition 2 is satisfied.
+
+
+\end{proof}
+
+\subsection{Cartesian dimension of $P_i\square P_j$}
+A two-dimensional grid graph is the Cartesian product two path graphs. The results below will demonstrate that when finding the exact Cartesian dimension of these graphs and for paths of length at least 3, the Cartesian dimension is equal for any pair of path graphs. To prove these results, we will use the Theorem \ref{cdim<kp} which shows the relation between Cartesian dimension and KP-labeling.\newline
+\begin{theorem}
+$Cdim(P_i \square P_j) = \left\{0,2,3,4\right\}$
+\end{theorem}
+\begin{proof}
+
+ Without loss of generality, let us take $i\leq j$.\newline
+\textit{Case 1} If $i=1$, then $P_1\square P_j=P_j$; if $j=1$ then $Cdim(P_i\square P_j)=0$;
+\textit{Case 2} If $j=2$, then $Cdim(P_i\square P_j)=1$; and if $j\geq 2$, then $Cdim(P_i\square P_j)=2$
  .\newline 
 If $i=2$ and $j=2$, then $Cdim(P_i\square P_j)=2$.
 As a result, we write the following proposition
-\begin{proposition}
-$Cdim(P_2\square P_j)=3$ if $j\geq 3$
-\end{proposition}
-\begin{proof}
-From Theorem \ref{d-realizable-free}, we have that $Cdim(P_2\square P_j)\geq 3$, since $P_2 \square P_j$ has $K_{1,3}$ as induced subgraph.\newline
+\newline
+\textit{Case 3} If $j\geq 3$, from Theorem \ref{d-realizable-free}, we have that $Cdim(P_2\square P_j)\geq 3$, since $P_2 \square P_j$ has $K_{1,3}$ as induced subgraph.\newline
 Next, we find a KP-labeling of the graph with 3 labels.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.6\linewidth]{figures/p_2sqp_j.png}
 \end{center}
-\caption{KP-labeling of $P_2\square P_6$}
+\caption{KP-labeling of $P_2\square P_6$}\label{fig:P_2sqP_6}
 \end{figure}\newline
-We label the copies of $P_2$ with label 1 and both copies of $P_j$ the same by alternating between 2 and 3.\newline
-For any two non-adjacent vertices, $u$ and $v$, if they belong to $C_4$, we take label 1 and the other label from set $\{2,3\}$ to satisfy the Condition 2; otherwise take labels 2 and 3 for vertices, $u$ and $v$, when they do not belong to some $C_4$ and $u$ and $v$ are in different components when taking the partition of graph with respect to labels 2 or 3.\newline
-Therefore, this label is a KP-labeling and from Theorem \ref{cdim<kp}, we have that $Cdim(P_2\square P_j)\leq 3$.\newline
+We label the copies of the first factor ($P_2$) with label 1 and both copies of $P_j$ the same by alternating between 2 and 3.
+An example of how would we label $P_2\square P_6$ is shown in Figure \ref{fig:P_2sqP_6}.\newline
+For any two nonadjacent vertices, $u$ and $v$, if they belong to a $C_4$, we take label 1 and the other label from set $\{2,3\}$ to satisfy Condition 2; otherwise take labels 2 and 3 for vertices, $u$ and $v$, when they do not belong to some $C_4$ and $u$ and $v$ are in different components when taking the partition of graph with respect to labels 2 or 3, meaning that the edges labeled with $i$ determine a cut-set, for $i$ in $\{2,3\}$.\newline
+Therefore, this labeling is a KP-labeling and from Theorem \ref{cdim<kp}, we have that $Cdim(P_2\square P_j)\leq 3$.\newline
 Combining both inequalities, we have that $Cdim(P_2\square P_j)=3$ if $j\geq 3$
 
-\end{proof}
+
 
 Finally, we will look at the general case when $i\geq 3$.
-\begin{proposition}
-$Cdim(P_2\square P_j)=4$ if $i\geq 3$
-\end{proposition}
-\begin{proof}
-From Theorem \ref{d-realizable-free}, we have that $Cdim(P_i\square P_j)\geq 4$, since $P_i \square P_j$ has $K_{1,4}$ as induced subgraph.\newline
+\newline
+\textit{Case 4} if $i\geq 3$, from Theorem \ref{d-realizable-free}, we have that $Cdim(P_i\square P_j)\geq 4$, since $P_i \square P_j$ has $K_{1,4}$ as induced subgraph.\newline
 Next, we find a KP-labeling of the graph with 4 labels.
 \begin{figure}[h]
 \begin{center}
@@ -507,12 +548,11 @@ Next, we find a KP-labeling of the graph with 4 labels.
 \caption{KP-labeling of $P_5\square P_6$}
 \end{figure}\newline
 We label the copies of $P_i$ identically by alternating between 1 and 4; and the copies of $P_j$ identically by alternating between 2 and 3.\newline
-For any two non-adjacent vertices, $u$ and $v$, when they belong to a $C_4$, we take the labels in this cycle. However, when any two non-adjacent vertices, $u$ and $v$, do not belong to a $C_4$, they are distanced vertically or horizontally in length by more than 2 (to go from $u$ to $v$ you have to make two hoops vertically or horizontally). When making the hoop horizontally, we take labels 2 and 3; when vertically, we take labels 1 and 4. Similarly to the previous proposition, vertices $u$ and $v$ would belong to different components when considering removing one of the labels we choose. 
+For any two nonadjacent vertices, $u$ and $v$, when they belong to a $C_4$, we take the labels in this cycle. However, if any two nonadjacent vertices, $u$ with coordinates $(a,x)$ and $v$ with coordinates $(b,y)$, do not belong to a $C_4$, then either $d_{P_i}(a,b) \geq 2$ or $d_{P_j}(x,y) \ge 2$. If $d_{P_i}(a,b) \geq 2$, we take labels 2 and 3; otherwise, we take labels 1 and 4. Similarly to the previous proposition, vertices $u$ and $v$ would belong to different components when removing either of the choosen labels. 
  \newline
 Therefore, this label is a KP-labeling and from Theorem \ref{cdim<kp}, we have that $Cdim(P_i\square P_j)\leq 4$.\newline
 Combining both inequalities, we have that $Cdim(P_i\square P_j)=4$, if $i\geq 3$
 \end{proof}
-
 
 
 
