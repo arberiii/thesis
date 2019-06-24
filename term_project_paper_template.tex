@@ -1,6 +1,6 @@
-\documentclass[12pt,a4paper,titlepage,openany]{report}
+	\documentclass[12pt,a4paper,titlepage,openany]{report}
 \usepackage{zakljucna_FAMNIT_1_stopnja_MA_MEF_EN_2016}
-
+\usepackage{enumitem}  
 % Head of document:
 
 \fancyhf{}
@@ -235,7 +235,7 @@ In this chapter we will talk about necessary and sufficent conditions for a grap
 We take a closer look at the characterization of induced subgraphs of Hamming graphs due to Klav\v zar and Peterin. \newline
 Before going to the result we need to go through couple of definitions and some results.
 \newline
-\begin{lemma}
+\begin{lemma}\label{cutedgecycle}
 An edge $e = \{u, v\}$ of a graph G is a cut-edge if and only if it does not belong to any cycle.
 \end{lemma}
 \begin{proof} Take any edge $e = \{u, v\}$. Remove this edge from our graph: if the graph is still connected, then there is some path from $u$ to $v$ not involving $e$;
@@ -302,46 +302,46 @@ Next we try to understand those Conditions 1 and 2 on cycle graphs and we infer 
 \begin{lemma}\label{lemma:cyclenotunique}Let $G$ be a labeled graph fulfilling Condition 2 and let $C_k$, $k \geq 4$, be an induced cycle of $G$. Then every label of $C_k$ is present more than once on $C_k$.
 \end{lemma}
 \begin{proof}
-The labels of a $u, v$-path of length $2$ on a $C_k$ are different, hence by Condition 2 those two labels should appear also along the other path. So for any label take two vertices $u$ and $v$ that have distance two and such that a $u,v$-path of length two contains the edge with that label and therefore the label is present more than once on $C_k$ 
+The labels of a $u, v$-path of length $2$ on a $C_k$ are different, hence by Condition 2 those two labels should appear also along the other path. So for any label take two vertices $u$ and $v$ that have distance two and such that a $u,v$-path of length two contains the edge with that label, meaning that the label is present on both disjoin paths therefore the label is present more than once on $C_k$ 
 \end{proof}
 Before going to the main result we will need also the following lemma that tells us that we only need to check the induced paths.
 \begin{lemma}\label{lemma:inducedpaths}Let $G$ be a labeled graph fulfilling Conditions 1 and 2 and let $u, v$ be vertices of $G$ with $d_G(u,v)\geq 2$. Then, if labels $i$ and $j$ appear on every induced $u, v$-path, they appear on every $u, v$-path.
 \end{lemma}
 \begin{proof}
-Suppose that labels $i$ and $j$ appear on every induced $u, v$-path. Let $P=x_1x_2...x_r, x_1=u,x_r=v$, be a $u, v$-path of minimal length that does not contain both labels $i$ and $j$. Then P is not induced since every induced path contains both labels, hence we have an edge between some non-consecutive vertices say $e=x_kx_l$ with $l-k>1$. We may assume that $e$ is selected such that $l-k$ is as small as possible. By the minimality of $P$, the path $x_1x_2...x_kx_lx_{l+1}...x_r$ which is shorter than $P$ contains both labels $i$ and $j$. Hence, the label of the edge $x_kx_l$ is either $i$ or $j$, otherwise $P$ would contain both labels $i$ and $j$. Assume without loss of generality it is $i$. Then, using minimality again, label $j$ appears on the path $x_1x_2...x_k$ or on $x_lx_{l+1}...x_r$, note that it cannot happen that $k=1$ and $l=r$ as $d_G(u,v)\geq 2$. It follows that $i$ does not appear on the path $x_kx_{k+1}...x_l$. But then the label $i$ appears only once on the cycle $C=x_kx_{k+1}...x_lx_k$. If $C$ is a triangle, we have a contradiction with Condition 1,
-otherwise with previous lemma.
+Suppose that labels $i$ and $j$ appear on every induced \textsc{$u, v$-path} but not on every $u, v$-path. Let $P=x_1x_2...x_r, x_1=u$, with $x_r=v$, be a $u, v$-path of minimal length that does not contain both labels $i$ and $j$. Then $P$ is not induced since every induced path contains both labels, hence we have an edge between some non-consecutive vertices say $e=x_kx_l$ with $l-k>1$. We may assume that $e$ is chosen so that $l-k$ is as small as possible. By the minimality of $P$, the path $x_1x_2...x_kx_lx_{l+1}...x_r$ (which is shorter than $P$) contains both labels $i$ and $j$. Hence, the label of the edge $x_kx_l$ is either $i$ or $j$, otherwise $P$ would contain both labels $i$ and $j$. Assume without loss of generality that the label is $i$. Then, using minimality again, label $j$ appears on the path $x_1x_2...x_k$ or on $x_lx_{l+1}...x_r$ (note that it cannot happen that $k=1$ and $l=r$ as $d_G(u,v)\geq 2$). It follows that $i$ does not appear on the path $x_kx_{k+1}...x_l$. But then label $i$ appears only once on the cycle $C=x_kx_{k+1}...x_lx_k$. If $C$ is a triangle, we have a contradiction with Condition 1, otherwise with Lemma \ref{lemma:cyclenotunique}.
 \end{proof}
+If $G$ is a tree, then assigning a different label to each edge result in a labeling satisfying Conditions 1 and 2, hence in a $KP$-labeling. Note that every edge in a tree is a cut-edge. More generally, we can ask: which edges in a graph that has a $KP$-labeling can receive a unique label in some $KP$-labeling? This question is answered by the following result. 
 \begin{proposition}
 Let $G$ be a graph having a $KP$-labeling and let $e$ be an edge in $G$. Then $G$ has a $KP$-labeling in which $e$ receives a unique label if and only if $e$ is a cut-edge.
 \end{proposition}
 
 \begin{proof}
 First we will show that if $e$ is a cut-edge then $G$ has a $KP$-labeling in which $e$ receives a unique label. Fix an arbitrary $KP$-labeling of G.\newline
-Relabel edge $e$ with a new label say $i$ not used before. We will show that the new labeling is also a $KP$-labeling. We need to verify the following two conditions:\newline
-Condition 1: Every triangle is monochromatic.\newline Condition 1 holds, since $e$ is not part of any cycle and therefore every triangle is still monochromatic.\newline
+Relabel edge $e$ with a new label, say $i$, not used before. We will show that the new labeling is also a $KP$-labeling. We need to verify the following two conditions:\newline
+Condition 1: Every triangle is monochromatic.\newline Condition 1 holds, since $e$ is not part of any cycle (see Lemma \ref{cutedgecycle}) and therefore every triangle is still monochromatic.\newline
 Condition 2: for every pair of distinct non-adjacent vertices $u,v$, there exist different labels $j$ and $k$ which both appear on every iduced $u,v$-path.\newline
 To verify condition 2, note that any two $u,v$-paths either both contain edge $e$ or none (otherwise $e$ would be part of a cycle, but $e$ is a cut-edge)\newline
-If none of the induced $u,v$-paths contains edge $e$ then the new $KP$-labeling still satisfies Condition 2 for the pair $u,v$ because of the original $KP$-labeling satisfied for this pair.\newline
-Otherwise all induced $u,v$-paths contain e, let the new label of $e$ be $i$, and original label of $e$ be $i_0$. We differ two cases:
+If none of the induced $u,v$-paths contains edge $e$ then the new $KP$-labeling still satisfies Condition 2 for the pair $u,v$ because of the original $KP$-labeling satisfied the condition for this pair.\newline
+Otherwise all induced $u,v$-paths contain $e$, original label of $e$ be $i_0$. We consider/distinguish two cases:
 \item[Case 1] If $i_0\in \{j,k\}$ then simply take the set $(\{j,k\}\setminus \{i_0\})\cup \{i\}$.
 \item[Case 2] If $i_0\not\in \{j,k\}$ then simply take the set $\{j,k\}$.\newline
-Suppose $G$ has a $KP$-labeling in induced path $e$ receives a unique label (by Corollary). Suppose for contradiction that $e$ is not a cut edge such that $e$ is part of a cycle $C$. If $C$ is a triangle then it is not monochromatic as then it must satisfy Condition 1 and every edge must label same as $e$ but then $e$ would not be labeled uniquely . Therefore $C$ cannot be triangle. 
+For the converse direction, suppose $G$ has a $KP$-labeling in which $e$ receives a unique label (by Corollary). Suppose for contradiction that $e$ is not a cut-edge. Then by Lemma \ref{cutedgecycle} $e$ is part of a cycle $C$. If $C$ is a triangle by Condition 1 and every edge of $C$ must have the same label as $e$, but then $e$ would not be labeled uniquely. Therefore $C$ cannot be triangle. 
 Let $V(C)=\{v_1,v_2,...,v_p\}$ in cyclic order and without loss of generality $e=v_1v_2$. Let $u=v_1$ and $v=v_3$. Then since $e$ is labeled uniquely, the two induced paths forming a cycle from $u$ to $v$. These two paths cannot share any two labels so Condition 2 cannot hold, a contradiction. 
 \end{proof}
 \begin{theorem}\label{thm:mainkp}
-Let $G$ be a connected graph. Then $G$ is an induced subgraph of a Hamming graph if and only if there exists a labeling of $G$ that fulfills Conditions $1$ and $2$.
+Let $G$ be a connected graph. Then $G$ is an induced subgraph of a Hamming graph of dimension $d$ if and only if $G$ has a $d-KP$-labeling.
 \end{theorem}
 \begin{proof}
-Let $G$ be an induced subgraph of $H=K_{n_1}\square K_{n_2}\square\cdots\square K_{n_k}$. To make things easier denote $p_i=p_{K_{n_i}}$ which is the projection of complete graph $K_{n_i}$ of $H$ and also consider the labeling $E(G)$ indeuced by the color map $c$ of $H$. We will show that this labeling satisfies Conditions $1$ and $2$.\newline
+Let $G$ be an induced subgraph of $H=K_{n_1}\square K_{n_2}\square\cdots\square K_{n_d}$. To make things easier denote $p_i=p_{K_{n_i}}$, which is the projection of the complete graph $K_{n_i}$ of $H$ and also consider the labeling $E(G)$ induced by the color map $c$ of $H$. We will show that this labeling satisfies Conditions $1$ and $2$.\newline
 Condition $1$ is clear. Indeed, if $u$, $v$, and $w$ induce a triangle, then they all lie in
-the same layer of H and by alternative description of Hamming graphs we have that each pair is adjacent so they differ in exactly on coordinate and therefore color map $c$ will map those edges to the coordinate in which they differ and so the edges $uv$, $uw$, and $vw$ receive the same label.\newline
-We next show Condition $2$ is satisfied also. Let $u$ and $v$ be two vertices of $G$ with $d_G(u,v)\geq 2$.
-Suppose that there is no label that appears on all induced $u, v$-paths. Now if we see $u$ and$v$ as $k-tuples$ and we understand paths as changing coordinates and therefore $p_i(u)=p_j(v)$ for all $i$ because if we look at one induced path that doesn't have label $i$ that means than we never change the $i^{th}$ coordinate as we traverse this path and therefore the $i^{th}$ coordinate is the same, and this is contrary to $d_G(u,v)\geq 2$. Suppose now that all induced $u, v$-paths have exactly one label in common, say $i$. We have $p_j(u)=p_j(v)$ for all $j\neq i$ and $p_i(u)\neq p_i(v)$ (the case when $p_i(u)= p_i(v)$). Vertices $p_i(u)$ and $p_j(v)$ are adjacent in $K_{n_i}$ , since $K_{n_i}$ is a complete graph. Hence, $u$ and $v$ are adjacent in $H$ and therefore also in $G$ which is impossible.\newline
-Conversely, let $l$ be a labeling of $G$ that fulfills Conditions 1 and 2. Let $\mathcal{F}=\{F_1,F_2,\ldots F_k\}$ be the partition of $E(G)$ induced by $l$ and let $f$ be the quotient map of $G$ with respect to $\mathcal{F}$. We claim that $f$ embeds $G$ as an induced subgraph into $G=G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$.\newline
-We show first that f is one-to-one, in this way we show that indeed $f$ embeds $G$ as an induced subgraph into $G=G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$. Suppose that vertices $x$ and $y$ are not adjacent in $G$. Then by Condition C and Lemma ~\ref{lemma:inducedpaths}, there exist labels $i$ and $j$ such that on every $x, y$-path we find labels $i$ and $j$. So $x$ and $y$ are in different components in both $G\backslash F_i$ and $G\backslash F_j$. Already the first fact assures that $f(x)\neq f(y)$. Let next $x$ and $y$ be adjacent vertices of $G$ and let $l(xy)=i$, and we can see that $f_j(x)=f_j(y)$ for every $j\neq i$, now let us take a look for $f_i$. Suppose that there exists an $x, y$-path $P=x_1x_2\ldots x_r$ in $G\backslash F_i$, where $x_1=x$ and $x_r=y$. We can assume that $P$ is shortest among all $x, y$-paths in $G\backslash F_i$. If $P$ is induced in $G-xy$ we have a contradiction with Condition 1 when $r=3$ since $P$ does not take the label $i$ ($P$ in $G\backslash F_i$) but a triangle will be formed with $xy$ and two edges in $P$ and a contradiction with Lemma ~\ref{lemma:cyclenotunique} when $r>3$ because $P+xy$ would form a cycle and label $i$  is present only once. Thus $P$ is not induced in $G-xy$,
+the same layer of $H$ and by the alternative description of Hamming graphs we have that each pair is adjacent so they differ in exactly in one coordinate. Therefore color map $c$ will map those edges to the coordinate in which they differ and so the edges $uv$, $uw$, and $vw$ receive the same label.\newline
+We next show that Condition $2$ is satisfied, too. Let $u$ and $v$ be two vertices of $G$ with $d_G(u,v)\geq 2$.
+Suppose that there is no label that appears on all induced $u, v$-paths. Now if we see $u$ and $v$ as $d-tuples$ and we understand paths as changing coordinates and therefore $p_i(u)=p_i(v)$ for all $i$ because if we look at one induced path that does not have label $i$ that means than we never change the $i^{th}$ coordinate as we traverse this path and therefore the $i^{th}$ coordinates are the same, which implies $u=v$ contrary to $d_G(u,v)\geq 2$. Suppose now that all induced $u, v$-paths have exactly one label in common, say $i$. We have $p_j(u)=p_j(v)$ for all $j\neq i$ and consequently $p_i(u)\neq p_i(v)$ (since $u\neq v$). Vertices $p_i(u)$ and $p_i(v)$ are adjacent in $K_{n_i}$, since $K_{n_i}$ is a complete graph. Hence, $u$ and $v$ are adjacent in $H$ and therefore also in $G$ which is impossible.\newline
+Conversely, let $\ell$ be a $d$-edge-labeling of $G$ that fulfills Conditions 1 and 2. Let $\mathcal{F}=\{F_1,F_2,\ldots F_d\}$ be the partition of $E(G)$ induced by $l$ and let $f$ be the quotient map of $G$ with respect to $\mathcal{F}$. We claim that $f$ embeds $G$ as an induced subgraph into $G=G/ F_1\square G/ F_2\square \ldots \square G/ F_d$.\newline
+We show first that $f$ is one-to-one. Suppose that vertices $x$ and $y$ are not adjacent in $G$. Then by Condition 2 and Lemma ~\ref{lemma:inducedpaths}, there exist labels $i$ and $j$ such that on every $x, y$-path in $G$ we find labels $i$ and $j$. So $x$ and $y$ are in different components in both $G\backslash F_i$ and $G\backslash F_j$. Already the first fact assures that $f(x)\neq f(y)$. Let next $x$ and $y$ be adjacent vertices of $G$ and let $l(xy)=i$. We can see that $f_j(x)=f_j(y)$ for every $j\neq i$, they belong to same component they are adjacent, now let us take a look at $f_i$. Suppose that there exists an $x, y$-path $P=x_1x_2\ldots x_r$ in $G\backslash F_i$, where $x_1=x$ and $x_r=y$. We can assume that $P$ is shortest among all $x, y$-paths in $G\backslash F_i$. If $P$ is induced in $G-xy$ we have a contradiction with Condition 1 when $r=3$ since $P$ does not take the label $i$ (recall that $P$ is in $G\backslash F_i$) but a triangle will be formed with $xy$ and two edges in $P$. When $r>3$, we have and a contradiction with Lemma ~\ref{lemma:cyclenotunique} because $P+xy$ would form a cycle in which label $i$  is present only once. Thus $P$ is not induced in $G-xy$,
 $r > 3$, and there are adjacent vertices $x_j$ and $x_k$ with $k > j+1$. By the minimality of $P$ we have $l(x_jx_k)=i$. We can select $j$ and $k$ such that $k- j$ is minimal among all such vertices $x_j$ and $x_k$. Then the cycle $C=x_jx_{j+1}\ldots x_{k-1}x_k$ is induced. If $C$ is a triangle we have a contradiction with Condition 1, otherwise we have a
-contradiction with Lemma ~\ref{lemma:cyclenotunique}. Hence, we have shown that f is one-to-one.\newline
-Let $xy$ be an edge with $l(xy)=i$. Then, by the above, $x$ and $y$ are in different components of $G\backslash F_i$. Moreover, they belong to the same component in any of the graphs $G\backslash F_j$ , for $j\neq i$. It follows that $f$ maps edges to edges and the claim is proved.\newline
+contradiction with Lemma ~\ref{lemma:cyclenotunique}. Hence, we have shown that $f$ is one-to-one.\newline
+Let $xy$ be an edge of $G$ with $l(xy)=i$. Then, by the above, $x$ and $y$ are in different components of $G\backslash F_i$. Moreover, they belong to the same component in any of the graphs $G\backslash F_j$ , for $j\neq i$. It follows that $f$ maps edges to edges and the claim is proved.\newline
 Hence, $G=f(G)$ is an induced subgraph of $G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$. To complete the proof we show that $G$ is also an induced subgraph of the Hamming graph $k_{|G\backslash F_1|}\square K_{|G\backslash F_2|}\square \ldots \square K_{|G\backslash F_k|}$ :
 Let $x$ and $y$ be non-adjacent vertices of $G$. Then, by the same reasoning as above, $x$ and $y$ are in different components of at least two graphs $G\backslash F_i$. It follows that $f(x)$ and $f(y)$ differ in at least two coordinates which remains valid after adding edges to the factor graphs.
 \end{proof}
@@ -522,7 +522,7 @@ If $i=2$ and $j=2$, then $Cdim(P_i\square P_j)=2$.
 As a result, we write the following proposition
 \newline
 \textit{Case 3} If $j\geq 3$, from Theorem \ref{d-realizable-free}, we have that $Cdim(P_2\square P_j)\geq 3$, since $P_2 \square P_j$ has $K_{1,3}$ as induced subgraph.\newline
-Next, we find a KP-labeling of the graph with 3 labels.
+Next, we find a $KP$-labeling of the graph with 3 labels.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.6\linewidth]{figures/p_2sqp_j.png}
@@ -554,186 +554,107 @@ Therefore, this label is a KP-labeling and from Theorem \ref{cdim<kp}, we have t
 Combining both inequalities, we have that $Cdim(P_i\square P_j)=4$, if $i\geq 3$
 \end{proof}
 
+\chapter{Hamming dimesion}
+Graph products offer a variety of possibilities to introduce the concept of a graph dimension. A classical result of Graham and Winkler \cite{Graham} shows that any graph can be canonically isometrically embedded into the Cartesian product of graphs. Knowing that, this embedding is unique among all irredundant isometric embeddings with respect to the largest possible number of factors, the latter numberis is defined to be the \textit{isometric dimension} of a graph. 
+\newline The strong product $G\boxtimes H$ of graphs $G$ and $H$ is a graph such that the vertex set of $G\boxtimes H$ is the Cartesian product $V(G) \times V(H)$; and distinct vertices $(u,u')$ and $(v,v)$ are adjacent in $G\boxtimes  H$ if and only if $u = v$ and $u'$ is adjacent to $v'$, or $u' = v'$ and $u$ is adjacent to $v$, or $u$ is adjacent to $v$ and $u'$ is adjacent to $v'$. Back in 1938 Sch\" onberg \cite{Schonber} proved that every connected graph admits an isometric embedding into the strong product of paths. It is hence natural to define the \textit{strong isometric dimension}, $idim(G)$, of a graph $G$ as the least number $k$ such that $G$ embeds isometrically into the strong product of $k$ paths.\newline
+David Eppstein consider the following representation problem: for which unweighted undirected graphs can be assigned integer coordinates in some $d$-dimensional space $Z^d$, such that the distance between two vertices in the graph is equal to the $L_1$-distance(taxicab) between their coordinates? Call the minimum possible dimension $d$ of such an embedding (if one exists) the \textit{lattice dimension} of the graph.\newline
+The strong isometric dimension is universal in the sense that as soon as a graph is not the path graph, then its dimension is finite and bigger than 1. A similar conclusion can be stated for the so called direct dimension of a graph. On the other hand, for the most important graph product, the Cartesian one, no such universal dimension is known. While the isometric dimension is useful as soon as the dimension of a graph is more than 1, it was proved in \cite{Poljak} that for almost any graph its isometric dimension is 1. In
+other words, for almost any graph $G$, the isometric dimension yields no new insight about $G$. Also, only
+partial cubes, a special (although important) subclass of bipartite graphs, have finite lattice dimension.\newline
+
+We say that a graph $G$ is an irredundant subgraph of $\square _iG_i$ if each $G_i$ has at least two vertices and any vertex of $G_i$ appears as a coordinate of some vertex of $G$.\newline
+In order to significantly increase the number of graphs with a non-trivial dimension that comes from the Cartesian product of graphs Sandi Klav\v zar, Iztok Peterin and Sara Sabrina Zemlji\v c in \cite{Sandi}, defined the \textit{Hamming dimension} $Hdim(G )$ of a graph $G$ is introduced as the largest dimension of a Hamming graph into which $G$ embeds as an irredundant induced subgraph. If $G$ is not an induced subgraph of any Hamming graph we set $Hdim ( G ) = \infty$.\newline In Figure \ref{fig:c6hdim} is shown $C_6$ induced in two different Hamming graphs, $K_3\square K_3$ and $K_2\square K_2\square K_2$
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1\linewidth]{figures/c_6hdim.png}
+\end{center}
+\caption{$C_6$ induced in $K_3\square K_3$ and $K_2\square K_2\square K_2$}\label{fig:c6hdim}
+\end{figure}
+Clearly, $Hdim ( G ) = 1$ if and only if $G$ is a complete graph. By Theorem \ref{thm:mainkp}, we can understand it as $Hdim ( G ) <\infty$ if and only if $G$ has a $d-KP$-labeling.
+\section{Hamming dimension of Sierpiński graphs}
+The general problem of determining the Hamming dimension of a graph seems very demanding, here we will study this concept on Sierpiński graphs. Roughly speaking, in \cite{Sandi}, they proved that all Sierpi\'nski graphs (except in the trivial cases) have Hamming dimension bigger than 1 and finite. On the other hand, all but base 3 Sierpi\'nski graphs have isometric dimension 1. Hence the Hamming dimension indeed significantly increases the number of graphs with a non-trivial Cartesian-like dimension.\newline
+Graphs whose drawings can be viewed as approximations to the famous Sierpi\'nski triangle have been studied intensely in the past 25 years. The interest for these graphs comes from many different sources such as games like the Chinese rings or the Tower of Hanoi, topology, physics, the study of interconnection networks, and elsewhere.\newline
+Sierpi\'nski graphs $S^{k}_n$ were studied for the first time in \cite{Sandi2}. In computer science, a very similar class of graphs (known as WK-recursive networks) was introduced earlier. The study in \cite{Sandi2} was motivated in part by the fact that for $k=3$ these graphs are isomorphic to the Tower of Hanoi graphs and in part by topological studies.\newline
+The graphs $S^k_n$ were investigated from numerous points of view, we recall some of them. These graphs contain unique 1-perfect codes. Metric properties of Sierpi\'nski graphs were investigated in \cite{Andreas}. To
+determine the chromatic number of these graphs is easy, while in \cite{Andreas2} it is proved that they are in
+edge- and total coloring class 1, except those isomorphic to a complete graph of odd or even order, respectively.\newline
+The Sierpi\'nski graph $S^k_n$ , $k,n\geq 1$, is defined on the vertex set $\{ 1,\ldots,k \}^n$ , two different vertices $u = ( u 1 ,\ldots, u_n )$ and $v = (v 1 ,\ldots , v_n )$ being adjacent if and only if there exists an $h \in \{ 1 , \ldots, n \}$ such that
+\begin{enumerate}[label=(\roman*)]
+\item $u_t = v_t$ , for $t = 1 ,\ldots , h − 1$;
+\item $u_h \neq v_h$ ; and
+\item $u_t = v_h$ and $v t = u h$ for $t = h+ 1 ,\ldots, n$.
+\end{enumerate}
+An example of Sierpi\'nski Graph is shown in Figure \ref{fig:spierpinski}.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1\linewidth]{figures/sierpinski.png}
+\end{center}
+\caption{The Sierpi\'nski graph $S^3_4$}\label{fig:spierpinski}
+\end{figure}
+We will use abbreviation $\langle u_1,\ldots, u_n \rangle$ for $(u_1,\ldots, u_n)$ and in figures will use the short version $u_1\ldots u_n$. \newline
+A vertex of the form $\langle ii \ldots i \rangle$ of $S^k_n$ is called an extreme vertex. Note that $S^k_n$ contains $k$ extreme vertices and that $| V ( S^k_n )| = k^n$.
+
+
 
 
  \begin{thebibliography}{99}
 \thispagestyle{fancy}
 
-\bibitem{Cook}
-\articleInJournalOneAuthor
-    {Curtis R. Cook}
-    {Representations of graphs by n-tuples. In Proceedings of the Fifth South-eastern Conference on Combinatorics, Graph Theory, and Computing}
-   {Israel J.~Math}{52}
-   {1985}{46--52}
-
-\bibitem{Blum}
+\bibitem{Graham}
   \articleInJournalManyAuthors
-    {A.~Blum, G.~Konjevod}{R.~Ravi}
-    {Semidefinite relaxations for minimum bandwidth and other vertex-ordering problems}
-   {Theor.~Comp.~Sci.}{235}
-   {2000}{25--42}
+    {R.L. Graham and P.M. Winkler}
+    {On isometric embeddings of graphs}
+   {rans.Amer. Math. Soc.}{288}
+   {1985}{527--536}
 
-\bibitem{Bourgain}
+\bibitem{Schonber}
 \articleInJournalOneAuthor
-    {J.~Bourgain}
-    {On Lipschitz embedding of finite metric spaces in Hilbert space}
-   {Israel J.~Math}{52}
-   {1985}{46--52}
+    {I.J. Schonber}
+    {Metric spaces and positive definite functions}
+   {Trans. Amer.Math. Soc.}{44}
+   {1938}{522--536}
 
-\bibitem{Chinn}
+\bibitem{David}
+\articleInJournalOneAuthor
+    {David Eppstein}
+    {The lattice dimension of a graph}
+   {European Journal of Combinatorics}{26}
+   {2005}{585--592} 
+
+\bibitem{Poljak}
   \articleInJournalManyAuthors
-    {P.~Chinn, J.~Chv\'atalov\'a, A.~Dewdney}{N.~Gibbs}
-    {The bandwidth problem for graphs and matrices -- a survey}
-   {J.~Graph Theory}{6}
-   {1982}{223--254}
+    {S. Poljak and A. Pultr}
+    {Representing graphs by means of strong and weakproducts}
+   {Comment. Math. Univ. Carolin.}{22}
+   {1981}{449--466}  
+   
+\bibitem{Sandi}
+  \articleInJournalManyAuthors
+    {Sandi Klav\v zar, Iztok Peterin and Sara Sabrina Zemlji\v c}
+    {Hamming dimension of a graph—The case of Sierpi\'nski graphs}
+   {European Journal of Combinatorics}{34}
+   {2013}{460--473}
 
-\bibitem{Chvatalova}
-\PhDDissertation
-    {J.~Chv\'atalov\'a}
-    {On the bandwidth problem for graphs}
-    {Ph.D.~dissertation, University of Waterloo, 1980}
+\bibitem{Sandi2}
+  \articleInJournalManyAuthors
+    {Sandi Klav\v zar, Uro\v s Milutinovi\' c}
+    {Graphs $S(n, k)$ and a Variant of the Tower of Hanoi Problem}
+   {Czechoslovak Mathematical Journal}{47}
+   {1997}{95--104}
 
-\bibitem{Frankl}
-  \articleInJournalTwoAuthors
-    {P.~Frankl}{H.~Maehara}
-    {The Johnson-Lindenstrauss lemma and the sphericity of some graphs}
-   {J.~Comb.~Theory, Ser.~B}{44}
-   {1988}{355--362}
-
-\bibitem{Feige}
-  \articleInJournalOneAuthor
-    {U.~Feige}
-    {Approximating the bandwidth via volume respecting embeddings}
-    {J.~Comp.~Syst.~Sci.}{60}
-    {2000}{510--539}
-
-\bibitem{George}
-  \bookTwoAuthors
-  {A.~George}{J.~Liu}
-   {Computer Solution of Large Positive Definite Systems}
-    {Prentice-Hall, 1981}
-
-\bibitem{Grotschel}
-  \bookManyAuthors  {M.~Gr\"otschel, L.~Lov\'asz}{A.~Schrijver}
-   {Geometric Algorithms and Combinatorial Optimization}
-    {Springer-Verlag, Berlin, 1987}
-
-\bibitem{Kleitman}
-   \articleInJournalTwoAuthors
-     {D.~Kleitman}{R.~Vohra}
-     {Computing the bandwidth of interval graphs}
-     {SIAM J.~Discrete Math.}{3}
-     {1990}{373--375}
-
-\bibitem{Knuth}
-  \bookOneAuthor     {D.~Knuth}
-   {The Art of Computer Programming, Vol.~2, Seminumerical Algorithms}
-    {Addison Wesley, Second Edition, 1981}
-
-\bibitem{Lagarias}
-\bookChapterOneAuthor
-   {J.~Lagarias}
-   {Point Lattices}
-   {R.~Graham, M.~Gr\"otschel, L.~Lov\'asz (eds.)}
-   {Handbook of Combinatorics, Volume~1}
-   {MIT Press, 1995}
-   {919--966}
-
-\bibitem{Linial}
-   \articleInJournalManyAuthors
-     {N.~Linial, E.~London}{Y.~Rabinovich}
-   {The geometry of graphs and some of its algorithmic applications}
-     {Combinatorica}{15}
-     {1995}{215--245}
-
-\bibitem{Novak}
-   \articleInJournalOneAuthorAccepted
-     {J.~Novak}
-   {Polynomial approximation of rational manifolds. I}
-     {J.~Abstract~Approximation}
-
-\bibitem{Novak2}
-   \articleInJournalOneAuthorInPrint
-     {J.~Novak}
-   {Polynomial approximation of rational manifolds. II}
-     {J.~Abstract~Approximation}
-
-\bibitem{Novak3}
-   \articleInJournalTwoAuthorsAccepted
-     {J.~Novak}{M.~Novak}
-   {Polynomial approximation of rational manifolds. III}
-     {J.~Abstract~Approximation}
-
-\bibitem{Novak4}
-   \articleInJournalTwoAuthorsInPrint
-     {J.~Novak}{M.~Novak}
-   {Polynomial approximation of rational manifolds. IV}
-     {J.~Abstract~Approximation}
-
-\bibitem{Novak5}
-   \articleInJournalOneAuthorSubmitted
-     {J.~Novak}
-   {Polynomial approximation of rational manifolds. V}
-     {2014}
-
-\bibitem{Novak6}
-   \articleInJournalTwoAuthorsSubmitted
-     {J.~Novak}{M.~Novak}
-   {Polynomial approximation of rational manifolds. VI}
-     {2014}
-
-\bibitem{Novak7}
-\conferenceArticleTwoAuthors
-     {J.~Novak}{M.~Novak}
-   {Polynomial approximation of rational manifolds. VII}
-    {Proc.~112th Annual Symposium on Topological Approximation}
-    {2002}
-    {112--133}
-
-\bibitem{Santalo}
-  \bookOneAuthor
-  {L.A.~Santalo}
-   {Integral Geometry and Geometric Probability}
-    {Encyclopedia of Mathematics and its Applications, Volume 1, Addison Wesley, 1976}
-
-\bibitem{Saxe}
-   \articleInJournalOneAuthor
-     {J.~Saxe}
-   {Dynamic programming algorithms for recognizing small-bandwidth graphs in polynomial time}
-     {SIAM J.~Alg.~Meth.}{1}
-     {1980}{363--369}
-
-\bibitem{Strang}
-  \bookOneAuthor     {G.~Strang}
-   {Linear Algebra and its Applications, Third Edition}
-    {Saunders College \hbox{Publishing}, Harcourt Brace Jovanovich College Publishers, 1988}
-
-    \bibitem{Unger}
-\conferenceArticleOneAuthor
-    {W.~Unger}
-    {The complexity of the approximation of the bandwidth problem}
-    {Proc.~39th Annual IEEE Symposium on Foundations of Computer Science}
-    {1998}
-    {82--91}
-
-\bibitem{splet1}
-\webPageNoAuthor
-    {Miller--Rabin primality test}
-    {\newline http://en.wikipedia.org/wiki/Miller/\%E2\%80\%93Rabin\_primality\_test}
-    {25}{4}{2014}
-
-\bibitem{splet2}
-\webPageNoAuthorWithInstitution
-    {The Converse of Wilson's Theorem}{The Oxford Math Center}
-    {http://www.oxfordmathcenter.com/drupal7/node/382}
-    {25}{4}{2014}
-
-\bibitem{splet3}
-\webPageOneAuthor
-    {T.~Tao}
-    {Algebraic probability spaces}
-    {http://terrytao.wordpress.com/}
-    {4}{7}{2014}
+\bibitem{Andreas}
+  \articleInJournalManyAuthors
+    {Andreas M. Hinz,Daniele Parisse}
+    {The Average Eccentricity of Sierpiński Graphs}
+   {Graphs and Combinatorics}{28}
+   {2012}{671--686}
+   
+\bibitem{Andreas2}
+  \articleInJournalManyAuthors
+    {Andreas M. Hinz,Daniele Parisse}
+    {Coloring Hanoi and Sierpiński graphs}
+   {Discrete Mathematics}{312}
+   {2012}{1521--1535}   
 
 % There has to be an empty line here so that the page numbers of citations are properly displayed.
 \end{thebibliography}
