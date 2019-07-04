@@ -264,7 +264,7 @@ $$f(v)=(f_1(v),f_2(v),\ldots , f_k(v))$$
 We call $f$ the \textit{quotient map} of $G$ with respect to $\mathfrak{F}$. Note that $f$ need not be one-to-one in general and that it is possible that some quotient graphs are the one vertex graph, an example is shown in Figure \ref{fnotonetoone}.
 \begin{figure}[h]\label{fnotonetoone}
 \begin{center}
-\includegraphics[width=0.8\linewidth]{figures/fnotonetoone.png}
+\includegraphics[width=1\linewidth]{figures/fnotonetoone.png}
 \end{center}
 \caption{An example of a graph that the quotient map is not one-to-one}
 \end{figure}
@@ -342,97 +342,97 @@ We show first that $f$ is one-to-one. Suppose that vertices $x$ and $y$ are not 
 $r > 3$, and there are adjacent vertices $x_j$ and $x_k$ with $k > j+1$. By the minimality of $P$ we have $l(x_jx_k)=i$. We can select $j$ and $k$ such that $k- j$ is minimal among all such vertices $x_j$ and $x_k$. Then the cycle $C=x_jx_{j+1}\ldots x_{k-1}x_k$ is induced. If $C$ is a triangle we have a contradiction with Condition 1, otherwise we have a
 contradiction with Lemma ~\ref{lemma:cyclenotunique}. Hence, we have shown that $f$ is one-to-one.\newline
 Let $xy$ be an edge of $G$ with $l(xy)=i$. Then, by the above, $x$ and $y$ are in different components of $G\backslash F_i$. Moreover, they belong to the same component in any of the graphs $G\backslash F_j$ , for $j\neq i$. It follows that $f$ maps edges to edges and the claim is proved.\newline
-Hence, $G=f(G)$ is an induced subgraph of $G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$. To complete the proof we show that $G$ is also an induced subgraph of the Hamming graph $k_{|G\backslash F_1|}\square K_{|G\backslash F_2|}\square \ldots \square K_{|G\backslash F_k|}$ :
+Hence, $G$ is isomorphic to the subgraph $G\backslash F_1\square G\backslash F_2\square \ldots \square G\backslash F_k$ induced by $f(V(G))$. To complete the proof we show that $G$ is also an induced subgraph of the Hamming graph $k_{|V(G\backslash F_1)|}\square K_{|V(G\backslash F_2|)}\square \ldots \square K_{V(|G\backslash F_k|)}$ :
 Let $x$ and $y$ be non-adjacent vertices of $G$. Then, by the same reasoning as above, $x$ and $y$ are in different components of at least two graphs $G\backslash F_i$. It follows that $f(x)$ and $f(y)$ differ in at least two coordinates which remains valid after adding edges to the factor graphs.
 \end{proof}
-\begin{example} Let's see that $C_7$ is an induced subgraph of a Hamming graph and there exists a labeling of $C_7$ that fulfills Conditions $1$ and $2$.
+\begin{example} Let us see that $C_7$ is an induced subgraph of a Hamming graph and that there exists a labeling of $C_7$ that fulfills Conditions $1$ and $2$.
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=1\linewidth]{figures/c_7inducedhamming.png}
 \end{center}
-\caption{$C_7$ as an induced subgraph of $K_2\square K_3\square K_2$}\label{fig:c7induced}
+\caption{$C_7$ as an induced subgraph of $K_2\square K_3\square K_2$.}\label{fig:c7induced}
 \end{figure}
 \newline
-$C_7$ is an induced subgraph of Hamming graph more specifically of $K_2\square K_3\square K_2$ in the Figure ~\ref{fig:c7induced} take cycle $(112,212,232,231,221,121,111)$ and using the color map $c$, edge $111,112$ gets label $3$, edge $112,212$ gets label $1$, edge $212,232$ gets label $2$, edge $232,231$ gets label $3$, edge $231,221$ gets label $2$, edge $221,121$ gets label $1$, edge $121,111$ gets label $2$. We can easily check that edges of a triangle have the same label (here there is no triangle which is fine) and let $u$ and $v$ be arbitrary vertices of $C_7$ with $d_{C_7}(u,v) \geq 2$. Then there exist different labels i and j which both appear on any induced u, v-path.\newline
-$C_7$ has a labeling in which Conditions 1 and 2 hold as the first graph in Figure ~\ref{fig:c7induced}, now let's take a look at where does the map $f$ sends vertices of $C_7$. We follow the order clockwise from most top vertice, $f$ maps the first vertice to $112$, $f$ maps the second vertice to $212$, $f$ maps the third vertice to $232$, $f$ maps the fourth vertice to $231$, $f$ maps the fifth vertice to $221$,, $f$ maps the sixth vertice to $121$,, $f$ maps the seventh vertice to $111$ and as we can see $G=f(G)$ and induced subgraph of $K_2\square K_3\square K_2$
+$C_7$ is an induced subgraph of Hamming graph, more specifically of $K_2\square K_3\square K_2$ in Figure \ref{fig:c7induced} take the cycle $(112,212,232,231,221,121,111)$ and using the color map $c$, edge $111,112$ gets label $3$, edge $112,212$ gets label $1$, and edge $212,232$ gets label $2$, edge $232,231$ gets label $3$, edge $231,221$ gets label $2$, edge $221,121$ gets label $1$, edge $121,111$ gets label $2$. We can easily check that edges of a triangle have the same label (here there is no triangle, which is fine) and let $u$ and $v$ be arbitrary vertices of $C_7$ with $d_{C_7}(u,v) \geq 2$. Then there exist different labels $i$ and $j$ which both appear on any induced $u, v$-path.\newline
+$C_7$ has a labeling in which Conditions 1 and 2 hold as the first graph in Figure ~\ref{fig:c7induced}. Now let us take a look at where does the map $f$ send vertices of $C_7$. We follow the order clockwise from most top vertex, $f$ maps the first vertex to $112$, $f$ maps the second vertex to $212$, $f$ maps the third vertex to $232$, $f$ maps the fourth vertex to $231$, $f$ maps the fifth vertex to $221$, $f$ maps the sixth vertex to $121$,, $f$ maps the seventh vertex to $111$ and as we can see $G=f(G)$ and an induced subgraph of $K_2\square K_3\square K_2$.
 \end{example}
-Note that the quotient graphs obtained in the proof of Theorem ~\ref{thm:mainkp} need not be complete. For instance, consider the path $P_4$ together with the labeling 1, 2, 1 as we get $G\backslash F_1=P_3$ and $G\backslash F_2=K_2$.
+Note that the quotient graphs obtained in the proof of Theorem \ref{thm:mainkp} need not be complete. For instance, consider the path $P_4$ together with the labeling 1, 2, 1 as we get $G\backslash F_1\cong P_3$ and $G\backslash F_2\cong K_2$.
 \chapter{Cartesian dimension}
-Given a positive integer $d$, a $d$-realization of a graph $G=(V,E)$ is an injective mapping $\varphi_G:V\rightarrow \mathbb{R}^d$ such that two vertices $u, v \in V$ are adjacent if and only if $\varphi G(u)$ and $\varphi G(v)$ differ in exactly one coordinate. A graph $G$ is said to be $d$-realizable if it has a $d$-realization. Note that $G$ is $d$-realizable if and only if $G$ has a $d$-realization $\varphi_G : V \rightarrow \mathbb{N}^d$ or any large enough set of dimension $d$ since $V(G)$ is countable.\newline
-Any graph that has a $d$-realization, it has also a $d+1$-realization (simply add one coordinate equal to $0$). Which naturally leads to a definition: the Cartesian dimension of a graph $G = (V, E)$, denoted $Cdim(G)$, is defined as the minimum non-negative integer $d$ such that $G$ is $d$-realizable, if such an integer exists, and $\infty$, otherwise. (Note that $K_1$ is the only graph of Cartesian dimension 0.)\newline
+Given a positive integer $d$, a $d$-realization of a graph $G=(V,E)$ is an injective mapping $\varphi_G:V\to \mathbb{R}^d$ such that two vertices $u, v \in V$ are adjacent if and only if $\varphi_G(u)$ and $\varphi_G(v)$ differ in exactly one coordinate. A graph $G$ is said to be $d$-realizable if it has a $d$-realization. Note that $G$ is $d$-realizable if and only if $G$ has a $d$-realization $\varphi_G : V \rightarrow \mathbb{N}^d$ or any large enough set so that we do not run out of available values for coordinates since $V(G)$ is finite.\newline
+Any graph that has a $d$-realization, it has also a $(d+1)$-realization (simply add one coordinate constantly equal to $0$). This naturally leads to a definition: the Cartesian dimension of a graph $G = (V, E)$, denoted $Cdim(G)$, is defined as the minimum non-negative integer $d$ such that $G$ is $d$-realizable, if such an integer exists, and $\infty$, otherwise. Note that $K_1$ is the only graph of Cartesian dimension 0.\newline
 
-For a graph $G$ to have Cartesian dimension $1$ it must have a $1$-realization, or in other words you can map all the vertices of the graph to $\mathbb{R}$ and becuase the map has to be injective every vertice is mapped to different real number but every two vertice differ in exactly one coordinate which makes them adjacent, therefore the only graphs of Cartesian dimension $1$ are complete graphs of order at least $2$.
+For a graph $G$ to have Cartesian dimension $1$ it must have a $1$-realization, or in other words you can map all the vertices of the graph to $\mathbb{R}$ and becuase the map has to be injective every vertex is mapped to different real number but every two vertices differ in exactly one coordinate which makes them adjacent, therefore the only graphs of Cartesian dimension $1$ are exactly the complete graphs of order at least $2$.
 
 \begin{example}
-$C_6$ has Cartesian dimension $2$, indeed since it is not a complete graph it cannot have dimension $1$, and we find a $2-realization$ of $C_6$ with vertex set $V=\{v_1,v_2,v_3,v_4,v_5,v_6\}$ and edge set $E=\{v_1v_2,v_2v_3,v_3v_4,v_4v_5,v_5v_6,v_6v_1\}$ by map defining $\varphi_{C_7}:V\rightarrow \mathbb{R}^2$ with $\varphi(v_1)=(1,1)$, $\varphi(v_1)=(1,1)$, $\varphi(v_2)=(3,1)$, $\varphi(v_3)=(3,3)$, $\varphi(v_4)=(2,3)$, $\varphi(v_5)=(2,2)$ and $\varphi(v_1)=(1,2)$. An easy check shows that indeed for any edge the corresponding values of $\varphi$ differ in exactly one coordinate.
+$C_6$ has Cartesian dimension $2$. Indeed, since it is not a complete graph it cannot have dimension $1$, and we find a $2-realization$ of $C_6$ with vertex set $V=\{v_1,v_2,v_3,v_4,v_5,v_6\}$ and edge set $E=\{v_1v_2,v_2v_3,v_3v_4,v_4v_5,v_5v_6,v_6v_1\}$ by the map $\varphi_{C_7}:V\to \mathbb{R}^2$ given by $\varphi(v_1)=(1,1)$, $\varphi(v_1)=(1,1)$, $\varphi(v_2)=(3,1)$, $\varphi(v_3)=(3,3)$, $\varphi(v_4)=(2,3)$, $\varphi(v_5)=(2,2)$ and $\varphi(v_6)=(1,2)$ (See Figure \ref{c_62real}). An easy check shows that indeed for any edge the corresponding values of $\varphi_{C_7}$ differ in exactly one coordinate, while for any non-edge they differ in both cooridnate.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=1\linewidth]{figures/c_62real.png}
 \end{center}
-\caption{A $2$-realization of $C_6$}
+\caption{A $2$-realization of $C_6$}\label{c_62real}
 \end{figure}
 \end{example} 
 
 \begin{lemma}\label{diamondfreecliques}
-If graph $G$ is diamond-free then any two cliques of $G$ intersect in at most one vertex.
+If graph $G$ is diamond-free then any two maximal cliques of $G$ intersect in at most one vertex.
 \end{lemma}
 \begin{proof}
-Suppose cliques $A_1$ and $A_2$ intersect in at least two vertices say $v_1, v_2$. Becuase $A_1$ is maximal clique there is some vertice $v_3$ other than $v_1,v_2$ in $A_1$ but not in $A_2$ and since $A_1$ is clique we have that $v_1,v_2,v_3$ form a triangle, similarly there exists $v_4$ in $A_2$ but not in $A_1$ such that $v_1,v_2,v_4$ form triangle. But all together $v_1,v_2,v_3,v_4$ form a diamond, a contradiction with $G$ being diamond-free.
+Suppose two maximal cliques $A_1$ and $A_2$ intersect in at least two vertices say $v_1, v_2$. Because $A_1$ is a maximal clique there is some vertex $v_3$ other than $v_1,v_2$ in $A_1$ but not in $A_2$ and since $A_1$ is clique we have that $v_1,v_2,v_3$ form a triangle. Similarly, there exists a vertex $v_4$ in $A_2$ but not in $A_1$ such that $v_1,v_2,v_4$ form triangle. But then vertices $v_1,v_2,v_3,v_4$ induce a diamond, a contradiction with $G$ being diamond-free.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}(Staton and Wingard \cite{Staton})
 For every graph G, the following conditions are equivalent:
 \begin{enumerate}
 \item $Cdim(G)\leq 2$.
 \item $G$ is the line graph of a bipartite graph.
 \item $G$ is diamond-free and $K(G)$ is bipartite.
-\item $G$ is \{claw, diamond, $C_5$ , $C_7$ , ...\}-free.
+\item $G$ is \{claw, diamond, $C_5$, $C_7$, \ldots\}-free.
 \end{enumerate}
 \end{theorem}
 
 \begin{proof}
-$(1)\implies(4)$ We show that none of those graphs in (4) can be an induced subgraph of a graph with $Cdim(G)\leq 2$. $Cdim(G)$ cannot be equal to $1$ since only complete graph with Cartesian dimension $1$. Now suppose it $Cdim(G)=2$.
-\newline First let's show for diamond. Suppose G has diamond as induced subgraph with vertex set $V(G)=\{v_1,v_2,v_3,v_4\}$ and edge set $E(G)=\{v_1v_2,v_1v_3,v_2v_3,v_2v_4,v_3v_4\}$, now because $v_1$, $v_2$ and $v_3$ is complete graph on $3$ vertices all three together differ in one coordinate, similarly for $v_2$, $v_3$ and $v_4$ so it follows that also $v_1$ and $v_4$ differ only in one coordinate but they are not adjacent.
-\newline Next suppose G has claw as induced subgraph with vertex set $V(G)=\{v_1,v_2,v_3,v_4\}$ and edge set $E(G)=\{v_1v_2,v_1v_3,v_1v_4\}$ and w.l.o.g. assume that assume that $\varphi_G(v_1)$ differs only in first coordinate with $\varphi_G(v_2)$ and because $v_2$ and $v_3$ are not adjacent then $\varphi_G(v_1)$ and $\varphi_G(v_3)$ must differ only in second coordinate. Which bring us to $v_4$, because $v_1$ and $v_4$ are adjacent they must differ only one coordinate, but either coordinate is not good as would  imply adjacency between $v_4$ and $v_2$ or $v_4$ and $v_3$ but there is no edge among them.
-\newline And finally for odd-cycle larger than 3. Let the vertex set be $V(G)=\{v_1,v_2,...,v_n\}$ with edge set $E(G)=\{v_1v_2,v_2v_3,\ldots v_nv_1\}$ and notice that since there is no triangle no three vertices lie in same line so if we color map define in the section ~\ref{kp-labeling-section} then by by following the cycle we alternate by colors $1$ and $2$, but to close the cycle it must be followed by two different colors but cycle is odd so it is not possible.\newline
-$(4)\implies (3)$ We only need to show that $K(G)$ is not bipartite which is equivalent that $K(G)$ has an odd cycle. Suppose it has length greater than $3$, first note that no three cliques(vertices in $K(G)$) share one vertice as then a claw would be form in $G$ but $G$ is claw-free, so we form an odd cycle by following the common vertice of cliques of size greater than $3$ but $G$ is $\{C_5,C_7,\ldots\}$-free, therefore $K(G)$ has a cycle of length $3$. Now if all three cliques have a vertice in common then we can form a claw because those cliques are maximal so there exist some vertex that other cliques don't have. Let those cliques that form a triangle be $A_1,A_2,A_3$ and the common vertex of $A_1,A_2$ be $v_1$, $A_2,A_3$ be $v_2$ and $A_3,A_1$ be $v_3$, because $v_1$ and $v_2$ are in $A_2$ they are adjacent, similiar for others. Notice that one of the cliques must have another vertex $v_4$ other than $v_1,v_2,v_3$ otherwise $K(G)$ would be just a vertex. Now w.l.o.g. say $v_4\in A_1$ then we have another triangle with $v_1,v_3\in A_1$, which all together $v_1,v_2,v_3,v_4$ forms a diamond but $G$ is diamond-free which leads to a contradiction, therefore $K(G)$ is bipartite.\newline 
-$(3)\implies (1)$ If $G$ is complete then we know that $Cdim(G)=1$, suppose $G$ is not complete. Since $K(G)$ is bipartite we color vertices with two colors in natural way. Map vertices of $G$ in $\mathbb{R}^2$ by placing cliques of $G$ having one color on vertical lines and cliques having the other color on horizontal lines. By Lemma ~\ref{diamondfreecliques}, no two vertices are mapped to same point.
+$First, we prove that condition 1 implies condition 4$. We show that none of the graphs in condition 4 can be an induced subgraph of a graph with $Cdim(G)\leq 2$. Suppose that $G\in \{ claw, diamond\} \cup \{C_k|k\geq 5 \text{ and k odd}\}$, $Cdim(G)$ cannot be equal to $1$ since only complete graph with Cartesian dimension $1$. Now suppose it $Cdim(G)=2$.
+\newline First let us consider the diamond. Suppose $G$ has diamond graph, H as induced subgraph with vertex set $V(H)=\{v_1,v_2,v_3,v_4\}$ and edge set $E(H)=\{v_1v_2,v_1v_3,v_2v_3,v_2v_4,v_3v_4\}$. Now because $v_1$, $v_2$, and $v_3$ induce a complete graph on $3$ vertices, all three together differ in one coordinate, similarly for $v_2$, $v_3$ and $v_4$ so it follows that also $v_1$ and $v_4$ differ only in one coordinate but they are not adjacent, a contradiction.
+\newline Next suppose $G$ has claw graph, $H$ as induced subgraph with vertex set $V(H)=\{v_1,v_2,v_3,v_4\}$ and edge set $E(H)=\{v_1v_2,v_1v_3,v_1v_4\}$ and with out loss of generality assume that $\varphi_G(v_1)$ differs only in the first coordinate with $\varphi_G(v_2)$. Because $v_2$ and $v_3$ are not adjacent, $\varphi_G(v_1)$ and $\varphi_G(v_3)$ must differ only in the second coordinate(say). Because $v_1$ and $v_4$ are adjacent, they must differ in only one coordinate, but either coordinate is not good as that would  imply adjacency between $v_4$ and $v_2$, or between $v_4$ and $v_3$ but there is no edge among them.
+\newline And finally consider ann odd cycle of length more than 3. Let the vertex set be $V(G)=\{v_1,v_2,...,v_n\}$ with edge set $E(G)=\{v_1v_2,v_2v_3,\ldots ,v_nv_1\}$ and notice that since there is no triangle, no three vertices lie in the same line so if we color map define in the section ~\ref{kp-labeling-section} then by by following the cycle we must alternate by colors $1$ and $2$, but the cycle is odd so it is not possible.\newline
+$(4)\implies (3)$, suppose that $G$ is $\{claw, diamond, C_5, C_7, \ldots \}$-free. We only need to show that $K(G)$ is bipartite which is equivalent to showing that $K(G)$ has no odd cycle. Suppose $K(G)$ has an odd cycle of length greater than $3$. First note that no three  maximal cliques (vertices in $K(G)$) share one vertice as then a claw would be formed in $G$ (choose any other vertex from each clique and together with common vertex would form the claw) but $G$ is claw-free. Thus we form an odd cycle in $G$ by following the common vertices of cliques of size greater than $3$. But $G$ is $\{C_5,C_7,\ldots\}$-free, therefore $K(G)$ has a cycle of length $3$. Now if all three cliques have a vertex in common then we can form a claw because those cliques are maximal so there exist some vertex in any of the cliques that other cliques do not have. Let those cliques that form a triangle be $A_1,A_2,A_3$ and the common vertex of $A_1$ and $A_2$ is $v_1$; the common vertex of $A_2$ and $A_3$ is $v_2$; whereas the common vertex of $A_3,A_1$ is $v_3$, because $v_1$ and $v_2$ are in $A_2$ they are adjacent, similiarly for others. Notice that at least one of the cliques must have another vertex $v_4$ other than $v_1,v_2,v_3$, which is non-adjacent to one of them, otherwise $K(G)$ would be just a vertex. Now with out loss of generality say $v_4\in A_1$. Then we have another triangle with $v_1,v_3\in A_1$, which implies that $v_1,v_2,v_3,v_4$ induce a diamond because from assumption $v_2v_4\notin E(G)$ ($v_4$ is is non-adjacent to one of $v_1,v_2,v_3$) but $G$ is diamond-free which leads to a contradiction. Therefore $K(G)$ is bipartite.\newline 
+Now let us show that condition 3 implies condition 1. If $G$ is complete then we know that $Cdim(G)=1$. Suppose that $G$ is not complete. Since $K(G)$ is bipartite, we can color vertices of $K(G)$, with two colors in natural way. Map vertices of $G$ in $\mathbb{R}^2$ by placing cliques of $G$ having one color on vertical lines and cliques having the other color on horizontal lines. By Lemma ~\ref{diamondfreecliques}, no two vertices are mapped to same point. This gies a 2-realization of $G$, showing that $Cdim(G)\leq 2$
 \newline
-$(1)\iff (2)$ Given a bipartite graph $H$ such that $L(H)=G$, construct the adjacency matrix $A$. Mark points in $\mathbb{R}^2$ at $(i, j)$ iff $a_{ij} = 1$ in uppertriangle matrix of $A$. It is immediate that one can map vertex ${i,j}\in G$ to $(i,j)$ where $i<j$ and notice that this defines a one to one mapping and if two vertices are adjacent in $G$ then they will defer in exactly on coordinate. This shows that $Cdim(G)\leq 2$ as we found a $2$-realization.\newline
-Since G can be realized with vertices only at positive integral points (the map $\varphi_G$ can be defined to $\mathbb{N}^d$), the proof works in reverse.
+Now let us show that condition 1 holds if and only if condition 2 holds. Given a bipartite graph $H$ such that $L(H)=G$, construct the adjacency matrix $A$ of $H$. Mark points in $\mathbb{R}^2$ at $(i, j)$ if and only if $a_{ij} = 1$ in uppertriangle matrix of $A$. It is immediate that one can map vertex ${i,j}\in V(G)$ to $(i,j)$ where $i<j$ and notice that this defines a one to one mapping and if two vertices are adjacent in $G$ then they will defer in exactly on coordinate. This shows that $Cdim(G)\leq 2$ as we found a $2$-realization.\newline
+Since $G$ can be realized with vertices only at positive integral points (the map $\varphi_G$ can be defined to $\mathbb{N}^d$), the proof works in reverse.
 \end{proof}
 
 \begin{lemma}\label{xyv adjacent}
-Let $G$ be a d-realizable graph. Let $v$ be a vertex adjacent to vertices $x$ and $y$. Then $x$ and $y$ are adjacent if and only if they differ from $v$ in the same coordinate.
+Let $G$ be a d-realizable graph. Let $v$ be a vertex adjacent to vertices $x$ and $y$. Then $x$ and $y$ are adjacent if and only if both of them differ from $v$ in the same coordinate.
 \end{lemma}
 \begin{proof}
-($\implies$) If $x$ and $y$ are adjacent then they differ in exactly one coordinate say in $k$th coordinate. Also say $v$ differs to $x$ exactly in $i$th coordinate and to $y$ in $j$th coordinate. Now suppose $x$ and $y$ don't differ from $v$ in the same coordinate which means that $i\neq j$, also note that $k$ cannot be equal to both $i$ and $j$ as this would imply $i=j$ so w.l.o.g. $k\neq j$. Now because $i\neq j$, the $j$th coordinate of $x$ is the same with $j$th coordinate of $v$ and therefore differs from $j$th coordinate of $y$, but also $k\neq j$ which means that $x$ and $y$ differ in more than one coordinate which contradicts the fact that $x$ and $y$ are adjacent.\newline
-($\impliedby$) If they differ from $v$ in the same coordinate and because both of them are adjacent to $v$ then it means that they differ in exactly that coordinate which they differ with $v$, i.e. in one coordinate therefore they are adjacent.
+($\implies$) If $x$ and $y$ are adjacent then they differ in exactly one coordinate say in $k$th coordinate. Also say $v$ differs to $x$ exactly in the $i$th coordinate and to $y$ in the $j$th coordinate. Now suppose $x$ and $y$ do not differ from $v$ in the same coordinate which means that $i\neq j$, also note that $k$ cannot be equal to both $i$ and $j$ as this would imply $i=j$ so w.l.o.g. $k\neq j$. Now because $i\neq j$, the $j$th coordinate of $x$ is the same with $j$th coordinate of $v$ and therefore differs from $j$th coordinate of $y$, but also $k\neq j$ which means that $x$ and $y$ differ in more than one coordinate which contradicts the fact that $x$ and $y$ are adjacent.\newline
+($\impliedby$) If $x$ and $y$ differ from $v$ in the same coordinate and because both of them are adjacent to $v$ then it means that they differ in exactly that coordinate in which they differ with $v$, i.e. in one coordinate therefore they are adjacent.
 \end{proof}
 
 \begin{theorem}\label{d-realizable-free}
-Every d-realizable graph is \{$K_{1,d+1}$ , diamond,
-$K_{2,3}$ , $C_5$ \}-free.
+Every d-realizable graph is \{$K_{1,d+1}$, diamond,
+$K_{2,3}$, $C_5$ \}-free.
 \end{theorem} 
-\begin{proof}
-\textit{For $K_{1,d+1}:$} Suppose $v$ is the hub (the vertex with largest degree) of an induced $K_{1,d+1}$. Then $v$ differs from $n+1$ neighbors in different coordinates by Lemma ~\ref{xyv adjacent}, but there are only $n$ coordinates.\newline
-\textit{For diamond:} If $v_1$, $v_2$, $x$ and $y$ are vertices of an induced diamond with $v_1$ and $v_2$ the vertices of degree $2$, then, invoking the Lemma ~\ref{xyv adjacent} we see that $v_1$ differs from $x$ and $y$ in the same coordinate. Similarly $v_2$ diifers from $x$ and $y$ in the same coordinate. Hence $v_1$ and $v_2$ differ from $x$ and $y$ in the same coordinate, and thus either $x=y$ or $x$ is adjacent to $y$.\newline
-\textit{For $K_{2,3}$:} Let $x$ and $y$ be adjacent to all $v_1$,$v_2$,$v_3$ in an induced $K_{2,3}$. Then by Lemma ~\ref{xyv adjacent}, $v_1$,$v_2$, $v_3$ differ from $x$ in $3$ distinct coordinates. We assume that coordinates of $x$ are zeros. Then $y$ is at a distance of $2$ from x, so $y$ has $2$ non-zero coordinates. Hence $y$ has a zero in coordinate where either $v_1$,$v_2$ or $v_3$ is non-zero, and it follows that $y$ differs from one of these $3$ vertices in $3$ coordinates, and is therefore not adjacent to that vertex.\newline
-\textit{For $C_5$:} Let $v_1$,$v_2$,$v_3$,$v_4$,$v_5$ be the vertices of a $5$-cycle in cyclic order. We assume that the coordinates of $v_1$ are all zeros.
-$$v_1=(0,0,0,\ldots)$$
-W.l.o.g. we can say
-$$v_2=(\alpha,0,0,\ldots)$$
-By the Lemma ~\ref{xyv adjacent} w.l.o.g.
-$$v_3=(\alpha,\beta,0,0,\ldots)$$
+\begin{proof} Let $G$ be a d-realizable graph.\newline
+\textit{For $K_{1,d+1}:$} Suppose $v$ is the hub (the vertex with largest degree) of an induced $K_{1,d+1}$ in $G$. Then $v$ differs from $d+1$ neighbors in different coordinates by Lemma \ref{xyv adjacent}, but there are only $d$ coordinates, a contradiction.\newline
+\textit{For the diamond:} If $v_1$, $v_2$, $x$ and $y$ are vertices of an induced diamond with $v_1$ and $v_2$ the vertices of degree $2$, then, invoking Lemma \ref{xyv adjacent} we see that $v_1$ differs from $x$ and $y$ in the same coordinate. Similarly $v_2$ difers from $x$ and $y$ in the same coordinate. Hence $v_1$ and $v_2$ differ from $x$ and $y$ in the same coordinate, and thus either $x=y$ or $x$ is adjacent to $y$.\newline
+\textit{For $K_{2,3}$:} Let $x$ and $y$ be adjacent to all $v_1$,$v_2$,$v_3$ in an induced $K_{2,3}$. Then by Lemma ~\ref{xyv adjacent}, $v_1$,$v_2$, $v_3$ differ from $x$ in $3$ distinct coordinates. We may assume that coordinates of $x$ are zeros. Then $y$ is at a distance of $2$ from $x$, so $y$ has exactly $2$ non-zero coordinates. Hence $y$ has a zero in coordinate where either $v_1$,$v_2$ or $v_3$ is non-zero, and it follows that $y$ differs from one of these $3$ vertices in $3$ coordinates, and is therefore not adjacent to that vertex.\newline
+\textit{For the $C_5$:} Let $v_1$,$v_2$,$v_3$,$v_4$,$v_5$ be the vertices of a $5$-cycle in cyclic order. We assume that the coordinates of $v_1$ are all zeros.
+$$\varphi (v_1)=(0,0,0,\ldots)$$, where $\varphi$ is the map from vertex set to $\mathbb{R}^d$.\newline
+With out loss of generality we can say
+$$\varphi (v_2)=(\alpha,0,0,\ldots) \text{, for some } \alpha \in \mathbb{R} $$
+By the Lemma \ref{xyv adjacent} with out loss of generality
+$$\varphi (v_3)=(\alpha,\beta,0,0,\ldots) \text{, for some } \beta \in \mathbb{R}$$
 Now if $v_4$ differed from $v_3$ in any coordinate other than the first two, $v_4$ would be at a distance at least $3$ from $v_1$ and it would be impossible to find $v_5$ to complete the $5$-cycle. Hence $v_4$ differs from $v_3$ in one of the first 2 coordinates. If 
-$$v_4=(\alpha,\gamma,0,0,\ldots)$$
+$$varphi (v_4)=(\alpha,\gamma,0,0,\ldots) \text{, for some } \gamma \in \mathbb{R}$$
 then $v_4$ is adjacent to $v_2$. Hence
-$$v_4=(\delta,\beta,0,0,\ldots)$$
+$$\varphi (v_4)=(\delta,\beta,0,0,\ldots) \text{, for some } \delta \in \mathbb{R}$$
 and the only choice for $v_5$ are
 $$(\delta,0,0,0,\ldots)$$
 and 
 $$(0,\beta,0,0,\ldots)$$
-The first of these is adjacent to $v_2$ and second is adjacent to $v_3$
+In the first case $v_5$ is adjacent to $v_2$, and, in the  second one, to $v_3$; a contradiction.
  
 \end{proof}
 
@@ -482,7 +482,7 @@ A quick check can show that every induced cycle is a KP-labeling and also no $P_
 This example can be generalized that Theorem \ref{3-edge-label} does not work for any $d>3$.  
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{figures/d4.png}
+\includegraphics[width=1\linewidth]{figures/d4.png}
 \end{center}
 \caption{Counterexample of Theorem \ref{3-edge-label} for 4-edge-labeling}
 \end{figure}
@@ -525,7 +525,7 @@ As a result, we write the following proposition
 Next, we find a $KP$-labeling of the graph with 3 labels.
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{figures/p_2sqp_j.png}
+\includegraphics[width=1\linewidth]{figures/p_2sqp_j.png}
 \end{center}
 \caption{KP-labeling of $P_2\square P_6$}\label{fig:P_2sqP_6}
 \end{figure}\newline
@@ -543,7 +543,7 @@ Finally, we will look at the general case when $i\geq 3$.
 Next, we find a KP-labeling of the graph with 4 labels.
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{figures/p_isqp_j.png}
+\includegraphics[width=1\linewidth]{figures/p_isqp_j.png}
 \end{center}
 \caption{KP-labeling of $P_5\square P_6$}
 \end{figure}\newline
@@ -604,6 +604,13 @@ $$Hdim( S^3_n)\geq \frac{7}{4}\cdot 3^{n-3}+3\cdot 2^{n-4}+\frac{3}{2}\cdot n-\f
 
  \begin{thebibliography}{99}
 \thispagestyle{fancy}
+
+\bibitem{Staton}
+  \articleInJournalManyAuthors
+    {William Staton and G. Clifton Wingard}
+    {On line graphs of bipartite graphs}
+   {Util. Math.}{53}
+   {1998}{183--187} 
 
 \bibitem{Graham}
   \articleInJournalManyAuthors
