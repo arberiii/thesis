@@ -5,10 +5,11 @@
 \contentsline {section}{\numberline {3.1}KP-labeling}{5}
 \contentsline {section}{\numberline {3.2}Induced subgraphs of Hamming Graphs}{9}
 \contentsline {chapter}{\numberline {4}Cartesian dimension}{14}
-\contentsline {subsection}{\numberline {4.0.1}Cartesian dimension of $P_i\square P_j$}{22}
-\contentsline {chapter}{\numberline {5}Hamming dimesion}{25}
-\contentsline {section}{\numberline {5.1}Hamming dimension of Sierpiński graphs}{26}
-\contentsline {chapter}{\numberline {6}Bibliography}{29}
+\contentsline {section}{\numberline {4.1}NP-completeness of testing realizability in $d\geq 3$ dimension}{22}
+\contentsline {section}{\numberline {4.2}Cartesian dimension of $P_i\square P_j$}{24}
+\contentsline {chapter}{\numberline {5}Hamming dimesion}{27}
+\contentsline {section}{\numberline {5.1}Hamming dimension of Sierpiński graphs}{28}
+\contentsline {chapter}{\numberline {6}Bibliography}{31}
 \global \c@tocdepth -1\relax 
 \contentsline {chapter}{\numberline {A}Title of First Appendix}{}
 \contentsline {chapter}{\numberline {B}Title of Second Appendix}{}

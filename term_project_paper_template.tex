@@ -488,7 +488,7 @@ This example can be generalized that Theorem \ref{3-edge-label} does not work fo
 \end{figure}
 \end{example}
 From Condition 1 we know that every 3-KP-labeling of 3-cycle is constant(monochromatic). The folliwing result analyzes longer cycles.
-\begin{lemma}
+\begin{lemma}\label{123123}
 Let $C$ be a cycle of length at least 4. A 3-edge-coloring of $C$ with colors 1, 2, 3 is a KP-labeling if and only if
 \begin{itemize}
 \item either it is a 2-edge-coloring of $C$, or
@@ -507,7 +507,43 @@ Suppose now, without loss of generality, that $C$ contains a cyclically ordered 
 
 \end{proof}
 
-\subsection{Cartesian dimension of $P_i\square P_j$}
+\section{NP-completeness of testing realizability in $d\geq 3$ dimension}
+In this section we will present the result done by Martin Milani\v c, Peter Mur\v si\v c, and Marcelo Mydlarz.\newline
+In this section we try to understand the question: How difficult is it to determine if a given graph $G$ can be realized in $R^d$?\newline
+First we show that for every $d\geq 3$, determining whether $Cdim(G)\leq d$ is NP-complete.
+
+\begin{theorem}(Martin Milani\v c, Peter Mur\v si\v c, and Marcelo Mydlarz)\newline
+Given a graph $G$, determining whether $Cdim(G) \leq 3$ is NP-complete, even for connected bipartite graphs of maximum degree at most 3.
+\end{theorem}
+\begin{proof}
+A polynomially checkable certificate (a problem that can be checked in polynomial time) of the fact that $Cdim(G) \leq 3$ is any 3-realization of $G$ of the form $\varphi _G : V \to N^3$. Therefore, the problem is in NP (on any class of input graphs).\newline
+In \cite{Ian} showed that it is NP complete to determine the chromatic index of an arbitrary graph. The problem remains NP-complete even for cubic graphs, so to show hardness, we make a reduction from the 3-edge-coloring problem in cubic graphs.\newline
+Let $G$ be a cubic graph that is the input for the
+3-edge-coloring problem. We may assume that $G$ is connected. Construct a graph $G'$ from $G$ by replacing each edge $xy$ of $G$ with the structure shown in Figure \ref{gadget}, such structure we will call XVWY.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{figures/gadget.png}
+\end{center}
+\caption{A gadget XVWY replacing each edge $xy$}\label{gadget}
+\end{figure}
+Formally,
+$$V(G')= V(G)\cup
+\bigcup_{xy\in E(G)} \{v_{xy}, v_{yx}, w_{xy}, w_{yx}\},$$
+$$E(G')=\bigcup_{xy\in E(G)} \{xv_{xy}, v_{xy}w_{xy}, v_{xy}w_{yx}, v_{yx}w_{xy},v_{yx}w_{yx}, yv_{yx}\}.$$
+Now let us show that $G'$ is bipartite. Letting $V_1=V(G)\cup
+\bigcup_{xy\in E(G)} \{w_{xy},w_{yx}\}$ and $V_2=\bigcup_{xy\in E(G)} \{v_{xy},v_{yx}\}$, we see that $(V_1, V_2)$ is a bipartition of $G'$ since both $V_1$ and $V_2$ are indepedent set and every possible edge in $G'$ is between $V_1$ and $V_2$. Thus, $G'$ is a bipartite graph with vertices of degrees 2 and 3 only. We will show that $G$ is 3-edge-colorable if and only if $Cdim(G') 
+\leq 3$.\newline
+Let us show the backward direction. Let $Cdim(G')\leq 3$. By Theorem \ref{thm:mainkp}, $G'$ has a 3-KP-labeling. Then by Lemma \ref{lemma:cyclenotunique} we can infer that the cycle $C=v_{xy}-w_{xy}-v_{yx}-w_{yx}-v_{xy}$ in $G'$ must be 2-KP-labled. Since we have 3-KP-labeling, this implies that the edges $xv_{xy}$ and $yv_{yx}$ must have the same label $l_{xy}$, different from labels used in $C$. Since $G'$ is triangle-free, any KP-labeling of $G'$ is an edge-coloring (otherwise, Condition 4 would be violated). Therefore, by labeling each edge $xy \in E(G)$ with $l_xy$, we get a 3-edge-coloring of $G$.\newline
+Now suppose that $G$ has a 3-edge-coloring using colors 1, 2, 3. For each edge $xy$ of $G$ labeled $i \in \{1, 2, 3\}$, let $\{j, k\} = \{1, 2, 3\} \backslash \{i\}$ and label the associated edges of $G'$ as follows: edges $xv_{xy}$ and $yv_{yx}$ with $i$, edges $v_{xy} w_{xy}$ and $v_{yx} w_{yx}$ with $j$, and edges $v_{xy} w_{yx}$ and $v_{yx} w_{xy}$ with $k$. We claim that the so obtained labeling of $G'$ is a KP-labeling. Since we have a 3-edge-labeling of $G'$, by Thoerem \ref{3-edge-label}, it suffices to check that Conditions 3 and 4 are satisfied. First we check that no induced $P_3$ is monochromatic. If the edges are stricly from one gadget XVWY then from labeling no $P_3$ there is monochromatic. If $P_3$ is formed from two gadgets XVWY having a vertex in common, the labels of this $P_3$ are taken from the incident edges in $G$, but the label in $G$ is 3-edge-coloring and it has no monochromatic $P_3$, therefore the Condition 4 holds.
+In order to verify that Condition 3 holds, note that $G'$ has two types of induced cycles:
+\begin{enumerate}
+\item[-] 4-cycles. They only appear in the gadget XVWY; they are properly 2-edge-colored and hence KP-labeled by Lemma \ref{123123}.
+\item[-] Cycles of length greater than 4. Each such cycle $C$ has length $4p$ for some $p \geq 3$ because the cycle must close in some vertex from set $V(G)$ and a simple counting we get that it must be of length $4p$, and arises from a (not necessarily induced) $p$-cycle $C'$ in $G$. We will show that such cycles satisfy the 123123-condition and apply Lemma \ref{123123}. Let $x_1, x_2,\ldots, x_p$ be a cyclic order of vertices in $C'$. Without loss of generality, let 1, 2, 3, 1 be the labels (in this order) on some shortest path from $x_1$ to $x_2$ in $C$. We consider what are possible labels on the edges of any shortest path from $x_2$ to $x_3$ in $C$. Since on some shortest path from $x_1$ to $x_2$ ends with label 1 then no shortest path from $x_2$ to $x_3$ starts with 1, therefore it must starts with 2 or 3. If it starts with 2, it must end with labels 1,3,2 or 3,1,2; else if it starts with 3, it must end with labels 1,2,3 or 2,1,3. In every case we can find labels 2,3 in this order and thus, along cycle $C$ we find 6 distinct edges labeled 1, 2, 3, 1, 2, 3 in order. This shows that $C$ satisfies the 123123-condition. 
+\end{enumerate}  
+\end{proof}
+
+\section{Cartesian dimension of $P_i\square P_j$}
 A two-dimensional grid graph is the Cartesian product two path graphs. The results below will demonstrate that when finding the exact Cartesian dimension of these graphs and for paths of length at least 3, the Cartesian dimension is equal for any pair of path graphs. To prove these results, we will use the Theorem \ref{cdim<kp} which shows the relation between Cartesian dimension and KP-labeling.\newline
 \begin{theorem}
 $Cdim(P_i \square P_j) = \left\{0,2,3,4\right\}$
@@ -591,13 +627,31 @@ An example of Sierpi\'nski Graph is shown in Figure \ref{fig:spierpinski}.
 \end{center}
 \caption{The Sierpi\'nski graph $S^3_4$}\label{fig:spierpinski}
 \end{figure}
-We will use abbreviation $\langle u_1,\ldots, u_n \rangle$ for $(u_1,\ldots, u_n)$ and in figures will use the short version $u_1\ldots u_n$. \newline
-A vertex of the form $\langle ii \ldots i \rangle$ of $S^k_n$ is called an extreme vertex. Note that $S^k_n$ contains $k$ extreme vertices and that $| V ( S^k_n )| = k^n$.
+Below we will show without proof results from \cite{Sandi}
 
 \begin{theorem}
 For any $n\geq 2$
 $$Hdim( S^3_n)\geq \frac{7}{4}\cdot 3^{n-3}+3\cdot 2^{n-4}+\frac{3}{2}\cdot n-\frac{9}{4}$$
 \end{theorem}
+
+\begin{proposition}
+\begin{enumerate}[label=(\roman*)]
+\item $Hdim(S_3^2)=3,Hdim(S_3^3)=6$.
+\item For any $k\geq 4$, $Hdim(S_k^2)=2$. 
+\end{enumerate}
+\end{proposition}
+
+\begin{theorem}
+\begin{enumerate}[label=(\roman*)]
+\item $Hdim(S_3^n)\leq 5\cdot 3^{n-3}+1$ $(n\geq 3)$.
+\item $Hdim(S_k^n)\leq \frac{2}{k-1}k^{n-2}+\frac{2k-4}{k-1}$ $(k\geq 4 \text{ and } n\geq 2)$ 
+\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+For any $k\geq 4$, $Hdim(S_k^3)=4$
+\end{corollary}
+
 
 
 
@@ -632,6 +686,13 @@ $$Hdim( S^3_n)\geq \frac{7}{4}\cdot 3^{n-3}+3\cdot 2^{n-4}+\frac{3}{2}\cdot n-\f
     {The lattice dimension of a graph}
    {European Journal of Combinatorics}{26}
    {2005}{585--592} 
+   
+\bibitem{Ian}
+\articleInJournalOneAuthor
+    {Ian Holyer}
+    {The NP-completeness of edge-coloring}
+   {SIAM J. Comput.}{10}
+   {1981}{718--720}    
 
 \bibitem{Poljak}
   \articleInJournalManyAuthors
