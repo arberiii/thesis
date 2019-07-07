@@ -184,16 +184,33 @@ In Chapter \ref{hdim-chapter} we shortly introduce the definition of Hamming dim
 \chapter{Preliminaries}
 \thispagestyle{fancy}
 
-In order to determine how hard will it be to answer that question we should first take a look at the following definitions:\newline
-Let $A$ be an algorithm that solves a problem $\mathcal{P}$. The running time of algorithm $A$ is the number of basic calculation steps performed by $A$ (additions, subtractions, multiplications, comparison of two numbers, etc.). The time complexity of algorithm $A$ is the function $T_A(n)$ that
-measures the running time of $A$ in the worst case:
-\begin{center}
-	$T_A : n \rightarrow $ largest running time of $A$ on input instances of size $\leq$ $n$.
-\end{center} 
+Before we start with the results, we will go through terminogoly used in the rest of the project paper, and basic result related to graphs. Unless stated otherwise, we talk about finite, undirected, and simple graphs without isolated vertices. A graph is made up of vertices which are connected by edges, and we write graph G by $G=(V,E)$, where $V$ is the vertex set and $E$ is the set of edges in $G$. The degree of a vertex is the number of edges that are incident to the vertex, the distance between two vertices $u$ and $v$ in a graph $G$ is the number of edges in a shortest path connecting them and denote it by $d_G(u,v)$. A cut edge is an edge that when removed from a graph creates more components than previously in the graph. Let us now go through some special graphs, a path in a graph is a finite sequence of edges which joins a sequence of vertices. A cycle in a graph is a non-empty trail in which the only repeated vertices are the first and last vertices, a cycle which has 3 edges is called triangle. A tree is a connected acyclic graph. A graph is bipartite if the vertices can be partition into two sets $V_1$ and $V_2$ such that all edges go only from $V_1$ to $V_2$(no edges go from $V_1$ to $V_1$ or from $V_2$ to $V_2$). A complete graph is a graph with $n$ vertices and an edge between every two vertices, denoted by $K_n$. A induced subgraph is a subset of the vertices of a graph $G$ together with any edges whose endpoints are both in this subset. In Figure \ref{diaclaw} is shown diamond and claw graph.
 
-Given two functions $f,g : \mathbb{N} \to \mathbb{N}$, we say that $f$ is of order (at most) $O(g)$ if there exists a constant $C > 0$ such that $f(n) \leq C\cdot g(n)$ for all $n \in \mathbb{N}$ and we write $f = O(g)$.\newline
-An algorithm $A$ is \textit{polynomial} if its time complexity $T_A(n)$ is of order $O(n^k)$ for some $k \in \mathbb{N}$.
-Polynomial algorithms are also said to be efficient.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.5\linewidth]{figures/diaclaw.png}
+\end{center}
+\caption{Diamond and claw.}\label{diaclaw}
+\end{figure}
+
+A graph $G$ is said to be $\mathfrak{F}$-free if no induced subgraph of $G$ is isomorphic to a graph from $\mathfrak{F}$. A clique in a graph is a set of pairwise adjacent vertices, a maximal clique is such that it is not a subset of a larger clique. Let a graph $G$, $L(G)$ denotes the line graph of $G$, the vertices of $L(G)$ are the edges of $G$ and two vertices of $L(G)$ are adjacent if the corresponding edges of $G$ are adjacent, in Figure \ref{linegraph} is shown an example. The adjacency matrix $A(G)=((a_{ij}))$ of a graph G is a square-symmetric (0,1)-matrix whose rows and columns correspond to the vertices of $G$ and $a_{ij} = 1$ if the vertices $i$ and $j$ are adjacent. The clique graph $K(G)$ of a graph $G$ has as its vertex set the cliques of $G$, with two vertices adjacent whenever they have some vertex of $G$ in common.\newline
+Given a graph $G$, a d-edge-labeling of $G$ is a mapping from $E(G)$ to some set $L$ of labels, where $|L| = d$. Given a d-edge-labeling of $G$ and a set $F \subset E(G)$,
+we say that F is monochromatic if the labeling is the same for any edge in F. An edge coloring of a graph $G$ is a mapping from $E(G)$ to some set $L$ of labels so that no two incident edges have the same label, labels may also be referred to as colors.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.7\linewidth]{figures/linegraph.png}
+\end{center}
+\caption{Diamond and claw.}\label{linegraph}
+\end{figure}
+
+
+
+
+
+
+
+
 
 A \textit{decision problem} is a problem in which the set of instances divides into two sets depending on whether the answer is YES or NO.
 In computational complexity theory, the following three classes of decision problem are of interest:
@@ -207,35 +224,7 @@ quickly verify a positive answer if we are given a solution.
 If the answer is NO then there exists a certificate that
 enables us to verify this fact in polynomial time.
 \end{itemize}
-
-
-
-
-
-Despite many studies on $d$-realizable graphs in the literature, determining the computational complexity of recognizing $d$-realizable graphs has been elusive except for $d \in \{1, 2\}$,
-when $d$-realizable graphs coincide with complete graphs and with line graphs of bipartite graphs, respectively (and can be recognized in polynomial time).The problem that we study in this final project paper is to analyze the question about recognition complexity of $d$-realizable graphs for $d \geq 3$, asked explicitly by Peterson in 2003 [46].
-We show that for all $d \geq 3$, determining if a given graph is $d$-realizable is {\it NP}-complete, even for bipartite graphs.We also identify some tractable cases.
-We present the work of Martin Milani\v c, Peter Mur\v si\v c, and Marcelo Mydlarz $d$-realizable graphs (for any positive integer $d$) in the class of $HHD$-free graphs, a large class of perfect graphs containing chordal graphs and distance-hereditary graphs. The characterization leads to a linear time recognition algorithm.\newline
-
-My approach is based on the fact that a graph $G$ is $d$ -realizable if and only if $G$ is an induced subgraph of a Cartesian product of $d$ complete graphs. Given two graphs G and H, their Cartesian product is the graph $G\square H$ with vertex set $V (G) \times V (H)$ in which two
-vertices $(u_1 , u_2 )$ and $(v_1 , v_2 )$ are adjacent if and only if either $u_1 v_1\in E(G)$ and $u_2 = v_2$ ,
-or $u_1 = v_1$ and $u_2 v_2 \in E(H)$. The Cartesian product is associative and commutative (in the sense that $G\square H \cong H\square G$ where $\cong$ denotes the graph isomorphism relation). Another
-name for Cartesian products of complete graphs is Hamming graphs; a Hamming graph is $d$-dimensional if it is the Cartesian product of $d$ nontrivial complete graphs. The 3-dimensional Hamming graphs having all factors of the same size were studied in the literature under the name cubic lattice graphs [37, 12, 11, 1, 16], hence, 3-realizable graphs are exactly the induced subgraphs of cubic lattice graphs. Results are based on a characterization of induced subgraphs of d-dimensional Hamming graphs due to Klav\v zar and Peterin [33], expressed in terms of the existence of a particular edge labeling. For the 3-dimensional case, we develop a more specific characterization based on induced cycles of the graph and use it to prove hardness of recognizing 3-realizable graphs via a reduction from the 3-edge-coloring problem
-in cubic graphs. The hardness of the 3-dimensional case forms the basis for establishing hardness for all higher dimensions.\newline
-
-Since a $d$-realizable graph is also $(d + 1)$-realizable, the notion of d-realizability suggests a natural graph parameter. The Cartesian dimension of a graph $G = (V, E)$, denoted $Cdim(G)$, is defined as the minimum non-negative integer $d$ such that $G$ is $d$-realizable, if such an integer exists, and $\infty$, otherwise. The infinite case can indeed occur, even some small graphs – the diamond, the 5-cycle, and the complete bipartite graph $K_{2,3}$ , for example – cannot be realized in any dimension. Note that $Cdim(G)$, when finite and strictly positive, is the minimum positive integer $d$ such that $G$ is an induced subgraph of the Cartesian product
-of $d$ complete graphs. This point of view adds the Cartesian dimension of a graph to the list of graph dimensions studied in the literature related to various embeddings of graphs into Cartesian product graphs [24, 20, 27, 34]. Other dimensions were studied related to the
-strong product [22, 15, 32, 47] and the direct product of graphs [41, 48]. 
-
-\chapter{Characterizing Subgraphs of Hamming Graphs}\label{kp-chapter}
-\thispagestyle{fancy}
-
-In this chapter we will talk about necessary and sufficent conditions for a graph to be an induced subgraph of a Hamming graph and some results regarding those conditions.  
-
-\section{KP-labeling}\label{kp-labeling-section}
-We take a closer look at the characterization of induced subgraphs of Hamming graphs due to Klav\v zar and Peterin. \newline
-Before going to the result we need to go through couple of definitions and some results.
-\newline
+The following lemma describes when an edge is cut-edge
 \begin{lemma}\label{cutedgecycle}
 An edge $e = \{u, v\}$ of a graph G is a cut-edge if and only if it does not belong to any cycle.
 \end{lemma}
@@ -245,6 +234,16 @@ Conversely, suppose that $e = \{u, v\}$ lies in a cycle.
 Let $P$ be the path from $u$ to $v$ that does not use $e$ (i.e. goes the other way around the cycle.) Pick any $x, y$ in $G$; because $G$ is connected, there is a path from $x$ to $y$ in $G$. Take this path, and edit it as follows:
 whenever the edge $e$ shows up, replace this with the path $P$ (or $P$ traced backwards, if needed.) This then creates a walk from $x$ to $y$; by deleting cycles if necessary, this walk can be turned into a path from $x$ to $y$, and thus $G-e$ is connected. So if $e$ is contained in a cycle, it’s not a cut-edge.
 \end{proof}
+\chapter{Characterizing Subgraphs of Hamming Graphs}\label{kp-chapter}
+\thispagestyle{fancy}
+
+In this chapter we will talk about necessary and sufficent conditions for a graph to be an induced subgraph of a Hamming graph and some results regarding those conditions.  
+
+\section{KP-labeling}\label{kp-labeling-section}
+We take a closer look at the characterization of induced subgraphs of Hamming graphs due to Klav\v zar and Peterin. \newline
+Before going to the result we need to go through couple of definitions and some results.
+\newline
+
 The Cartesian product $G\square H$ of graphs $G$ and $H$ is the graph with vertex set $V(G)\times V(H)$ in which a vertex $(a,x)$ is adjacent to a vertex $(b,y)$ whenever
 $ab\in E(G)$ and $x=y$, or $a=b$ and $xy\in E(H)$. For a fixed vertex $a$ of $G$, the vertices $\{(a,x)|x\in V(H)\}$ induce a subgraph of $G \square H$ isomorphic to $H$, called an \textit{$H$-layer} of $G \square H$. Analogously we define \textit{$G$-layers}. A subgraph of $G \square H$ is called non-trivial if it intersects at least two $G$-layers and at least two $H$-layers. \newline
 The map $p_G:V(G\square H) \to G$ defined by $p_G(a,x)=a$, is called a projection. The image of an edge $(a,x)(b,y)$ under a projection is an edge when $x=y$ or a vertex in when $a=b$.\newline
@@ -392,7 +391,7 @@ For every graph G, the following conditions are equivalent:
 \end{theorem}
 
 \begin{proof}
-$First, we prove that condition 1 implies condition 4$. We show that none of the graphs in condition 4 can be an induced subgraph of a graph with $Cdim(G)\leq 2$. Suppose that $G\in \{ claw, diamond\} \cup \{C_k|k\geq 5 \text{ and k odd}\}$, $Cdim(G)$ cannot be equal to $1$ since only complete graph with Cartesian dimension $1$. Now suppose it $Cdim(G)=2$.
+First, we prove that condition 1 implies condition 4. We show that none of the graphs in condition 4 can be an induced subgraph of a graph with $Cdim(G)\leq 2$. Suppose that $G\in \{ claw, diamond\} \cup \{C_k|k\geq 5 \text{ and k odd}\}$, $Cdim(G)$ cannot be equal to $1$ since only complete graph with Cartesian dimension $1$. Now suppose it $Cdim(G)=2$.
 \newline First let us consider the diamond. Suppose $G$ has diamond graph, H as induced subgraph with vertex set $V(H)=\{v_1,v_2,v_3,v_4\}$ and edge set $E(H)=\{v_1v_2,v_1v_3,v_2v_3,v_2v_4,v_3v_4\}$. Now because $v_1$, $v_2$, and $v_3$ induce a complete graph on $3$ vertices, all three together differ in one coordinate, similarly for $v_2$, $v_3$ and $v_4$ so it follows that also $v_1$ and $v_4$ differ only in one coordinate but they are not adjacent, a contradiction.
 \newline Next suppose $G$ has claw graph, $H$ as induced subgraph with vertex set $V(H)=\{v_1,v_2,v_3,v_4\}$ and edge set $E(H)=\{v_1v_2,v_1v_3,v_1v_4\}$ and with out loss of generality assume that $\varphi_G(v_1)$ differs only in the first coordinate with $\varphi_G(v_2)$. Because $v_2$ and $v_3$ are not adjacent, $\varphi_G(v_1)$ and $\varphi_G(v_3)$ must differ only in the second coordinate(say). Because $v_1$ and $v_4$ are adjacent, they must differ in only one coordinate, but either coordinate is not good as that would  imply adjacency between $v_4$ and $v_2$, or between $v_4$ and $v_3$ but there is no edge among them.
 \newline And finally consider ann odd cycle of length more than 3. Let the vertex set be $V(G)=\{v_1,v_2,...,v_n\}$ with edge set $E(G)=\{v_1v_2,v_2v_3,\ldots ,v_nv_1\}$ and notice that since there is no triangle, no three vertices lie in the same line so if we color map define in the section ~\ref{kp-labeling-section} then by by following the cycle we must alternate by colors $1$ and $2$, but the cycle is odd so it is not possible.\newline
@@ -426,7 +425,7 @@ $$\varphi (v_2)=(\alpha,0,0,\ldots) \text{, for some } \alpha \in \mathbb{R} $$
 By the Lemma \ref{xyv adjacent} with out loss of generality
 $$\varphi (v_3)=(\alpha,\beta,0,0,\ldots) \text{, for some } \beta \in \mathbb{R}$$
 Now if $v_4$ differed from $v_3$ in any coordinate other than the first two, $v_4$ would be at a distance at least $3$ from $v_1$ and it would be impossible to find $v_5$ to complete the $5$-cycle. Hence $v_4$ differs from $v_3$ in one of the first 2 coordinates. If 
-$$varphi (v_4)=(\alpha,\gamma,0,0,\ldots) \text{, for some } \gamma \in \mathbb{R}$$
+$$\varphi (v_4)=(\alpha,\gamma,0,0,\ldots) \text{, for some } \gamma \in \mathbb{R}$$
 then $v_4$ is adjacent to $v_2$. Hence
 $$\varphi (v_4)=(\delta,\beta,0,0,\ldots) \text{, for some } \delta \in \mathbb{R}$$
 and the only choice for $v_5$ are
@@ -436,13 +435,6 @@ $$(0,\beta,0,0,\ldots)$$
 In the first case $v_5$ is adjacent to $v_2$, and, in the  second one, to $v_3$; a contradiction.
  
 \end{proof}
-
-Staton and Wingard
-
-Next we see the relation between $KP$-labeling and Cartesian dimension:
- \begin{theorem}[Klav\v zar and Peterin 2005]\label{cdim<kp}
-For every connected graph G and a positive integer d, we have $Cdim(G) \leq d$ if and only if $G$ has a d-KP-labeling.
-\end{theorem}
 
 We take a closer look at 3-dimensional case and present two results both are related to the Klav\v zar-Peterin characterization which is needed for hardness proof for recognizing 3-realizable graphs developed in paper (here reference paper of Prof Martin).\newline
 In the first result, we will see that the defining properties of a 3-KP-labeling are satisfied for a graph as soon as they are satisfied for the family of all its induced subgraphs isomorphic to a cycle or to a $P_3$.
