@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.24)  7 JUL 2019 09:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.24)  9 JUL 2019 09:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -371,20 +371,20 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 (./term_project_paper_template.aux)
 \openout1 = `term_project_paper_template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -423,17 +423,17 @@ e
 Non-PDF special ignored!
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for U+msa on input line 88.
+LaTeX Font Info:    Try loading font information for U+msa on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 88.
+LaTeX Font Info:    Try loading font information for U+msb on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 88--89
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 90--91
  [] 
  []
 
@@ -444,12 +444,12 @@ Package Fancyhdr Warning: \headheight is too small (23.33147pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
+Underfull \hbox (badness 10000) in paragraph at lines 117--117
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 115--116
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 117--118
  [] 
  []
 
@@ -487,9 +487,9 @@ Chapter 2.
 <figures/diaclaw.png, id=51, 981.6675pt x 542.025pt>
 File: figures/diaclaw.png Graphic file (type png)
 <use figures/diaclaw.png>
-Package pdftex.def Info: figures/diaclaw.png  used on input line 191.
+Package pdftex.def Info: figures/diaclaw.png  used on input line 193.
 (pdftex.def)             Requested size: 220.50885pt x 121.75186pt.
-LaTeX Font Info:    Try loading font information for U+euf on input line 196.
+LaTeX Font Info:    Try loading font information for U+euf on input line 198.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [4
@@ -498,15 +498,15 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 <figures/linegraph.png, id=57, 1274.7625pt x 712.6625pt>
 File: figures/linegraph.png Graphic file (type png)
 <use figures/linegraph.png>
-Package pdftex.def Info: figures/linegraph.png  used on input line 202.
+Package pdftex.def Info: figures/linegraph.png  used on input line 204.
 (pdftex.def)             Requested size: 308.71104pt x 172.58665pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 218.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 220.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 218.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 220.
  [5 <./figures/linegraph.png>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
@@ -514,7 +514,7 @@ Missing character: There is no ™ in font cmr12!
  [6]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--246
+Underfull \hbox (badness 10000) in paragraph at lines 245--248
 
  []
 
@@ -522,7 +522,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--246
 File: figures/Graph-Cartesian-product.png Graphic file (type png)
 <use figures/Graph-Cartesian-product.png>
 Package pdftex.def Info: figures/Graph-Cartesian-product.png  used on input lin
-e 252.
+e 254.
 (pdftex.def)             Requested size: 271.01pt x 135.95668pt.
 [7
 
@@ -530,17 +530,17 @@ e 252.
 <figures/fnotonetoone.png, id=70, 1606.0pt x 907.39pt>
 File: figures/fnotonetoone.png Graphic file (type png)
 <use figures/fnotonetoone.png>
-Package pdftex.def Info: figures/fnotonetoone.png  used on input line 267.
+Package pdftex.def Info: figures/fnotonetoone.png  used on input line 269.
 (pdftex.def)             Requested size: 441.01772pt x 249.1661pt.
 <figures/quotientgraph.png, id=71, 1787.67876pt x 944.52875pt>
 File: figures/quotientgraph.png Graphic file (type png)
 <use figures/quotientgraph.png>
-Package pdftex.def Info: figures/quotientgraph.png  used on input line 278.
+Package pdftex.def Info: figures/quotientgraph.png  used on input line 280.
 (pdftex.def)             Requested size: 441.01772pt x 233.00414pt.
 <figures/kpexample.png, id=72, 1624.0675pt x 985.6825pt>
 File: figures/kpexample.png Graphic file (type png)
 <use figures/kpexample.png>
-Package pdftex.def Info: figures/kpexample.png  used on input line 291.
+Package pdftex.def Info: figures/kpexample.png  used on input line 293.
 (pdftex.def)             Requested size: 441.01772pt x 267.65689pt.
 
 
@@ -555,7 +555,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [9 <./figures/fnotonetoone.png> <./figures/quotientgraph.png>] [10 <./figures/k
 pexample.png>]
-Overfull \hbox (17.22728pt too wide) in paragraph at lines 319--326
+Overfull \hbox (17.22728pt too wide) in paragraph at lines 321--328
 \OT1/cmr/m/n/12 Otherwise all in-duced $\OML/cmm/m/it/12 u; v$\OT1/cmr/m/n/12 -
 paths con-tain $\OML/cmm/m/it/12 e$\OT1/cmr/m/n/12 , orig-i-nal la-bel of $\OML
 /cmm/m/it/12 e$ \OT1/cmr/m/n/12 be $\OML/cmm/m/it/12 i[]$\OT1/cmr/m/n/12 . We c
@@ -566,7 +566,7 @@ on-sider/distinguish
 <figures/c_7inducedhamming.png, id=92, 2156.055pt x 1039.885pt>
 File: figures/c_7inducedhamming.png Graphic file (type png)
 <use figures/c_7inducedhamming.png>
-Package pdftex.def Info: figures/c_7inducedhamming.png  used on input line 351.
+Package pdftex.def Info: figures/c_7inducedhamming.png  used on input line 353.
 
 (pdftex.def)             Requested size: 441.01772pt x 212.70178pt.
 
@@ -576,14 +576,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [13] [14 <./figures/c_7inducedhamming.png>]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--363
+Underfull \hbox (badness 10000) in paragraph at lines 363--365
 
  []
 
 <figures/c_62real.png, id=100, 1183.42125pt x 617.30624pt>
 File: figures/c_62real.png Graphic file (type png)
 <use figures/c_62real.png>
-Package pdftex.def Info: figures/c_62real.png  used on input line 370.
+Package pdftex.def Info: figures/c_62real.png  used on input line 372.
 (pdftex.def)             Requested size: 441.01772pt x 230.04811pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -592,9 +592,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 389.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 391.
 
-Overfull \hbox (34.59564pt too wide) in paragraph at lines 394--403
+Overfull \hbox (34.59564pt too wide) in paragraph at lines 396--405
 \OT1/cmr/m/n/12 graph with ver-tex set $\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 (\OML
 /cmm/m/it/12 H\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 v[]; v[]; 
 v[]; v[]\OMS/cmsy/m/n/12 g$ \OT1/cmr/m/n/12 and edge set $\OML/cmm/m/it/12 E\OT
@@ -626,14 +626,14 @@ Missing character: There is no ’ in font cmr8!
 <figures/d4.png, id=121, 1125.20375pt x 836.12375pt>
 File: figures/d4.png Graphic file (type png)
 <use figures/d4.png>
-Package pdftex.def Info: figures/d4.png  used on input line 478.
+Package pdftex.def Info: figures/d4.png  used on input line 480.
 (pdftex.def)             Requested size: 441.01772pt x 327.70724pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (35.95374pt too wide) in paragraph at lines 483--484
+Overfull \hbox (35.95374pt too wide) in paragraph at lines 485--486
 []\OT1/cmr/m/n/12 From Con-di-tion 1 we know that ev-ery 3-KP-labeling of 3-cyc
 le is con-stant(monochromatic).
  []
@@ -642,63 +642,49 @@ le is con-stant(monochromatic).
 <figures/gadget.png, id=133, 1156.32pt x 653.44125pt>
 File: figures/gadget.png Graphic file (type png)
 <use figures/gadget.png>
-Package pdftex.def Info: figures/gadget.png  used on input line 519.
+Package pdftex.def Info: figures/gadget.png  used on input line 521.
 (pdftex.def)             Requested size: 264.61331pt x 149.53055pt.
  [24 <./figures/gadget.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
 
-LaTeX Warning: Reference `cdim<kp' on page 25 undefined on input line 541.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 541--542
-
- []
-
-<figures/p_2sqp_j.png, id=138, 1060.96375pt x 309.155pt>
-File: figures/p_2sqp_j.png Graphic file (type png)
-<use figures/p_2sqp_j.png>
-Package pdftex.def Info: figures/p_2sqp_j.png  used on input line 558.
-(pdftex.def)             Requested size: 441.01772pt x 128.5092pt.
-
-LaTeX Warning: Reference `cdim<kp' on page 25 undefined on input line 565.
-
-
-Overfull \hbox (27.75754pt too wide) in paragraph at lines 547--567
-\OT1/cmr/m/n/12 Therefore, this la-bel-ing is a KP-labeling and from The-o-rem 
-[], we have that $\OML/cmm/m/it/12 Cdim\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]\U/
-msa/m/n/12 ^^C\OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^T
  []
 
 [25]
+<figures/p_2sqp_j.png, id=141, 1060.96375pt x 309.155pt>
+File: figures/p_2sqp_j.png Graphic file (type png)
+<use figures/p_2sqp_j.png>
+Package pdftex.def Info: figures/p_2sqp_j.png  used on input line 568.
+(pdftex.def)             Requested size: 441.01772pt x 128.5092pt.
+
+Overfull \hbox (30.02127pt too wide) in paragraph at lines 560--577
+\OT1/cmr/m/n/12 Therefore, this la-bel-ing is a KP-labeling and from The-o-rem 
+3.5[], we have that $\OML/cmm/m/it/12 Cdim\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]
+\U/msa/m/n/12 ^^C\OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^T
+ []
+
 <figures/p_isqp_j.png, id=142, 1060.96375pt x 862.22125pt>
 File: figures/p_isqp_j.png Graphic file (type png)
 <use figures/p_isqp_j.png>
-Package pdftex.def Info: figures/p_isqp_j.png  used on input line 576.
+Package pdftex.def Info: figures/p_isqp_j.png  used on input line 586.
 (pdftex.def)             Requested size: 441.01772pt x 358.40718pt.
 
-
-LaTeX Warning: Reference `cdim<kp' on page 26 undefined on input line 583.
-
-
-Overfull \hbox (10.73492pt too wide) in paragraph at lines 570--585
-\OT1/cmr/m/n/12 Therefore, this la-bel is a KP-labeling and from The-o-rem [], 
-we have that $\OML/cmm/m/it/12 Cdim\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]\U/msa/
-m/n/12 ^^C\OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^T
+Overfull \hbox (12.99866pt too wide) in paragraph at lines 580--595
+\OT1/cmr/m/n/12 Therefore, this la-bel is a KP-labeling and from The-o-rem 3.5[
+], we have that $\OML/cmm/m/it/12 Cdim\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]\U/m
+sa/m/n/12 ^^C\OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^T
  []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 [26 <./figures/p_2sqp_j.png>] [27 <./figures/p_isqp_j.png>]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 588--594
+Underfull \hbox (badness 10000) in paragraph at lines 598--604
 
  []
 
 <figures/c_6hdim.png, id=150, 1211.52625pt x 503.8825pt>
 File: figures/c_6hdim.png Graphic file (type png)
 <use figures/c_6hdim.png>
-Package pdftex.def Info: figures/c_6hdim.png  used on input line 599.
+Package pdftex.def Info: figures/c_6hdim.png  used on input line 609.
 (pdftex.def)             Requested size: 441.01772pt x 183.41966pt.
 [28
 
@@ -714,7 +700,7 @@ Missing character: There is no ’ in font cmr12!
 <figures/sierpinski.png, id=158, 328.093pt x 274.37018pt>
 File: figures/sierpinski.png Graphic file (type png)
 <use figures/sierpinski.png>
-Package pdftex.def Info: figures/sierpinski.png  used on input line 620.
+Package pdftex.def Info: figures/sierpinski.png  used on input line 630.
 (pdftex.def)             Requested size: 441.01772pt x 368.83473pt.
 
 
@@ -753,28 +739,24 @@ Appendix A.
 
 ]
 Appendix B.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 864.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 874.
 [3
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 864.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 874.
  (./term_project_paper_template.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 864.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 864.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 874.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 874.
 Package rerunfilecheck Info: File `term_project_paper_template.brf' has not cha
 nged.
 (rerunfilecheck)             Checksum: EDEB56E3D2A5ACCB642D933D94568B94;967.
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 6085 strings out of 494805
- 90281 string characters out of 6178000
- 166990 words of memory out of 5000000
- 9260 multiletter control sequences out of 15000+600000
- 15251 words of font info for 57 fonts, out of 8000000 for 9000
+ 6093 strings out of 494805
+ 90343 string characters out of 6178000
+ 167005 words of memory out of 5000000
+ 9265 multiletter control sequences out of 15000+600000
+ 16132 words of font info for 61 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  43i,12n,45p,1926b,370s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -794,7 +776,7 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 ve/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on term_project_paper_template.pdf (47 pages, 892866 bytes).
+Output written on term_project_paper_template.pdf (47 pages, 893672 bytes).
 PDF statistics:
  247 PDF objects out of 1000 (max. 8388607)
  161 compressed objects within 2 object streams
