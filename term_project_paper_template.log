@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.24)  16 JUL 2019 22:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.24)  17 JUL 2019 00:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -478,8 +478,6 @@ Missing character: There is no „ in font cmr12!
 
 ]
 Chapter 1.
-Missing character: There is no Ï in font cmr12!
-Missing character: There is no ‰ in font cmr12!
 [1
 
 ] [2] [3]
@@ -747,15 +745,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 873.
  (./term_project_paper_template.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 873.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 873.
-
-
-Package rerunfilecheck Warning: File `term_project_paper_template.brf' has chan
-ged.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `term_project_paper_template.brf':
-(rerunfilecheck)             Before: E2E0F35F02FED6BE8E3AE1267A9457AF;919
-(rerunfilecheck)             After:  6A2259F66B1223E2F5C61B155A5F7732;869.
+Package rerunfilecheck Info: File `term_project_paper_template.brf' has not cha
+nged.
+(rerunfilecheck)             Checksum: DEC9D026367E386A6C72BF35575742A3;927.
  ) 
 Here is how much of TeX's memory you used:
  6093 strings out of 494805
@@ -782,7 +774,7 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 ve/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on term_project_paper_template.pdf (47 pages, 894075 bytes).
+Output written on term_project_paper_template.pdf (47 pages, 894580 bytes).
 PDF statistics:
  247 PDF objects out of 1000 (max. 8388607)
  161 compressed objects within 2 object streams
