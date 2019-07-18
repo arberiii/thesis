@@ -1,11 +1,11 @@
 \thispagestyle {fancy}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Diamond and claw.}}{4}
-\contentsline {figure}{\numberline {2}{\ignorespaces Diamond and claw.}}{5}
+\contentsline {figure}{\numberline {1}{\ignorespaces The diamond and the claw.}}{4}
+\contentsline {figure}{\numberline {2}{\ignorespaces Line graph.}}{5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3}{\ignorespaces The Cartesian product of graphs.}}{7}
-\contentsline {figure}{\numberline {4}{\ignorespaces An example of a graph that the quotient map is not one-to-one}}{9}
+\contentsline {figure}{\numberline {3}{\ignorespaces The Cartesian product of graphs.}}{8}
+\contentsline {figure}{\numberline {4}{\ignorespaces An example of a graph such that the quotient map is not one-to-one}}{8}
 \contentsline {figure}{\numberline {5}{\ignorespaces Quotient graph of $C_7$}}{9}
 \contentsline {figure}{\numberline {6}{\ignorespaces The label in left is a KP-labeling, while the one in right is not.}}{10}
 \contentsline {figure}{\numberline {7}{\ignorespaces $C_7$ as an induced subgraph of $K_2\square K_3\square K_2$.}}{14}

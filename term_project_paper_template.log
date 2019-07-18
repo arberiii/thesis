@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.24)  17 JUL 2019 00:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.24)  18 JUL 2019 02:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -482,77 +482,66 @@ Chapter 1.
 
 ] [2] [3]
 Chapter 2.
-<figures/diaclaw.png, id=51, 981.6675pt x 542.025pt>
+Missing character: There is no â in font cmr12!
+Missing character: There is no ˆ in font cmr12!
+Missing character: There is no ’ in font cmr12!
+<figures/diaclaw.png, id=51, 837.1275pt x 511.9125pt>
 File: figures/diaclaw.png Graphic file (type png)
 <use figures/diaclaw.png>
 Package pdftex.def Info: figures/diaclaw.png  used on input line 192.
-(pdftex.def)             Requested size: 220.50885pt x 121.75186pt.
-LaTeX Font Info:    Try loading font information for U+euf on input line 197.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [4
+(pdftex.def)             Requested size: 220.50885pt x 134.836pt.
+[4
 
  <./figures/diaclaw.png>]
-<figures/linegraph.png, id=57, 1274.7625pt x 712.6625pt>
+<figures/linegraph.png, id=56, 1239.63126pt x 757.83125pt>
 File: figures/linegraph.png Graphic file (type png)
 <use figures/linegraph.png>
 Package pdftex.def Info: figures/linegraph.png  used on input line 203.
-(pdftex.def)             Requested size: 308.71104pt x 172.58665pt.
+(pdftex.def)             Requested size: 308.71104pt x 188.71727pt.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 219.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 219.
- [5 <./figures/linegraph.png>]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
- [6]
+ [5 <./figures/linegraph.png>] [6]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--247
+Underfull \hbox (badness 10000) in paragraph at lines 244--246
 
  []
 
-<figures/Graph-Cartesian-product.png, id=64, 602.25pt x 302.12875pt>
+<figures/Graph-Cartesian-product.png, id=63, 602.25pt x 302.12875pt>
 File: figures/Graph-Cartesian-product.png Graphic file (type png)
 <use figures/Graph-Cartesian-product.png>
 Package pdftex.def Info: figures/Graph-Cartesian-product.png  used on input lin
-e 253.
+e 254.
 (pdftex.def)             Requested size: 271.01pt x 135.95668pt.
 [7
 
- <./figures/Graph-Cartesian-product.png>]
-<figures/fnotonetoone.png, id=70, 1606.0pt x 907.39pt>
+]
+<figures/fnotonetoone.png, id=70, 1226.5825pt x 584.1825pt>
 File: figures/fnotonetoone.png Graphic file (type png)
 <use figures/fnotonetoone.png>
-Package pdftex.def Info: figures/fnotonetoone.png  used on input line 268.
-(pdftex.def)             Requested size: 441.01772pt x 249.1661pt.
-<figures/quotientgraph.png, id=71, 1787.67876pt x 944.52875pt>
+Package pdftex.def Info: figures/fnotonetoone.png  used on input line 269.
+(pdftex.def)             Requested size: 330.76328pt x 157.52635pt.
+<figures/quotientgraph.png, id=71, 1133.23375pt x 807.015pt>
 File: figures/quotientgraph.png Graphic file (type png)
 <use figures/quotientgraph.png>
 Package pdftex.def Info: figures/quotientgraph.png  used on input line 279.
-(pdftex.def)             Requested size: 441.01772pt x 233.00414pt.
+(pdftex.def)             Requested size: 352.8155pt x 251.24338pt.
 <figures/kpexample.png, id=72, 1624.0675pt x 985.6825pt>
 File: figures/kpexample.png Graphic file (type png)
 <use figures/kpexample.png>
 Package pdftex.def Info: figures/kpexample.png  used on input line 292.
 (pdftex.def)             Requested size: 441.01772pt x 267.65689pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ [8 <./figures/Graph-Cartesian-product.png> <./figures/fnotonetoone.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9 <./figures/fnotonetoone.png> <./figures/quotientgraph.png>] [10 <./figures/k
-pexample.png>]
+[9 <./figures/quotientgraph.png>] [10 <./figures/kpexample.png>]
 Overfull \hbox (17.22728pt too wide) in paragraph at lines 320--327
 \OT1/cmr/m/n/12 Otherwise all in-duced $\OML/cmm/m/it/12 u; v$\OT1/cmr/m/n/12 -
 paths con-tain $\OML/cmm/m/it/12 e$\OT1/cmr/m/n/12 , orig-i-nal la-bel of $\OML
@@ -561,7 +550,7 @@ on-sider/distinguish
  []
 
 [11] [12]
-<figures/c_7inducedhamming.png, id=92, 2156.055pt x 1039.885pt>
+<figures/c_7inducedhamming.png, id=91, 2156.055pt x 1039.885pt>
 File: figures/c_7inducedhamming.png Graphic file (type png)
 <use figures/c_7inducedhamming.png>
 Package pdftex.def Info: figures/c_7inducedhamming.png  used on input line 352.
@@ -578,7 +567,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 362--364
 
  []
 
-<figures/c_62real.png, id=100, 1183.42125pt x 617.30624pt>
+<figures/c_62real.png, id=99, 1183.42125pt x 617.30624pt>
 File: figures/c_62real.png Graphic file (type png)
 <use figures/c_62real.png>
 Package pdftex.def Info: figures/c_62real.png  used on input line 371.
@@ -621,7 +610,7 @@ Missing character: There is no â in font cmr8!
 Missing character: There is no ˆ in font cmr8!
 Missing character: There is no ’ in font cmr8!
  [19] [20]
-<figures/d4.png, id=121, 1125.20375pt x 836.12375pt>
+<figures/d4.png, id=120, 1125.20375pt x 836.12375pt>
 File: figures/d4.png Graphic file (type png)
 <use figures/d4.png>
 Package pdftex.def Info: figures/d4.png  used on input line 479.
@@ -637,7 +626,7 @@ le is con-stant(monochromatic).
  []
 
 [21] [22 <./figures/d4.png>] [23]
-<figures/gadget.png, id=133, 1156.32pt x 653.44125pt>
+<figures/gadget.png, id=132, 1156.32pt x 653.44125pt>
 File: figures/gadget.png Graphic file (type png)
 <use figures/gadget.png>
 Package pdftex.def Info: figures/gadget.png  used on input line 520.
@@ -648,7 +637,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 542--543
  []
 
 [25]
-<figures/p_2sqp_j.png, id=141, 1060.96375pt x 309.155pt>
+<figures/p_2sqp_j.png, id=140, 1060.96375pt x 309.155pt>
 File: figures/p_2sqp_j.png Graphic file (type png)
 <use figures/p_2sqp_j.png>
 Package pdftex.def Info: figures/p_2sqp_j.png  used on input line 567.
@@ -660,7 +649,7 @@ Overfull \hbox (30.02127pt too wide) in paragraph at lines 559--576
 \U/msa/m/n/12 ^^C\OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^T
  []
 
-<figures/p_isqp_j.png, id=142, 1060.96375pt x 862.22125pt>
+<figures/p_isqp_j.png, id=141, 1060.96375pt x 862.22125pt>
 File: figures/p_isqp_j.png Graphic file (type png)
 <use figures/p_isqp_j.png>
 Package pdftex.def Info: figures/p_isqp_j.png  used on input line 585.
@@ -679,7 +668,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 597--603
 
  []
 
-<figures/c_6hdim.png, id=150, 1211.52625pt x 503.8825pt>
+<figures/c_6hdim.png, id=149, 1211.52625pt x 503.8825pt>
 File: figures/c_6hdim.png Graphic file (type png)
 <use figures/c_6hdim.png>
 Package pdftex.def Info: figures/c_6hdim.png  used on input line 608.
@@ -695,7 +684,7 @@ Missing character: There is no „ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
-<figures/sierpinski.png, id=158, 328.093pt x 274.37018pt>
+<figures/sierpinski.png, id=157, 328.093pt x 274.37018pt>
 File: figures/sierpinski.png Graphic file (type png)
 <use figures/sierpinski.png>
 Package pdftex.def Info: figures/sierpinski.png  used on input line 629.
@@ -731,30 +720,47 @@ Missing character: There is no Å in font cmcsc10!
 Missing character: There is no „ in font cmcsc10!
 Missing character: There is no Å in font cmcsc10!
 Missing character: There is no „ in font cmcsc10!
- [35] [1]
+
+Underfull \hbox (badness 10000) in paragraph at lines 842--842
+[]\OT1/cmr/m/n/12 @onlinepict, ti-tle = "Carte-sian prod-uct of graphs", url =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 842--842
+\OT1/cmr/m/n/12 "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Grap
+h-
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 842--842
+\OT1/cmr/m/n/12 Cartesian-product.svg/600px-Graph-Cartesian-product.svg.png",  
+ \OT1/cmr/m/it/12 (Cited on
+ []
+
+[35] [1]
 Appendix A.
 [2
 
 ]
 Appendix B.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 873.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 879.
 [3
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 873.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 879.
  (./term_project_paper_template.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 873.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 873.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 879.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 879.
 Package rerunfilecheck Info: File `term_project_paper_template.brf' has not cha
 nged.
 (rerunfilecheck)             Checksum: DEC9D026367E386A6C72BF35575742A3;927.
  ) 
 Here is how much of TeX's memory you used:
- 6093 strings out of 494805
- 90343 string characters out of 6178000
- 167005 words of memory out of 5000000
- 9265 multiletter control sequences out of 15000+600000
- 16132 words of font info for 61 fonts, out of 8000000 for 9000
+ 6083 strings out of 494805
+ 90182 string characters out of 6178000
+ 167017 words of memory out of 5000000
+ 9261 multiletter control sequences out of 15000+600000
+ 14716 words of font info for 55 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  43i,12n,45p,1926b,370s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -771,13 +777,12 @@ fonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on term_project_paper_template.pdf (47 pages, 894580 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on term_project_paper_template.pdf (47 pages, 858002 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 161 compressed objects within 2 object streams
+ 243 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -185,24 +185,24 @@ In Chapter \ref{hdim-chapter} we shortly introduce the definition of Hamming dim
 \chapter{Preliminaries}
 \thispagestyle{fancy}
 
-Before we start with the results, we will go through terminogoly used in the rest of the project paper, and basic result related to graphs. Unless stated otherwise, we talk about finite, undirected, and simple graphs without isolated vertices. A graph is made up of vertices which are connected by edges, and we write graph G by $G=(V,E)$, where $V$ is the vertex set and $E$ is the set of edges in $G$. The degree of a vertex is the number of edges that are incident to the vertex, the distance between two vertices $u$ and $v$ in a graph $G$ is the number of edges in a shortest path connecting them and denote it by $d_G(u,v)$. A cut edge is an edge that when removed from a graph creates more components than previously in the graph. Let us now go through some special graphs, a path in a graph is a finite sequence of edges which joins a sequence of vertices. A cycle in a graph is a non-empty trail in which the only repeated vertices are the first and last vertices, a cycle which has 3 edges is called triangle. A tree is a connected acyclic graph. A graph is bipartite if the vertices can be partition into two sets $V_1$ and $V_2$ such that all edges go only from $V_1$ to $V_2$(no edges go from $V_1$ to $V_1$ or from $V_2$ to $V_2$). A complete graph is a graph with $n$ vertices and an edge between every two vertices, denoted by $K_n$. A induced subgraph is a subset of the vertices of a graph $G$ together with any edges whose endpoints are both in this subset. In Figure \ref{diaclaw} is shown diamond and claw graph.
+Before we start with the results, we will fix the terminology used in the project paper and summarize some basic result about graphs. We only consider finite, undirected, and simple graphs without isolated vertices. A graph consist of vertices which are connected by edges, and we write a graph $G$ as $G=(V,E)$, where $V$ is the vertex set and $E$ is the edge set in $G$. If $G=(V,E)$, we write $V(G)=V$ and $E(G)=E$. We define $G-S$ for $S\subseteq V(G)$, as $V(G)\backslash S$ and $G-F$ for $F\subseteq E(G)$, as $E(G)\backslash F$. The degree of a vertex is the number of edges that are incident to the vertex, the distance between two vertices $u$ and $v$ in a graph $G$ is the number of edges in a shortest path connecting them and we denote it by $d_G(u,v)$. A cut-edge is an edge that when removed from a graph increases the number of components. Let us now go through some special family of graphs. A path $P_n$ is a graph whose vertices can be listed in the order $v_1, v_2,\ldots, v_n$ such that the edges are $\{v_i, v_{i+1}\}$ where $i = 1, 2,\ldots , n − 1$. A cycle $C_n$ in a graph is a non-empty trail in which the only repeated vertices are the first and last vertices, a cycle which has 3 edges is called triangle. A tree is a connected acyclic graph. A graph is bipartite if the vertices can be partitioned into two sets $V_1$ and $V_2$ such that all edges go only from $V_1$ to $V_2$(no edges go from $V_1$ to $V_1$ or from $V_2$ to $V_2$). A complete graph is a graph with $n$ vertices and an edge between every two vertices, it is denoted by $K_n$. A induced subgraph of $G$ is graph consisting of a subset of the vertices of a graph $G$ together with any edges whose endpoints are both in this subset. Figure \ref{diaclaw} shows the diamond and the claw graphs.
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.5\linewidth]{figures/diaclaw.png}
 \end{center}
-\caption{Diamond and claw.}\label{diaclaw}
+\caption{The diamond and the claw.}\label{diaclaw}
 \end{figure}
 
-A graph $G$ is said to be $\mathfrak{F}$-free if no induced subgraph of $G$ is isomorphic to a graph from $\mathfrak{F}$. A clique in a graph is a set of pairwise adjacent vertices, a maximal clique is such that it is not a subset of a larger clique. Let a graph $G$, $L(G)$ denotes the line graph of $G$, the vertices of $L(G)$ are the edges of $G$ and two vertices of $L(G)$ are adjacent if the corresponding edges of $G$ are adjacent, in Figure \ref{linegraph} is shown an example. The adjacency matrix $A(G)=((a_{ij}))$ of a graph G is a square-symmetric (0,1)-matrix whose rows and columns correspond to the vertices of $G$ and $a_{ij} = 1$ if the vertices $i$ and $j$ are adjacent. The clique graph $K(G)$ of a graph $G$ has as its vertex set the cliques of $G$, with two vertices adjacent whenever they have some vertex of $G$ in common.\newline
-Given a graph $G$, a d-edge-labeling of $G$ is a mapping from $E(G)$ to some set $L$ of labels, where $|L| = d$. Given a d-edge-labeling of $G$ and a set $F \subset E(G)$,
-we say that F is monochromatic if the labeling is the same for any edge in F. An edge coloring of a graph $G$ is a mapping from $E(G)$ to some set $L$ of labels so that no two incident edges have the same label, labels may also be referred to as colors.
+Let $\mathcal{F}$ A graph $G$ is said to be $\mathcal{F}$-free if no induced subgraph of $G$ is isomorphic to a graph from $\mathcal{F}$. A clique in a graph is a set of pairwise adjacent vertices, a maximal clique is a clique that it is not a subset of a larger clique. For a graph $G$, $L(G)$ denotes the line graph of $G$, the vertices of $L(G)$ are the edges of $G$ and two vertices of $L(G)$ are adjacent if the corresponding edges of $G$ are adjacent, see Figure \ref{linegraph} for an example. The adjacency matrix $A(G)=(a_{ij})_{i,j}^n$ of a graph G with vertex set $\{ v_1,v_2,\ldots, v_n\}$ is a square symmetric (0,1)-matrix whose rows and columns correspond to the vertices of $G$ and $a_{ij} = 1$ if and only if vertices $v_i$ and $v_j$ are adjacent. The clique graph $K(G)$ of a graph $G$ has as its vertex set the maximal cliques of $G$, with two vertices adjacent whenever they have some vertex of $G$ in common.\newline
+Given a graph $G$, a $d$-edge-labeling of $G$ is a mapping from $E(G)$ to some set $L$ of labels, where $|L| = d$. Given a $d$-edge-labeling of $G$ and a set $F \subseteq E(G)$,
+we say that $F$ is monochromatic if the labeling is the same for any edge in $F$. An edge coloring of a graph $G$ is a mapping from $E(G)$ to some set $L$ of labels such that no two incident edges have the same label. In this case, labels may also be referred to as colors.  Unless stated otherwise, a labeling (or more precisely a $k$-labeling) of $G$ will always mean an edge-labeling (with $k$ labels).
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.7\linewidth]{figures/linegraph.png}
 \end{center}
-\caption{Diamond and claw.}\label{linegraph}
+\caption{Line graph.}\label{linegraph}
 \end{figure}
 
 
@@ -214,79 +214,79 @@ we say that F is monochromatic if the labeling is the same for any edge in F. An
 
 
 A \textit{decision problem} is a problem in which the set of instances divides into two sets depending on whether the answer is YES or NO.
-In computational complexity theory, the following three classes of decision problem are of interest:
+In computational complexity theory, the following three classes of decision problems are of interest:
 \begin{itemize}
-\item {\it P} is the set of decision problems that can be solved by a polynomial algorithm. Intuitively: $P$ is the set of problems that can be solved efficiently.
-\item {\it NP} is the set of decision problems with the following property:
-If the answer is YES then there exists a certificate that
+\item {\it P} -- the set of decision problems that can be solved by a polynomial-time algorithm. Intuitively: $P$ is the set of problems that can be solved efficiently.
+\item {\it NP} -- the set of decision problems with the following property:
+If the answer is YES, then there exists a certificate that
 enables us to verify this fact in polynomial time. Intuitively: NP is the set of problems for which we can
 quickly verify a positive answer if we are given a solution.
-\item {\it co-NP} is the set of decision problems with the following property:
-If the answer is NO then there exists a certificate that
+\item {\it co-NP} -- the set of decision problems with the following property:
+If the answer is NO, then there exists a certificate that
 enables us to verify this fact in polynomial time.
 \end{itemize}
-The following lemma describes when an edge is cut-edge
+The following lemma describes when an edge is cut-edge.
 \begin{lemma}\label{cutedgecycle}
-An edge $e = \{u, v\}$ of a graph G is a cut-edge if and only if it does not belong to any cycle.
+An edge of a graph G is a cut-edge if and only if it does not belong to any cycle.
 \end{lemma}
-\begin{proof} Take any edge $e = \{u, v\}$. Remove this edge from our graph: if the graph is still connected, then there is some path from $u$ to $v$ not involving $e$;
+\begin{proof} Take any edge $e = \{u, v\}$. We may assume with out loss of generality that $G$ is connected, since otherwise we can replace $G$ with the connected component of $G$ containg $e$. This will not affect any of the two properties of $e$ consider in the statement of the lemma.  Remove this edge from our graph. If the resulting graph has the same number of component as G, then there is some path from $u$ to $v$ not involving $e$;
 consequently, if we add $e$ to the end of this path, we get a cycle. Thus, if $e$ is not a cut-edge, then $e$ belongs to a cycle.\newline
-Conversely, suppose that $e = \{u, v\}$ lies in a cycle.
-Let $P$ be the path from $u$ to $v$ that does not use $e$ (i.e. goes the other way around the cycle.) Pick any $x, y$ in $G$; because $G$ is connected, there is a path from $x$ to $y$ in $G$. Take this path, and edit it as follows:
-whenever the edge $e$ shows up, replace this with the path $P$ (or $P$ traced backwards, if needed.) This then creates a walk from $x$ to $y$; by deleting cycles if necessary, this walk can be turned into a path from $x$ to $y$, and thus $G-e$ is connected. So if $e$ is contained in a cycle, it’s not a cut-edge.
+Conversely, suppose that $e = \{u, v\}$ lies in a cycle $C$. Then $P=C-e$ is a path from $u$ to $v$ that does not use $e$. Pick any two vertices $x, y$ in $G$; because $G$ is connected, there is a path from $x$ to $y$ in $G$. Take this path, and edit it as follows:
+whenever the edge $e$ shows up, replace this with the path $P$ (or $P$ traced backwards, if needed). This then creates a walk from $x$ to $y$; by deleting cycles if necessary, this walk can be turned into a path from $x$ to $y$, and thus the graph $G-e$ is connected. So if $e$ is contained in a cycle, it is not a cut-edge.
 \end{proof}
 \chapter{Characterizing Subgraphs of Hamming Graphs}\label{kp-chapter}
 \thispagestyle{fancy}
 
 In this chapter we will talk about necessary and sufficent conditions for a graph to be an induced subgraph of a Hamming graph and some results regarding those conditions.  
 
-\section{KP-labeling}\label{kp-labeling-section}
-We take a closer look at the characterization of induced subgraphs of Hamming graphs due to Klav\v zar and Peterin. \newline
-Before going to the result we need to go through couple of definitions and some results.
+\section{The definition of a KP-labeling}\label{kp-labeling-section}
+
+Before presenting to the result we need to go through some definitions.
 \newline
 
 The Cartesian product $G\square H$ of graphs $G$ and $H$ is the graph with vertex set $V(G)\times V(H)$ in which a vertex $(a,x)$ is adjacent to a vertex $(b,y)$ whenever
-$ab\in E(G)$ and $x=y$, or $a=b$ and $xy\in E(H)$. For a fixed vertex $a$ of $G$, the vertices $\{(a,x)|x\in V(H)\}$ induce a subgraph of $G \square H$ isomorphic to $H$, called an \textit{$H$-layer} of $G \square H$. Analogously we define \textit{$G$-layers}. A subgraph of $G \square H$ is called non-trivial if it intersects at least two $G$-layers and at least two $H$-layers. \newline
-The map $p_G:V(G\square H) \to G$ defined by $p_G(a,x)=a$, is called a projection. The image of an edge $(a,x)(b,y)$ under a projection is an edge when $x=y$ or a vertex in when $a=b$.\newline
+$ab\in E(G)$ and $x=y$, or $a=b$ and $xy\in E(H)$. For a fixed vertex $a$ of $G$, the vertices $\{(a,x)|x\in V(H)\}$ induce a subgraph of $G \square H$ isomorphic to $H$, called an \textit{$H$-layer} of $G \square H$. Analogously we define \textit{$G$-layers}.\newline
+More generally, the Cartesian product $G_1\square G_2 \square \ldots \square G_n$ of graphs $G_1,G_2,\ldots, G_n$ is the the graph with vertex set $V(G_1)\times V(G_2)\times \ldots \times V(G_n)$ in which a vertex $(u_1,u_2,\ldots, u_n)$ is adjacent to a vertex $(v_1,v_2,\ldots,v_n)$ whenever $u_iv_i\in E(G_i)$ and $u_j=v_j$ for every $j\in \{1,2,\ldots,n\}\backslash \{i\}$.\newline
+The map $p_G:V(G\square H) \to G$ defined by $p_G(a,x)=a$, is called a projection. The image of an edge $(a,x)(b,y)$ under projection $p_G$ is an edge when $x=y$, and a vertex when $a=b$.\newline
+Similarly we extended the definion, the projection of $p_G:V(G\square H_1\square H_2\square \ldots \square H_n) \to G$ is defined by $p_G(a,h_1,h_2,\ldots,h_n)=a$
 \begin{figure}\label{fig:cartProduct}
 \centering
 \includegraphics[scale=0.45]{figures/Graph-Cartesian-product.png}
 \caption{The Cartesian product of graphs.}
 
 \end{figure}
-Cartesian products of complete graphs are known as Hamming graphs. But they can be described also as follows. For
-$i=1,2,\ldots, n$ let $r_i\geq 2$ be given integers. Let $G$ be the graph whose vertices are the $n$-tuples $b_1b_2\cdots b_n$ with $b_i\in \{0,1,\ldots r_i-1\}$. Two vertices are adjacent if the corresponding tuples differ in precisely one coordinate. The vertex set of $G$ is the same as that of $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ and edges in $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ between two vertices are exactly those that have same vertex in every graph $K_{r_i}$ but one and since in complete graphs we have every possible edge, then it is easy to see that $G$ and $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ are isomorphic. For an edge $uv$ of
-$H=K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ we define the color map $c:E(H)\rightarrow \{1,2,\ldots n\}$ with $c(uv)=i$, where $u$ and $v$ differ in coordinate $i$.
+Cartesian products of complete graphs are known as Hamming graphs. But they can also be described as follows. For
+$i=1,2,\ldots, n$ let $r_i\geq 2$ be given integers. Let $G$ be the graph whose vertices are the $n$-tuples $b_1b_2\cdots b_n$ with $b_i\in \{0,1,\ldots, r_i-1\}$. Two vertices are adjacent if the corresponding tuples differ in precisely one coordinate. The vertex set of $G$ is the same as that of $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ and edges in $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ between two vertices are exactly those that have same vertex in every graph $K_{r_i}$ but one. Since in complete graphs we have all possible edges, it is easy to see that $G$ and $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ are isomorphic. For an edge $uv$ of
+$H=K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ we define the color map $c:E(H)\rightarrow \{1,2,\ldots, n\}$ with $c(uv)=i$, where $u$ and $v$ differ in coordinate $i$.
 \newline
-Let $G$ be a connected graph and let $\mathcal{F}=\{F_1,F_2,\ldots F_k\}$ be a partition of $E(G)$. The \textit{quotient graph} $G/ F_i$ has connected components of $G\backslash F_i$ as vertices, two components $C$ and $C'$ being adjacent whenever there exists an edge of $F_i$ connecting a vertex of $C$ with a vertex of $C'$. For each $i$, define a map $f_i:V(G)\rightarrow V(G/ F_i)$ by $f_i(v)=C$, where $C$ is the component of $G\backslash F_i$ containing $v$. Then let
-$$f:V(G)\to V(G/ F_1\square G/ F_2\square \ldots \square G/ F_k)$$
-be the natural coordinate-wise mapping, that is
-$$f(v)=(f_1(v),f_2(v),\ldots , f_k(v))$$
-We call $f$ the \textit{quotient map} of $G$ with respect to $\mathfrak{F}$. Note that $f$ need not be one-to-one in general and that it is possible that some quotient graphs are the one vertex graph, an example is shown in Figure \ref{fnotonetoone}.
-\begin{figure}[h]\label{fnotonetoone}
+Let $G$ be a connected graph and let $\mathcal{F}=\{F_1,F_2,\ldots, F_k\}$ be a partition of $E(G)$. The \textit{quotient graph} $G/ F_i$ has connected components of $G- F_i$ as vertices, two components $C$ and $C'$ being adjacent whenever there exists an edge of $F_i$ connecting a vertex of $C$ with a vertex of $C'$. For each $i$, define a map $f_i:V(G)\rightarrow V(G/ F_i)$ by $f_i(v)=C$, where $C$ is the component of $G- F_i$ containing $v$. Then let
+$$f:V(G)\to V((G/ F_1)\square (G/ F_2)\square \ldots \square (G/ F_k))$$
+be the natural coordinate-wise mapping, that is,
+$$f(v)=(f_1(v),f_2(v),\ldots , f_k(v)).$$
+We call $f$ the \textit{quotient map} of $G$ with respect to $\mathcal{F}$. Note that $f$ need not be one-to-one in general and that it is possible that some quotient graphs are the one vertex graph, an example is shown in Figure \ref{fnotonetoone}.
+\begin{figure}[h]
 \begin{center}
-\includegraphics[width=1\linewidth]{figures/fnotonetoone.png}
+\includegraphics[width=0.75\linewidth]{figures/fnotonetoone.png}
 \end{center}
-\caption{An example of a graph that the quotient map is not one-to-one}
+\caption{An example of a graph such that the quotient map is not one-to-one}\label{fnotonetoone}
 \end{figure}
- However, all the partitions $\mathfrak{F}$ introduced later will lead to one-to-one mappings with non-trivial quotient graphs.\newline
-A partition $\{F_1,F_2,\ldots ,F_k\}$ of $E(G)$ naturally leads to an edge-labeling $l:E(G)\to \{1,2,\ldots,k\}$ by setting $l(e)=i$, where $e\in F_i$. Unless stated
-otherwise, a labeling (or more precisely a $k$-labeling) of $G$ will mean an edge-labeling (with $k$ labels).
+ However, all the partitions $\mathcal{F}$ introduced later will lead to one-to-one mappings with non-trivial quotient graphs.\newline
+A partition $\{F_1,F_2,\ldots ,F_k\}$ of $E(G)$ naturally leads to an edge-labeling $\ell:E(G)\to \{1,2,\ldots,k\}$ by setting $\ell(e)=i$, where $e\in F_i$.
 \newline 
 Quotient graph is the central concept in this chapter, so to get a better understanding we also visualize it.
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=1\linewidth]{figures/quotientgraph.png}
+\includegraphics[width=0.8\linewidth]{figures/quotientgraph.png}\label{quotientgraphc7}
 \end{center}
 \caption{Quotient graph of $C_7$}
 \end{figure}
-We define the partition of $E(C_7)$ by defining $F_i$ having edges with label $i$, as we can see $C_7/ F_1$ and $C_7/F_3$ have only two vertices and since there is an edge in the correspoding $F_i$ connecting those two components, both of  $C_7\backslash F_1$ and $C_7/F_3$ are simply $K_2$, while $C_7\backslash F_2$ has three vertices but each two of compontents are connected with an edge from $F_2$ so $C_7\backslash F_2$ is simply $K_3$.   
+Consider the labeling of the 7-cycle, $C_7$, given in Figure \ref{quotientgraphc7}, and the partition of $E(C_7)$ obtained by defining $F_i$ to be the set of edges labeled $i$, for $i\in \{1,2,3\}$. As we can see, $C_7/ F_1$ and $C_7/F_3$ have only two vertices and since there is an edge in the correspoding $F_i$ connecting those two components, both of  $C_7/ F_1$ and $C_7/F_3$ are simply a $K_2$, while $C_7/ F_2$ has three vertices but each two of compontents are connected with an edge from $F_2$ so $C_7/ F_2$ is simply a $K_3$.   
 \newline
-Sandi Klav\v zar and Iztok Peterin defined two conditions to get a better understanding. They actually named them by letters $B$ and $C$, and also defined condition A which is needed for subgraphs oh Hamming graphs but since we will not need condition $A$ will name just by numbers $1$ and $2$.\newline
+Klav\v zar and Peterin defined two conditions in their characterization of induced subgraphs of Hamming graphs. They actually named them by letters $B$ and $C$, and also defined condition A, which was needed for subgraphs of Hamming graphs, but since we will not need condition $A$, we will name the two conditions simply by numbers $1$ and $2$.\newline
 We say that a $d$-edge-labeling of $G$ is a ($d$-)KP-labeling if it satisfies the following conditions:
 \newline
 \textbf{Condition 1} The edges of any triangle have the same label.\newline
-\textbf{Condition 2} Let $u$ and $v$ be arbitrary vertices of $G$ with $d_G(u,v) \geq 2$. Then there exist different labels $i$ and $j$ which both appear on any induced $u$, $v$-path.\newline
+\textbf{Condition 2} For any two non-adjacent vertices $u$ and $v$ in $G$, there exist different labels $i$ and $j$ which both appear on any induced $u$, $v$-path.\newline
 \begin{figure}[h!]\label{kpexample}
 \begin{center}
 \includegraphics[width=1\linewidth]{figures/kpexample.png}
@@ -829,6 +829,12 @@ It would be interesting to study the relation of KP-labeling and Cartesian dimen
     {Coloring Hanoi and Sierpiński graphs}
    {Discrete Mathematics}{312}
    {2012}{1521--1535}   
+\newline
+\bibitem{cartesianproduct}
+@online{pict,
+ title   = "Cartesian product of graphs",
+ url     = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Graph-Cartesian-product.svg/600px-Graph-Cartesian-product.svg.png",
+}
 
 % There has to be an empty line here so that the page numbers of citations are properly displayed.
 \end{thebibliography}
