@@ -3,14 +3,15 @@
 \contentsline {chapter}{\numberline {2}Preliminaries}{4}
 \contentsline {chapter}{\numberline {3}Characterizing Subgraphs of Hamming Graphs}{7}
 \contentsline {section}{\numberline {3.1}The definition of a KP-labeling}{7}
-\contentsline {section}{\numberline {3.2}Induced subgraphs of Hamming Graphs}{10}
-\contentsline {chapter}{\numberline {4}Cartesian dimension}{15}
-\contentsline {section}{\numberline {4.1}NP-completeness of testing realizability in $d\geq 3$ dimension}{23}
-\contentsline {section}{\numberline {4.2}Cartesian dimension of $P_i\square P_j$}{25}
-\contentsline {chapter}{\numberline {5}Hamming dimesion}{28}
-\contentsline {section}{\numberline {5.1}Hamming dimension of Sierpiński graphs}{29}
-\contentsline {chapter}{\numberline {6}Conclusion}{32}
-\contentsline {chapter}{\numberline {7}Bibliography}{33}
+\contentsline {section}{\numberline {3.2}KP-labeling: the definition and basic results}{11}
+\contentsline {section}{\numberline {3.3}Induced subgraphs of Hamming Graphs}{13}
+\contentsline {chapter}{\numberline {4}Cartesian dimension}{16}
+\contentsline {section}{\numberline {4.1}NP-completeness of testing realizability in $d\geq 3$ dimension}{24}
+\contentsline {section}{\numberline {4.2}Cartesian dimension of grid graphs}{26}
+\contentsline {chapter}{\numberline {5}Hamming dimesion}{30}
+\contentsline {section}{\numberline {5.1}Hamming dimension of Sierpiński graphs}{31}
+\contentsline {chapter}{\numberline {6}Conclusion}{34}
+\contentsline {chapter}{\numberline {7}Bibliography}{35}
 \global \c@tocdepth -1\relax 
 \contentsline {chapter}{\numberline {A}Title of First Appendix}{}
 \contentsline {chapter}{\numberline {B}Title of Second Appendix}{}
