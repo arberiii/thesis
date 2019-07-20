@@ -6,8 +6,8 @@
 \contentsline {section}{\numberline {3.2}KP-labeling: the definition and basic results}{11}
 \contentsline {section}{\numberline {3.3}Induced subgraphs of Hamming Graphs}{13}
 \contentsline {chapter}{\numberline {4}Cartesian dimension}{16}
-\contentsline {section}{\numberline {4.1}NP-completeness of testing realizability in $d\geq 3$ dimension}{24}
-\contentsline {section}{\numberline {4.2}Cartesian dimension of grid graphs}{26}
+\contentsline {section}{\numberline {4.1}NP-completeness of testing realizability in $d\geq 3$ dimension}{25}
+\contentsline {section}{\numberline {4.2}Cartesian dimension of grid graphs}{27}
 \contentsline {chapter}{\numberline {5}Hamming dimesion}{30}
 \contentsline {section}{\numberline {5.1}Hamming dimension of Sierpi\' nski graphs}{31}
 \contentsline {chapter}{\numberline {6}Conclusion}{34}
