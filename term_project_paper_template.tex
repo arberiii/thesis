@@ -185,7 +185,8 @@ In Chapter \ref{hdim-chapter} we shortly introduce the definition of Hamming dim
 \chapter{Preliminaries}
 \thispagestyle{fancy}
 
-Before we start with the results, we will fix the terminology used in the project paper and summarize some basic result about graphs. We only consider finite, undirected, and simple graphs without isolated vertices. A graph consist of vertices which are connected by edges, and we write a graph $G$ as $G=(V,E)$, where $V$ is the vertex set and $E$ is the edge set in $G$. If $G=(V,E)$, we write $V(G)=V$ and $E(G)=E$. We define $G-S$ for $S\subseteq V(G)$, as $V(G)\backslash S$ and $G-F$ for $F\subseteq E(G)$, as $E(G)\backslash F$. The degree of a vertex is the number of edges that are incident to the vertex, the distance between two vertices $u$ and $v$ in a graph $G$ is the number of edges in a shortest path connecting them and we denote it by $d_G(u,v)$. A cut-edge is an edge that when removed from a graph increases the number of components. Let us now go through some special family of graphs. A path $P_n$ is a graph whose vertices can be listed in the order $v_1, v_2,\ldots, v_n$ such that the edges are $\{v_i, v_{i+1}\}$ where $i = 1, 2,\ldots , n − 1$. A cycle $C_n$ in a graph is a non-empty trail in which the only repeated vertices are the first and last vertices, a cycle which has 3 edges is called triangle. A tree is a connected acyclic graph. A graph is bipartite if the vertices can be partitioned into two sets $V_1$ and $V_2$ such that all edges go only from $V_1$ to $V_2$(no edges go from $V_1$ to $V_1$ or from $V_2$ to $V_2$). A complete graph is a graph with $n$ vertices and an edge between every two vertices, it is denoted by $K_n$. A induced subgraph of $G$ is graph consisting of a subset of the vertices of a graph $G$ together with any edges whose endpoints are both in this subset. Figure \ref{diaclaw} shows the diamond which is a $K_4$ minus one edge and the claw graphs which is $K_{1,3}$.
+Before we start with the results, we will fix the terminology used in the project paper and summarize some basic result about graphs. We only consider finite, undirected, and simple graphs without isolated vertices. A graph consist of vertices which are connected by edges, and we write a graph $G$ as $G=(V,E)$, where $V$ is the vertex set and $E$ is the edge set in $G$. If $G=(V,E)$, we write $V(G)=V$ and $E(G)=E$. We define $G-S$ for $S\subseteq V(G)$, as $V(G)\backslash S$ and $G-F$ for $F\subseteq E(G)$, as $E(G)\backslash F$. The degree of a vertex is the number of edges that are incident to the vertex, the distance between two vertices $u$ and $v$ in a graph $G$ is the number of edges in a shortest path connecting them and we denote it by $d_G(u,v)$. The neighborhood of a vertex $v$ in a graph $G$ is the subgraph of $G$ induced by all vertices adjacent to $v$
+A neighbourhood in which vertex $v$ itself is included is called the closed neighborhood. A cut-edge is an edge that when removed from a graph increases the number of components. Let us now go through some special family of graphs. A path $P_n$ is a graph whose vertices can be listed in the order $v_1, v_2,\ldots, v_n$ such that the edges are $\{v_i, v_{i+1}\}$ where $i = 1, 2,\ldots , n − 1$. A cycle $C_n$ in a graph is a non-empty trail in which the only repeated vertices are the first and last vertices, a cycle which has 3 edges is called triangle. A tree is a connected acyclic graph. A graph is bipartite if the vertices can be partitioned into two sets $V_1$ and $V_2$ such that all edges go only from $V_1$ to $V_2$(no edges go from $V_1$ to $V_1$ or from $V_2$ to $V_2$). A complete graph is a graph with $n$ vertices and an edge between every two vertices, it is denoted by $K_n$. A induced subgraph of $G$ is graph consisting of a subset of the vertices of a graph $G$ together with any edges whose endpoints are both in this subset. Figure \ref{diaclaw} shows the diamond which is a $K_4$ minus one edge and the claw graphs which is $K_{1,3}$.
 
 \begin{figure}[h]
 \begin{center}
@@ -204,7 +205,10 @@ we say that $F$ is monochromatic if the labeling is the same for any edge in $F$
 \end{center}
 \caption{Line graph.}\label{linegraph}
 \end{figure}
-
+\medskip
+We say that a graph $G$ is an irredundant subgraph of
+$G_1\square G_2\square \ldots \square G_k$ if each $G_i$ has at least two vertices and any vertex of $G_i$ appears as a coordinate of some vertex of $G$. A subgraph $H$ of a graph $G$ is an isometric subgraph of $G$ if $d_H(u, v)=d_G(u, v)$ for each pair of vertices $u , v$ of $H$. 
+\medskip
 
 
 
@@ -249,11 +253,11 @@ $ab\in E(G)$ and $x=y$, or $a=b$ and $xy\in E(H)$. For a fixed vertex $a$ of $G$
 More generally, the Cartesian product $G_1\square G_2 \square \ldots \square G_n$ of graphs $G_1,G_2,\ldots, G_n$ is the the graph with vertex set $V(G_1)\times V(G_2)\times \ldots \times V(G_n)$ in which a vertex $(u_1,u_2,\ldots, u_n)$ is adjacent to a vertex $(v_1,v_2,\ldots,v_n)$ whenever $u_iv_i\in E(G_i)$ and $u_j=v_j$ for every $j\in \{1,2,\ldots,n\}\backslash \{i\}$.\newline
 The map $p_G:V(G\square H) \to G$ defined by $p_G(a,x)=a$, is called a projection. The image of an edge $(a,x)(b,y)$ under projection $p_G$ is an edge when $x=y$, and a vertex when $a=b$.\newline
 Similarly we extended the definion, the projection of $p_G:V(G\square H_1\square H_2\square \ldots \square H_n) \to G$ is defined by $p_G(a,h_1,h_2,\ldots,h_n)=a$
-\begin{figure}\label{fig:cartProduct}
-\centering
-\includegraphics[scale=0.45]{figures/Graph-Cartesian-product.png}
+\begin{figure}[h]\label{fig:cartProduct}
+\begin{center}
+\includegraphics[width=0.75\linewidth]{figures/Graph-Cartesian-product.png}
 \caption{The Cartesian product of graphs.}
-
+\end{center}
 \end{figure}
 Cartesian products of complete graphs are known as Hamming graphs. But they can also be described as follows. For
 $i=1,2,\ldots, n$ let $r_i\geq 2$ be given integers. Let $G$ be the graph whose vertices are the $n$-tuples $b_1b_2\cdots b_n$ with $b_i\in \{0,1,\ldots, r_i-1\}$. Two vertices are adjacent if the corresponding tuples differ in precisely one coordinate. The vertex set of $G$ is the same as that of $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ and edges in $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ between two vertices are exactly those that have same vertex in every graph $K_{r_i}$ but one. Since in complete graphs we have all possible edges, it is easy to see that $G$ and $K_{r_1}\square K_{r_2}\square \ldots \square K_{r_n}$ are isomorphic. For an edge $uv$ of
@@ -595,47 +599,44 @@ Combining both inequalities, we have that $Cdim(P_i\square P_j)=4$, if $i\geq 3$
 \end{proof}
 
 \chapter{Hamming dimesion}\label{hdim-chapter}
-Graph products offer a variety of possibilities to introduce the concept of a graph dimension. A classical result of Graham and Winkler \cite{Graham} shows that any graph can be canonically isometrically embedded into the Cartesian product of graphs. Knowing that, this embedding is unique among all irredundant isometric embeddings with respect to the largest possible number of factors, the latter numberis is defined to be the \textit{isometric dimension} of a graph. 
-\newline The strong product $G\boxtimes H$ of graphs $G$ and $H$ is a graph such that the vertex set of $G\boxtimes H$ is the Cartesian product $V(G) \times V(H)$; and distinct vertices $(u,u')$ and $(v,v)$ are adjacent in $G\boxtimes  H$ if and only if $u = v$ and $u'$ is adjacent to $v'$, or $u' = v'$ and $u$ is adjacent to $v$, or $u$ is adjacent to $v$ and $u'$ is adjacent to $v'$. Back in 1938 Sch\" onberg \cite{Schonber} proved that every connected graph admits an isometric embedding into the strong product of paths. It is hence natural to define the \textit{strong isometric dimension}, $idim(G)$, of a graph $G$ as the least number $k$ such that $G$ embeds isometrically into the strong product of $k$ paths.\newline
-David Eppstein consider the following representation problem: for which unweighted undirected graphs can be assigned integer coordinates in some $d$-dimensional space $Z^d$, such that the distance between two vertices in the graph is equal to the $L_1$-distance(taxicab) between their coordinates? Call the minimum possible dimension $d$ of such an embedding (if one exists) the \textit{lattice dimension} of the graph.\newline
-The strong isometric dimension is universal in the sense that as soon as a graph is not the path graph, then its dimension is finite and bigger than 1. A similar conclusion can be stated for the so called direct dimension of a graph. On the other hand, for the most important graph product, the Cartesian one, no such universal dimension is known. While the isometric dimension is useful as soon as the dimension of a graph is more than 1, it was proved in \cite{Poljak} that for almost any graph its isometric dimension is 1. In
-other words, for almost any graph $G$, the isometric dimension yields no new insight about $G$. Also, only
-partial cubes, a special (although important) subclass of bipartite graphs, have finite lattice dimension.\newline
-
-We say that a graph $G$ is an irredundant subgraph of $\square _iG_i$ if each $G_i$ has at least two vertices and any vertex of $G_i$ appears as a coordinate of some vertex of $G$.\newline
-In order to significantly increase the number of graphs with a non-trivial dimension that comes from the Cartesian product of graphs Sandi Klav\v zar, Iztok Peterin and Sara Sabrina Zemlji\v c in \cite{Sandi}, defined the \textit{Hamming dimension} $Hdim(G )$ of a graph $G$ is introduced as the largest dimension of a Hamming graph into which $G$ embeds as an irredundant induced subgraph. If $G$ is not an induced subgraph of any Hamming graph we set $Hdim ( G ) = \infty$.\newline In Figure \ref{fig:c6hdim} is shown $C_6$ induced in two different Hamming graphs, $K_3\square K_3$ and $K_2\square K_2\square K_2$
+Graph products offer a variety of possibilities to introduce the concept of a graph dimension. A classical result of Graham and Winkler \cite{Graham} shows that any graph can be canonically isometrically embedded into the Cartesian product of graphs. Knowing that, this embedding is unique among all irredundant isometric embeddings with respect to the largest possible number of factors. The latter number is is defined to be the \textit{isometric dimension} of a graph. 
+\newline The strong product $G\boxtimes H$ of graphs $G$ and $H$ is a graph such that the vertex set of $G\boxtimes H$ is the Cartesian product $V(G) \times V(H)$; distinct vertices $(u,u')$ and $(v,v)$ are adjacent in $G\boxtimes  H$ if and only if $u = v$ and $u'$ is adjacent to $v'$, or $u' = v'$ and $u$ is adjacent to $v$, or $u$ is adjacent to $v$ and $u'$ is adjacent to $v'$. Back in 1938 Sch\" onberg \cite{Schonber} proved that every connected graph admits an isometric embedding into the strong product of paths. It is hence natural to define the \textit{strong isometric dimension}, $idim(G)$, of a graph $G$ as the least number $k$ such that $G$ embeds isometrically into the strong product of $k$ paths.\newline
+Eppstein considered the following representation problem in \cite{David}: to which unweighted undirected graphs one can assigned integer coordinates in some $d$-dimensional space $\mathbb{Z}^d$ such that the distance between two vertices in the graph is equal to the $L_1$-distance (taxicab) between their coordinates? Call the minimum possible dimension $d$ of such an embedding (if one exists) the \textit{lattice dimension} of the graph.\newline
+The strong isometric dimension is universal in the sense that as soon as a graph is not the path graph, then its dimension is finite and bigger than 1. A similar conclusion can be stated for the so called direct dimension of a graph defined in \cite{Eaton}. On the other hand, for one of the most important graph products, the Cartesian product, no such universal dimension is known. While the isometric dimension is useful as soon as the dimension of a graph is more than 1, it was proved in \cite{Poljak} that almost all graphs have isometric dimension 1. In other words, for almost all graphs $G$ the isometric dimension yields no new insight about $G$. Also, only the so called partial cubes, a special (although important) subclass of bipartite graphs, have finite lattice dimension.\newline
+\newline
+To significantly increase the number of graphs with a non-trivial dimension, Klav\v zar, Peterin, and Zemlji\v c, defined in \cite{Sandi} the \textit{Hamming dimension} $Hdim(G )$ of a graph $G$ as the largest dimension of a Hamming graph into which $G$ embeds as an irredundant induced subgraph. If $G$ is not an induced subgraph of any Hamming graph, we set $Hdim ( G ) = \infty$.\newline In Figure \ref{fig:c6hdim} we shown the 6-cycle, as an induced subgraph of two different Hamming graphs, $K_3\square K_3$ and $K_2\square K_2\square K_2$.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=1\linewidth]{figures/c_6hdim.png}
 \end{center}
 \caption{$C_6$ induced in $K_3\square K_3$ and $K_2\square K_2\square K_2$}\label{fig:c6hdim}
 \end{figure}
-Clearly, $Hdim ( G ) = 1$ if and only if $G$ is a complete graph. By Theorem \ref{thm:mainkp}, we can understand it as $Hdim ( G ) <\infty$ if and only if $G$ has a $d-KP$-labeling.
-\section{Hamming dimension of Sierpiński graphs}
-The general problem of determining the Hamming dimension of a graph seems very demanding, here we will study this concept on Sierpiński graphs. Roughly speaking, in \cite{Sandi}, they proved that all Sierpi\'nski graphs (except in the trivial cases) have Hamming dimension bigger than 1 and finite. On the other hand, all but base 3 Sierpi\'nski graphs have isometric dimension 1. Hence the Hamming dimension indeed significantly increases the number of graphs with a non-trivial Cartesian-like dimension.\newline
+Clearly, $Hdim ( G ) = 1$ if and only if $G$ is a complete graph. From Theorem~\ref{thm:mainkp}, we infer that $Hdim ( G ) <\infty$ if and only if $G$ has a "KP-labeling".
+\section{Hamming dimension of Sierpi\' nski graphs}
+The general problem of determining the Hamming dimension of a graph seems very challenging. Here we will study this concept on Sierpi\' nski graphs. Roughly speaking, in \cite{Sandi}, they proved that all Sierpi\'nski graphs (except in the trivial cases) have Hamming dimension bigger than 1 and finite. On the other hand, all but base 3 Sierpi\'nski graphs have isometric dimension 1. \newline
 Graphs whose drawings can be viewed as approximations to the famous Sierpi\'nski triangle have been studied intensely in the past 25 years. The interest for these graphs comes from many different sources such as games like the Chinese rings or the Tower of Hanoi, topology, physics, the study of interconnection networks, and elsewhere.\newline
-Sierpi\'nski graphs $S^{k}_n$ were studied for the first time in \cite{Sandi2}. In computer science, a very similar class of graphs (known as WK-recursive networks) was introduced earlier. The study in \cite{Sandi2} was motivated in part by the fact that for $k=3$ these graphs are isomorphic to the Tower of Hanoi graphs and in part by topological studies.\newline
-The graphs $S^k_n$ were investigated from numerous points of view, we recall some of them. These graphs contain unique 1-perfect codes. Metric properties of Sierpi\'nski graphs were investigated in \cite{Andreas}. To
+Sierpi\'nski graphs $S^{k}_n$ were studied for the first time by Klav\v zar and Milutinovi\' c in \cite{Sandi2}. In computer science, a very similar class of graphs (known as WK-recursive networks) was introduced earlier by Vecchia and Sanges in \cite{Vecchia}. The study in \cite{Sandi2} was motivated in part by the fact that for $k=3$ these graphs are isomorphic to the Tower of Hanoi graphs and in part by topological studies.\newline
+A 1-perfect code in a graph $G$ is a vertex subset of $G$ with the property that the closed neighborhoods of its elements form a partition of $V(G)$. The graphs $S^k_n$ were investigated from numerous points of view, we recall some of them. These graphs contain unique 1-perfect codes, proven by Klav\v zar, Milutinovi\' c, and Petr in \cite{Ciril}. Metric properties of Sierpi\'nski graphs were investigated in \cite{Andreas}. To
 determine the chromatic number of these graphs is easy, while in \cite{Andreas2} it is proved that they are in
 edge- and total coloring class 1, except those isomorphic to a complete graph of odd or even order, respectively.\newline
-The Sierpi\'nski graph $S^k_n$ , $k,n\geq 1$, is defined on the vertex set $\{ 1,\ldots,k \}^n$ , two different vertices $u = ( u 1 ,\ldots, u_n )$ and $v = (v 1 ,\ldots , v_n )$ being adjacent if and only if there exists an $h \in \{ 1 , \ldots, n \}$ such that
+The Sierpi\'nski graph $S^k_n$, where $k,n\geq 1$, is defined on the vertex set $\{ 1,\ldots,k \}^n$ , two different vertices $u = (u_1 ,\ldots, u_n )$ and $v = (v_1 ,\ldots , v_n)$ being adjacent if and only if there exists an $h \in \{ 1 , \ldots, n \}$ such that
 \begin{enumerate}[label=(\roman*)]
-\item $u_t = v_t$ , for $t = 1 ,\ldots , h − 1$;
+\item $u_t = v_t$ , for $t = 1 ,\ldots , h-1$;
 \item $u_h \neq v_h$ ; and
-\item $u_t = v_h$ and $v t = u h$ for $t = h+ 1 ,\ldots, n$.
+\item $u_t = v_h$ and $v_t = u_h$ for $t = h+1 ,\ldots, n$.
 \end{enumerate}
 An example of Sierpi\'nski Graph is shown in Figure \ref{fig:spierpinski}.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=1\linewidth]{figures/sierpinski.png}
 \end{center}
-\caption{The Sierpi\'nski graph $S^3_4$}\label{fig:spierpinski}
+\caption{The Sierpi\'nski graph $S^3_3$}\label{fig:spierpinski}
 \end{figure}
-Below we will show without proof results from \cite{Sandi}
+Below we will state without proof some results from \cite{Sandi}.
 
 \begin{theorem}
 For any $n\geq 2$
-$$Hdim( S^3_n)\geq \frac{7}{4}\cdot 3^{n-3}+3\cdot 2^{n-4}+\frac{3}{2}\cdot n-\frac{9}{4}$$
+$$Hdim( S^3_n)\geq \frac{7}{4}\cdot 3^{n-3}+3\cdot 2^{n-4}+\frac{3}{2}\cdot n-\frac{9}{4}.$$
 \end{theorem}
 
 \begin{proposition}
@@ -647,61 +648,147 @@ $$Hdim( S^3_n)\geq \frac{7}{4}\cdot 3^{n-3}+3\cdot 2^{n-4}+\frac{3}{2}\cdot n-\f
 
 \begin{theorem}
 \begin{enumerate}[label=(\roman*)]
-\item $Hdim(S_3^n)\leq 5\cdot 3^{n-3}+1$ $(n\geq 3)$.
-\item $Hdim(S_k^n)\leq \frac{2}{k-1}k^{n-2}+\frac{2k-4}{k-1}$ $(k\geq 4 \text{ and } n\geq 2)$ 
+\item $Hdim(S_3^n)\leq 5\cdot 3^{n-3}+1$ for all $n\geq 3$.
+\item $Hdim(S_k^n)\leq \frac{2}{k-1}k^{n-2}+\frac{2k-4}{k-1}$ for all $k\geq 4 \text{ and } n\geq 2$. 
 \end{enumerate}
 \end{theorem}
 
 \begin{corollary}
-For any $k\geq 4$, $Hdim(S_k^3)=4$
+For any $k\geq 4$, $Hdim(S_k^3)=4$.
 \end{corollary}
 
 \chapter{Conclusion}
-This project paper is focused on carefully examining the representations of graphs as induced subgraphs of Hamming graphs. We have seen that for a graph $G$ to be an induced subgraph of a Hamming graph if and only if there exists a labeling of $E(G)$ fulfilling the two conditions:\begin{enumerate}
-\item edges of a triangle receive the same label;
+This project paper is focused on carefully examining the representations of graphs as induced subgraphs of Hamming graphs. We have seen that a graph $G$ is an induced subgraph of a Hamming graph if and only if there exists a labeling of $E(G)$ fulfilling the two conditions:\begin{enumerate}
+\item edges of a triangle receive the same label,
 \item for any vertices $u$ and $v$ at distance at least two, there exist two labels which both appear on any induced $u; v$-path. 
 \end{enumerate}
-We have noticed that for Cartesian dimension, the two-dimensional case corresponds to the class of line graphs of bipartite graphs and is well-understood and for $d\leq 3$ the problem of determining whether a given graph $G$ is d-realizable is NP-complete.\newline
-Shortly, we also defined the Hamming dimension and saw that with the aid of Hamming dimension, we were able to see  that number of graphs with a non-trivial dimension that comes from the Cartesian product of graphs increases.\newline
-It would be interesting to study the relation of KP-labeling and Cartesian dimension of special graphs such as cycles, Sierpi\'nski graphs, etc. 
+We have noticed that for Cartesian dimension, the two-dimensional case corresponds to the class of line graphs of bipartite graphs and is well-understood, while for all $d\geq 3$ the problem of determining whether a given graph $G$ is $d$-realizable is NP-complete.\newline
+Shortly, we also defined the Hamming dimension and stated without proofs some statements.\newline
+It would be interesting to perform a further study and comparison of the Cartesian and the Hamming dimension of graphs for graphs of particular classes, such as planar graphs or graphs of small maximum degree, as well as for more structed graph families such as generalized Petersen graphs, Johnson graphs, etc. 
 
  \begin{thebibliography}{99}
 \thispagestyle{fancy}
 
-\bibitem{Imrich}
+\bibitem{Bermond}
   \articleInJournalManyAuthors
-    {Wilfried Imrich and Sandi Klav\v zar}
-    {Recognizing Hamming graphs in linear time and space}
-   {Information Processing Letters}{63}
-   {1997}{91--95}
-   
-\bibitem{Milanic}
-  \articleInJournalManyAuthors
-    {M. Milanič, P. Muršič, and M. Mydlarz}
-    {Induced Embeddings into Hamming Graphs}
-   {42nd International Symposium on Mathematical Foundations of Computer Science}{83}
-   {2017}{1--15}   
+    {Jean-Claude Bermond, Marie-Claude Heydemann}{Dominique Sotteau}
+    {Line graphs of hypergraphs}
+   {Discrete Math}{18}
+   {1977}{235--241} 
 
-\bibitem{Staton}
-  \articleInJournalManyAuthors
-    {William Staton and G. Clifton Wingard}
-    {On line graphs of bipartite graphs}
-   {Util. Math.}{53}
-   {1998}{183--187}
-   
-\bibitem{Mulder}
+
+\bibitem{Cook}
   \articleInJournalOneAuthor
-    {Henry Martyn Mulder}
-    {Interval-regular graphs}
-   {Discrete Mathematics}{41}
-   {1982}{253--269}  
+    {Curtis R. Cook}
+    {Representations of graphs by $n$-tuples}
+   {In Proceedings of the Fifth Southeastern Conference on Combinatorics, Graph Theory, and Computing}{10}
+   {1974}{303--316}
+
+\bibitem{Eaton}
+  \articleInJournalManyAuthors
+    {Nancy Eaton}{Vojt\v ech R\" odl}
+    {Graphs of small dimensions}
+   {Combinatorica}{16}
+   {1996}{59--85}
 
 \bibitem{Egawa}
   \articleInJournalOneAuthor
     {Yoshimi Egawa}
-    {Characterization of the cartesian product of complete graphs by convex subgraphs}
+    {Characterization of the Cartesian product of complete graphs by convex subgraphs}
    {Discrete Mathematics}{58}
-   {1986}{307--309}       
+   {1986}{307--309}     
+
+\bibitem{David}
+\articleInJournalOneAuthor
+    {David Eppstein}
+    {The lattice dimension of a graph}
+   {European Journal of Combinatorics}{26}
+   {2005}{585--592} 
+
+\bibitem{Feder}
+\articleInJournalOneAuthor
+    {T. Feder}
+    {Product graph representations}
+   {Journal Graph Theory}{16}
+   {1992}{467--488}
+
+\bibitem{Graham}
+  \articleInJournalManyAuthors
+    {R.L. Graham}{P.M. Winkler}
+    {On isometric embeddings of graphs}
+   {American Mathematical Society}{288}
+   {1985}{527--536}
+
+\bibitem{Gurvich}
+  \articleInJournalManyAuthors
+    {Vladimir A. Gurvich}{Mikhail A. Temkin}
+    {Cellular perfect graphs}
+   {Dokl. Akad. Nauk}{362}
+   {1992}{527--536}
+
+\bibitem{Andreas2}
+  \articleInJournalManyAuthors
+    {Andreas M. Hinz}{Daniele Parisse}
+    {Coloring Hanoi and Sierpiński graphs}
+   {Discrete Mathematics}{312}
+   {2012}{1521--1535}  
+
+\bibitem{Andreas}
+  \articleInJournalManyAuthors
+    {Andreas M. Hinz}{Daniele Parisse}
+    {The Average Eccentricity of Sierpi\' nski Graphs}
+   {Graphs and Combinatorics}{28}
+   {2012}{671--686}
+
+\bibitem{Ian}
+\articleInJournalOneAuthor
+    {Ian Holyer}
+    {The NP-completeness of edge-coloring}
+   {SIAM J. Comput.}{10}
+   {1981}{718--720}  
+
+\bibitem{Imrich}
+  \articleInJournalManyAuthors
+    {Wilfried Imrich} {Sandi Klav\v zar}
+    {Recognizing Hamming graphs in linear time and space}
+   {Information Processing Letters}{63}
+   {1997}{91--95}
+
+\bibitem{Iztok}
+  \articleInJournalManyAuthors
+    {Sandi Klav\v zar}{Iztok Peterin}
+    {Characterizing subgraphs of Hamming graphs}
+   {Journal of Graph Theory}{49}
+   {2005}{302--312} 
+
+\bibitem{Sandi}
+  \articleInJournalManyAuthors
+    {Sandi Klav\v zar, Iztok Peterin}{Sara Sabrina Zemlji\v c}
+    {Hamming dimension of a graph-The case of Sierpi\'nski graphs}
+   {European Journal of Combinatorics}{34}
+   {2013}{460--473}
+
+\bibitem{Sandi2}
+  \articleInJournalManyAuthors
+    {Sandi Klav\v zar}{Uro\v s Milutinovi\' c}
+    {Graphs $S(n, k)$ and a Variant of the Tower of Hanoi Problem}
+   {Czechoslovak Mathematical Journal}{47}
+   {1997}{95--104}
+
+\bibitem{Ciril}
+  \articleInJournalManyAuthors
+    {Sandi Klav\v zar, Uro\v s Milutinovi\' c}{Ciril Petr}
+    {1-perfect codes in Sierpi\' nski graphs}
+   {Bulletin of the Australian Mathematical Society}{66}
+   {2002}{}
+
+
+\bibitem{Milanic}
+  \articleInJournalManyAuthors
+    {M. Milani\v c, P. Muršič}{M. Mydlarz}
+    {Induced Embeddings into Hamming Graphs}
+   {42nd International Symposium on Mathematical Foundations of Computer Science}{83}
+   {2017}{1--15}   
 
 \bibitem{Mollard}
   \articleInJournalOneAuthor
@@ -710,28 +797,13 @@ It would be interesting to study the relation of KP-labeling and Cartesian dimen
    {Discrete Mathematics}{93}
    {1991}{63--74}
 
-\bibitem{Cook}
+\bibitem{Mulder}
   \articleInJournalOneAuthor
-    {Curtis R. Cook}
-    {Representations of graphs by n-tuples}
-   {In Proceedings of the Fifth Southeastern Conference on Combinatorics, Graph Theory, and Computing}{10}
-   {1974}{303--316}
-   
-\bibitem{Bermond}
-  \articleInJournalManyAuthors
-    {Jean-Claude Bermond, Marie-Claude Heydemann, and Dominique Sotteau}
-    {Line graphs of hypergraphs}
-   {Discrete Math}{18}
-   {1977}{235--241}    
-   
-\bibitem{Gurvich}
-  \articleInJournalManyAuthors
-    {Vladimir A. Gurvich and Mikhail A. Temkin}
-    {Cellular perfect graphs}
-   {Dokl. Akad. Nauk}{362}
-   {1992}{527--536}   
+    {Henry Martyn Mulder}
+    {Interval-regular graphs}
+   {Discrete Mathematics}{41}
+   {1982}{253--269}  
 
-      
 \bibitem{Peterson}
 \articleInJournalOneAuthor
     {Dale Peterson}
@@ -740,19 +812,20 @@ It would be interesting to study the relation of KP-labeling and Cartesian dimen
    {2003}{223--239}
 
 
-\bibitem{Graham}
+\bibitem{Poljak}
   \articleInJournalManyAuthors
-    {R.L. Graham and P.M. Winkler}
-    {On isometric embeddings of graphs}
-   {rans.Amer. Math. Soc.}{288}
-   {1985}{527--536}
-   
-\bibitem{Iztok}
+    {S. Poljak}{A. Pultr}
+    {Representing graphs by means of strong and weak products}
+   {Comment. Math. Univ. Carolin.}{22}
+   {1981}{449--466} 
+
+
+\bibitem{Zito}
   \articleInJournalManyAuthors
-    {Sandi Klav\v zar and Iztok Peterin}
-    {Characterizing subgraphs of Hamming graphs}
-   {Journal of Graph Theory}{49}
-   {2005}{302--312}   
+    {Pavan Sangha}{Michele Zito}
+    {Finding Large Independent Sets in Line of Sight Networks}
+   {Algorithms and Discrete Applied Mathematics}{10156}
+   {2017}{332--343}    
 
 \bibitem{Schonber}
 \articleInJournalOneAuthor
@@ -761,82 +834,21 @@ It would be interesting to study the relation of KP-labeling and Cartesian dimen
    {Trans. Amer.Math. Soc.}{44}
    {1938}{522--536}
 
-\bibitem{Feder}
-\articleInJournalOneAuthor
-    {T. Feder}
-    {Product graph representations}
-   {Journal Graph Theory}{16}
-   {1992}{467--488}
-   
-\bibitem{David}
-\articleInJournalOneAuthor
-    {David Eppstein}
-    {The lattice dimension of a graph}
-   {European Journal of Combinatorics}{26}
-   {2005}{585--592} 
-   
-\bibitem{Ian}
-\articleInJournalOneAuthor
-    {Ian Holyer}
-    {The NP-completeness of edge-coloring}
-   {SIAM J. Comput.}{10}
-   {1981}{718--720}    
 
-\bibitem{Poljak}
+\bibitem{Staton}
   \articleInJournalManyAuthors
-    {S. Poljak and A. Pultr}
-    {Representing graphs by means of strong and weakproducts}
-   {Comment. Math. Univ. Carolin.}{22}
-   {1981}{449--466}  
+    {William Staton}{G. Clifton Wingard}
+    {On line graphs of bipartite graphs}
+   {Util. Math.}{53}
+   {1998}{183--187}      
    
-\bibitem{Zito}
+\bibitem{Vecchia}
   \articleInJournalManyAuthors
-    {Pavan Sangha and Michele Zito}
-    {Finding Large Independent Sets in Line of Sight Networks}
-   {Algorithms and Discrete Applied Mathematics}{10156}
-   {2017}{332--343}    
-   
-\bibitem{Winkler}
-  \articleInJournalManyAuthors
-    {R. L. Graham and P. M. Winkler}
-    {On Isometric Embeddings of Graphs}
-   {Transactions of the American Mathematical Society}{288}
-   {1985}{527--536}    
-
-\bibitem{Sandi}
-  \articleInJournalManyAuthors
-    {Sandi Klav\v zar, Iztok Peterin and Sara Sabrina Zemlji\v c}
-    {Hamming dimension of a graph—The case of Sierpi\'nski graphs}
-   {European Journal of Combinatorics}{34}
-   {2013}{460--473}
-
-\bibitem{Sandi2}
-  \articleInJournalManyAuthors
-    {Sandi Klav\v zar, Uro\v s Milutinovi\' c}
-    {Graphs $S(n, k)$ and a Variant of the Tower of Hanoi Problem}
-   {Czechoslovak Mathematical Journal}{47}
-   {1997}{95--104}
-
-\bibitem{Andreas}
-  \articleInJournalManyAuthors
-    {Andreas M. Hinz,Daniele Parisse}
-    {The Average Eccentricity of Sierpiński Graphs}
-   {Graphs and Combinatorics}{28}
-   {2012}{671--686}
-   
-\bibitem{Andreas2}
-  \articleInJournalManyAuthors
-    {Andreas M. Hinz,Daniele Parisse}
-    {Coloring Hanoi and Sierpiński graphs}
-   {Discrete Mathematics}{312}
-   {2012}{1521--1535}   
-\newline
-\bibitem{cartesianproduct}
-@online{pict,
- title   = "Cartesian product of graphs",
- url     = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Graph-Cartesian-product.svg/600px-Graph-Cartesian-product.svg.png",
-}
-
+    {G.Della Vecchia}{C. Sanges}
+    {A recursively scalable network VLSI implementation}
+   {Future Generation Computer Systems}{4}
+   {1988}{235--243}    
+        
 % There has to be an empty line here so that the page numbers of citations are properly displayed.
 \end{thebibliography}
 \newpage
