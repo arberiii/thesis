@@ -3,10 +3,10 @@
 \contentsline {chapter}{\numberline {2}Preliminaries}{4}
 \contentsline {chapter}{\numberline {3}Characterizing Subgraphs of Hamming Graphs}{7}
 \contentsline {section}{\numberline {3.1}The definition of a KP-labeling}{7}
-\contentsline {section}{\numberline {3.2}KP-labeling: the definition and basic results}{11}
-\contentsline {section}{\numberline {3.3}Induced subgraphs of Hamming Graphs}{13}
+\contentsline {section}{\numberline {3.2}KP-labeling: basic results}{11}
+\contentsline {section}{\numberline {3.3}Induced subgraphs of Hamming Graphs}{12}
 \contentsline {chapter}{\numberline {4}Cartesian dimension}{16}
-\contentsline {section}{\numberline {4.1}NP-completeness of testing realizability in $d\geq 3$ dimension}{25}
+\contentsline {section}{\numberline {4.1}NP-completeness of testing realizability in $d\geq 3$ dimension}{24}
 \contentsline {section}{\numberline {4.2}Cartesian dimension of grid graphs}{27}
 \contentsline {chapter}{\numberline {5}Hamming dimesion}{30}
 \contentsline {section}{\numberline {5.1}Hamming dimension of Sierpi\' nski graphs}{31}
