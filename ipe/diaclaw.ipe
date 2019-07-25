@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70206" creator="Ipe 7.2.7">
-<info created="D:20190717012239" modified="D:20190717012239"/>
+<info created="D:20190717012239" modified="D:20190725081517"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -273,7 +273,7 @@ h
 128 768 l
 64 704 l
 </path>
-<text matrix="1 0 0 1 16 0" transformations="translations" pos="80 592" stroke="black" type="label" width="73.387" height="17.213" depth="0" valign="baseline" size="Huge">diamon</text>
+<text matrix="1 0 0 1 16 0" transformations="translations" pos="80 592" stroke="black" type="label" width="86.049" height="17.213" depth="0" valign="baseline" size="Huge">diamond</text>
 <path matrix="1 0 0 1 -64 0" stroke="black" pen="fat">
 352 704 m
 416 768 l
